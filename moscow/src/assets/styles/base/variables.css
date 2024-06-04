@@ -1,0 +1,26 @@
+:root {
+    --primary-color: #222222;
+    --secondary-color: #F2F2F2;
+    --background-color: #F2F2F2;
+    --text-color: #333;
+    --links-header: #007BFF;
+    --btn-text-color-default-primary: #222222;
+    --btn-color-default-primary: #FFDE40;
+    --btn-color-hover-primary: #ffe084;
+    --btn-color-click-primary: #daad26;
+    --btn-color-disable-primary: #979797;
+    --btn-text-color-disable-primary: #e0e0e0;
+    --border-button-color: #e2e2e2;
+
+    --font-regular: 'Inter', sans-serif;
+    --font-medium: 'Inter', sans-serif;
+    --font-semibold: 'Inter', sans-serif;
+    --font-bold: 'Inter', sans-serif;
+    --font-black: 'Inter', sans-serif;
+    
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+    --weight-black: 900;
+}

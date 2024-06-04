@@ -1,0 +1,28 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 24px;
+
+    cursor: pointer;
+}
+
+.primary-short {
+    background-color: var(--btn-color-default);
+
+    width: 246px;
+    height: 67px;
+}
+
+.primary-long {
+    background-color: var(--btn-color-default);
+
+    width: 902px;
+    height: 67px;
+}
+
+.call-me-back {
+    
+}

@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/moscow/public/assets/fonts/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/moscow/public/assets/fonts/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7SUc.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1{
+    font-family: var(--font-medium);
+    font-family: var(--weight-medium);
+    color: var(--secondary-color);
+}
+
+a {
+    color: var(--links-header);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+
+.calculate-price-short,
+.calculate-price-long {
+    font-family: var(--font-bold);
+    font-weight: var(--weight-bold);
+    font-size: 1rem;
+}
