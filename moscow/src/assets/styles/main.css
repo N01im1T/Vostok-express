@@ -1,0 +1,11 @@
+@import './base/reset.css';
+@import './base/typography.css';
+@import './base/variables.css';
+
+@import './components/header.css';
+@import './components/footer.css';
+@import './components/transport.css';
+@import './components/calculator.css';
+@import './components/steps.css';
+@import './components/modals.css';
+@import './components/buttons.css';
