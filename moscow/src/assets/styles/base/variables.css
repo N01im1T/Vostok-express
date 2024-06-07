@@ -2,15 +2,32 @@
     --primary-color: #222222;
     --secondary-color: #F2F2F2;
     --background-color: #F2F2F2;
-    --text-color: #333;
-    --links-header: #007BFF;
+    --text-color: #F2F2F2;
+    --text-color-dark: #222222;
+    --link: #F2F2F2;
+    --link-dark: #222222; 
+    
     --btn-text-color-default-primary: #222222;
     --btn-color-default-primary: #FFDE40;
     --btn-color-hover-primary: #ffe084;
     --btn-color-click-primary: #daad26;
     --btn-color-disable-primary: #979797;
     --btn-text-color-disable-primary: #e0e0e0;
-    --border-button-color: #e2e2e2;
+    --btn-color-default-secondary: #F2F2F2;
+    --btn-color-click-secondary: #222222;
+    --btn-color-disable-secondary: #333333;
+    --btn-color-default-secondary-black: #222222;
+    --btn-color-click-secondary-black: #F2F2F2;
+    --btn-color-disable-secondary-black: #828282;
+    --btn-text-color-default-secondary: #F2F2F2;
+    --btn-text-color-disable-secondary: #333333;
+    --btn-text-color-default-secondary-black: #222222;
+    --btn-text-color-disable-secondary-black: #828282;
+    --toggle-btn-click: #4f4f4f;
+    --toggle-btn-disable: #828282;
+
+    --contact-info-click: #4f4f4f;
+    --contact-info-disable: #333333;
 
     --font-regular: 'Inter', sans-serif;
     --font-medium: 'Inter', sans-serif;

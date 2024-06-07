@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Восток экспресс</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-    <link rel="icon" href="/moscow/public/assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="../assets/site.webmanifest">
     <link rel="mask-icon" href="../assets/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -17,23 +19,87 @@
 </head>
 
 <body>
-    <header>
-        <h1>
-            Трансфер <img class="emoji" src="../assets/images/header/airplane-emoji.png" alt="airplane-emoji"> в аэропорт города Хабаровск <img class="emoji" src="../assets/images/header/round_pushpin-emoji.png" alt="airplane-emoji">
-        </h1>
-        
-        <p>
-            Или обратно по предварительному заказу по любым направлениям 
-            легковыми автомобилями, минивэнами, микроавтобусами и автобусами.
-        </p>
-        
-        <button class="button calculate-price-short">
-                Рассчитать стоимость
-        </button>
+    <header class="header">
+        <div class="header-container">
+            <div class="top-bar">
+                <div class="logo-container">
+                    <img src="../assets/images/header/logo-light.png" alt="Logo">
+                    <span>Трансфер в аэропорт города Москва</span>
+                </div>
 
-        <p class="contact-links">
-            или спросите в <a href="#">WhatsApp</a>, <a href="#">Telegram</a>
-        </p>
+                <div class="toggle-language-container">
+                    <button id="toggle-btn" class="toggle-btn" role="switch" aria-checked="true">
+                        <span id="ru" class="ru active">RU</span>
+                        <span id="en" class="en">EN</span>
+                    </button>
+                </div>
+
+                <div class="contact-info">
+                    <div class="location">
+                        <a class="" href="https://www.google.com/maps/place/%D0%A8%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%82%D1%8C%D0%B5%D0%B2%D0%BE+-+%D0%B0%D1%8D%D1%80%D0%BE%D0%BF%D0%BE%D1%80%D1%82+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%90.%D0%A1.+%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0/@55.9730464,37.334241,12.65z/data=!4m10!1m2!2m1!1z0LDRjdGA0L7Qv9C-0YDRgiDQvNC-0YHQutCy0LA!3m6!1s0x46b53c20c24e7149:0x5f49767ab403ed07!8m2!3d55.9736482!4d37.412503!15sCh3QsNGN0YDQvtC_0L7RgNGCINC80L7RgdC60LLQsFofIh3QsNGN0YDQvtC_0L7RgNGCINC80L7RgdC60LLQsJIBFWludGVybmF0aW9uYWxfYWlycG9ydJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VONWEwOXlXRlZSRUFF4AEA!16zL20vMDFuNTN0?entry=ttu"
+                         target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="location-icon">
+                                <path class="path-fill" d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" fill="#F2F2F2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="path-stroke" d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Москва
+                        </a>
+                    </div>
+                    <div class="email">
+                        <a href="tel:+7999074-67-78" target="_blank"
+                         rel="noopener noreferrer">
+                            +7(999)074-67-78
+                        </a>
+                        <a href="mailto:2a@gmail.com" target="_blank"
+                         rel="noopener noreferrer">
+                            2a@gmail.com
+                        </a>
+                    </div>
+                    <button type="button" class="btn btn-secondary btn-call-me-back">
+                        Перезвоните мне
+                    </button>
+                </div>
+            </div>
+            
+            <div class="header-main-content">
+                <div class="main-content-wraper">
+                    <h1>
+                        Трансфер <img class="emoji" src="../assets/images/header/airplane-emoji.png" alt="airplane-emoji"> в аэропорт города <img class="emoji" src="../assets/images/header/round_pushpin-emoji.png" alt="airplane-emoji"> Москва
+                    </h1>
+                    <p>
+                        Или обратно по предварительному заказу по любым направлениям
+                        легковыми автомобилями, минивэнами, микроавтобусами и автобусами.
+                    </p>
+                    <div class="text-wrapper">
+                        <button type="button" class="btn btn-primary btn-sm">
+                            Рассчитать стоимость
+                        </button>
+                        <p>
+                            или спросите в <a href="#">WhatsApp</a>, <a href="#">Telegram</a>
+                        </p>
+                    </div>
+            
+                    <div class="car-info">
+                        <div class="car-info-item">
+                            <span>200+</span>
+                            <p>Автомобилей класса «Эконом» и «Стандарт»</p>
+                        </div>
+                        <div class="car-info-item">
+                            <span>100+</span>
+                            <p>Автомобилей класса «Эконом» и «Стандарт»</p>
+                        </div>
+                        <div class="car-info-item">
+                            <span>50+</span>
+                            <p>Автомобилей класса «Эконом» и «Стандарт»</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-section">
+                    <img src="../assets/images/header/khabarovsk-airport.png" alt="Международный аэропорт Москвы">
+                </div>
+            </div>
+        </div>
     </header>
 
     <section id="transport">
@@ -56,8 +122,7 @@
 
     </section>
 
-
-    <script src="/moscow/src/main.js"></script>
+    <script type="module" src="/moscow/src/main.js" defer></script>
 
 </body>
 

@@ -9,3 +9,13 @@
 @import './components/steps.css';
 @import './components/modals.css';
 @import './components/buttons.css';
+
+body{
+    background-color: var(--background-color);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto; 
+}
