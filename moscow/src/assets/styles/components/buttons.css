@@ -5,8 +5,6 @@
 
     border-radius: 24px;
 
-    cursor: pointer;
-
     transition: all 0.5s ease;
 }
 
@@ -30,6 +28,7 @@
 .btn-primary:disabled {
     background-color: var(--btn-color-disable-primary);
     
+    pointer-events: none;
     cursor: not-allowed;
 }
 
@@ -52,6 +51,8 @@
 
 .btn-secondary:not(:disabled):hover {
     border: 2px solid;
+
+    transition: border 0.3s;
 }
 
 .btn-secondary:not(:disabled):active {
@@ -61,20 +62,28 @@
 .btn-secondary:disabled {
     border-color: var(--btn-color-disable-secondary);
 
+    pointer-events: none;
     cursor: not-allowed;
 }
 
-.btn-secondary .black {
+.btn-secondary.black {
     border-color: var(--btn-color-default-secondary-black);
 }
 
-.btn-secondary .black:not(:disabled):active {
+.btn-secondary.black:not(:disabled):hover {
+    border: 2px solid var(--btn-color-default-secondary-black);
+    
+    transition: border 0.3s, border-color 0.5s;
+}
+
+.btn-secondary.black:not(:disabled):active {
     border-color: var(--btn-color-click-secondary-black);
 }
 
-.btn-secondary .black:disabled {
+.btn-secondary.black:disabled {
     border-color: var(--btn-color-disable-secondary-black);
 
+    pointer-events: none;
     cursor: not-allowed;
 }
 
@@ -116,6 +125,8 @@
 .toggle-btn .active:not(:disabled):hover {
     padding: 0.4rem;
     border: 2px solid;
+
+    transition: border 0.3s, padding 0.3s;
 }
 
 .toggle-btn .active:not(:disabled):active {
@@ -129,5 +140,6 @@
         border-color: var(--toggle-btn-disable);
     }
 
+    pointer-events: none;
     cursor: not-allowed;
 }

@@ -26,6 +26,13 @@
     --toggle-btn-click: #4f4f4f;
     --toggle-btn-disable: #828282;
 
+    --input-primary-color: #F2F2F2;
+    --input-secondary-color: #333333;
+    --input-minor-color: #828282;
+    --input-black-text: #222222;
+    --input-error: #eb5757;
+    --input-disable: #bdbdbd;
+
     --contact-info-click: #4f4f4f;
     --contact-info-disable: #333333;
 
@@ -33,11 +40,13 @@
     --font-medium: 'Inter', sans-serif;
     --font-semibold: 'Inter', sans-serif;
     --font-bold: 'Inter', sans-serif;
+    --font-extrabold: 'Inter', sans-serif;
     --font-black: 'Inter', sans-serif;
     
     --weight-regular: 400;
     --weight-medium: 500;
     --weight-semibold: 600;
     --weight-bold: 700;
+    --weight-extrabold: 800;
     --weight-black: 900;
 }
