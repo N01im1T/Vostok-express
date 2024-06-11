@@ -24,8 +24,16 @@ h1{
     font-family: var(--font-medium);
     font-weight: var(--weight-medium);
     font-size: 6rem;
-    color: var(--secondary-color);
+    color: var(--text-color);
     line-height: 1.2;
+}
+
+h2{
+    font-family: var(--font-medium);
+    font-weight: var(--weight-medium);
+    font-size: 4rem;
+    color: var(--text-color-dark);
+    line-height: 1.159;
 }
 
 a {
@@ -54,11 +62,11 @@ a {
     color: var(--btn-text-color-disable-secondary);
 }
 
-.btn-secondary .black {
+.btn-secondary.black {
     color: var(--btn-text-color-default-secondary-black);
 }
 
-.btn-secondary .black:disabled {
+.btn-secondary.black:disabled {
     color: var(--btn-text-color-disable-secondary-black);
 }
 
@@ -71,6 +79,46 @@ a {
 
 .toggle-btn:disabled {
     color: var(--toggle-btn-disable);
+}
+
+/* Inputs */
+
+.input-container {
+    font-family: var(--font-refular);
+    font-weight: var(--weight-regular);
+}
+
+.input-container.disabled > .floating-label{
+    color: var(--input-disable);
+} 
+
+.styled-input {
+    font-size: 1rem;
+}
+
+.styled-input:focus {
+    caret-color: var(--input-minor-color);
+}
+
+.styled-input:focus + .floating-label,
+.styled-input:not(:placeholder-shown) + .floating-label {
+    font-size: 10px;
+    color: var(--input-black-text);
+    caret-color: var(--input-black-text);
+}
+
+.styled-input.invalid:not(:placeholder-shown) + .floating-label {
+    color: var(--input-error);
+}
+
+.styled-input .invalid {
+    color: var(--input-error);
+    font-size: 10px;
+}
+
+.floating-label {
+    font-size: 1rem;
+    color: var(--input-secondary-color);
 }
 
 /* Modals */
@@ -151,6 +199,7 @@ a {
 
 .text-wrapper p {
     font-size: 1.5rem;
+    word-wrap: break-word;
 }
 
 .text-wrapper p a{
@@ -174,4 +223,78 @@ a {
 .car-info-item p{
     font-size: 1.5rem;
     word-wrap: break-word;
+}
+
+/* Transport */
+
+.transport {
+    color: var(--text-color-dark);
+}
+
+.transport-card-goods {
+    font-family: var(--font-regular);
+    font-weight: var(--weight-regular);
+    font-size: 1.25rem;
+}
+
+.transport-quality {
+    font-family: var(--font-bold);
+    font-weight: var(--weight-bold);
+    font-size: 2rem;
+}
+
+.transport-description {
+    font-family: var(--font-regular);
+    font-weight: var(--weight-regular);
+    font-size: 1rem;
+}
+
+.transport-price {
+    font-family: var(--font-bold);
+    font-weight: var(--weight-bold);
+    font-size: 2.5rem;
+    word-wrap: break-word;
+}
+
+.transport-price span:first-child {
+    font-family: var(--font-extrabold);
+    font-weight: var(--weight-extrabold);
+    font-size: 1.25rem;
+}
+
+/* Calculator */
+
+.calculator-container h2 {
+    text-align: center;
+    color: var(--text-color);
+    word-wrap: break-word;
+}
+
+.personal-data-processing {
+    text-align: center;
+    word-wrap:break-word;
+}
+
+.personal-data-processing a {
+    text-decoration: underline;
+    text-underline-offset: 3.5px;
+    text-underline-position: below;
+
+}
+
+.personal-data-processing a:hover {
+    text-decoration: none;
+}
+
+
+@media (max-width: 1440px) {
+    h1{
+        font-size: 4rem;
+    }
+
+    /* Header */
+
+    .car-info-item p{
+        font-size: 18px;
+    }
 }
