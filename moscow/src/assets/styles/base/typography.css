@@ -36,9 +36,22 @@ h2{
     line-height: 1.159;
 }
 
+h3{
+    font-family: var(--font-semibold);
+    font-weight: var(--weight-semibold);
+    font-size: 2.25rem;
+    color: var(--text-color-dark);
+    line-height: 1.14;
+}
+
 a {
     color: var(--link);
     text-decoration: none;
+}
+
+p {
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 /* Buttons */
@@ -199,7 +212,6 @@ a {
 
 .text-wrapper p {
     font-size: 1.5rem;
-    word-wrap: break-word;
 }
 
 .text-wrapper p a{
@@ -222,7 +234,6 @@ a {
 
 .car-info-item p{
     font-size: 1.5rem;
-    word-wrap: break-word;
 }
 
 /* Transport */
@@ -253,7 +264,6 @@ a {
     font-family: var(--font-bold);
     font-weight: var(--weight-bold);
     font-size: 2.5rem;
-    word-wrap: break-word;
 }
 
 .transport-price span:first-child {
@@ -271,6 +281,7 @@ a {
 }
 
 .personal-data-processing {
+    font-size: 1.125rem;
     text-align: center;
     word-wrap:break-word;
 }
@@ -286,6 +297,81 @@ a {
     text-decoration: none;
 }
 
+/* Advantages */
+
+.advantages {
+    font-size: 1.125rem;
+    color: var(--text-color-dark)
+}
+
+.advantages-about-company p,
+.advantages-about-supporting p {
+    text-align: left;
+}
+
+/* Steps */
+
+.steps {
+    font-size: 1.125rem;
+    color: var(--text-color-dark);
+}
+
+.step {
+    text-align: left;
+}
+
+.centered-text {
+    font-family: var(--font-semibold);
+    font-weight: var(--weight-semibold);
+    font-size: 2.25rem;
+    fill: #333;
+}
+
+/* Airport transfer */
+
+.text h2 {
+    color: var(--text-color);
+}
+
+.text p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+/* About company */
+
+.about-company {
+    font-size: 1.25rem;
+    color: var(--text-color-dark);
+}
+
+.about-company-advantages {
+    font-family: var(--font-black);
+    font-weight: var(--weight-black);
+    font-size: 6rem;
+}
+
+.advantage-item p {
+    font-family: var(--font-medium);
+    font-weight: var(--weight-medium);
+    font-size: 1.5rem;
+}
+
+.highlight-symbol {
+    color: #F2C94C;
+}
+
+.awards-slider-content a {
+    color: var(--text-color-dark);
+    text-decoration: underline dotted;
+    text-underline-offset: 3.5px;
+    text-underline-position: below;
+    transition: text-decoration 0.4s ease;
+}
+
+.awards-slider-content a:hover {
+    text-decoration: none;
+}
 
 @media (max-width: 1440px) {
     h1{

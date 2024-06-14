@@ -97,7 +97,7 @@
 .main-content-wrapper {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     margin-right: 2rem;
 }

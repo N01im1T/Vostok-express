@@ -1,0 +1,46 @@
+.steps {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    padding: 6rem 6rem 6rem 6rem;
+}
+
+.steps h2 {
+    margin-bottom: 3.5rem;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+.steps-container>* {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    max-width: 396px;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+}
+
+.step-number {
+    margin-bottom: 1rem;
+}
+
+.step-number svg {
+    width: 96px;
+    height: 80px;
+}
+
+.centered-text {
+    text-anchor: middle;
+}
+
+.step p {
+    max-height: 50px;
+    margin-top: 0.5rem;
+}
