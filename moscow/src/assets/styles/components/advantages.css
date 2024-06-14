@@ -1,0 +1,40 @@
+.advantages {
+    padding: 6rem 6rem 6rem 6rem;
+}
+
+.advantages-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+.advantages-about-company,
+.advantages-about-supporting {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+
+    max-width: 824px;
+}
+
+.advantages-about-company img,
+.advantages-about-supporting img{
+    max-width: 193px;
+    max-height: 193px;
+}
+
+.advantages-about-company h3,
+.advantages-about-supporting h3{
+    max-width: 527px;
+}
+
+.advantages-about-company ul {
+    list-style-type: disc;
+
+    margin-top: 2px;
+    padding-left: 20px; 
+}
