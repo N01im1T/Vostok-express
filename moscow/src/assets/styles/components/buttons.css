@@ -5,7 +5,8 @@
 
     border-radius: 24px;
 
-    transition: all 0.5s ease;
+    transition: background-color 0.5s ease, border-color 0.5s ease,
+    border-width 0.3s ease-in-out;
 }
 
 /* Primary buttons */
@@ -37,7 +38,8 @@
 }
 
 .btn-lg {
-    width: 902px;
+    max-width: 902px;
+    width: 100%;
 }
 
 /* Secondary buttons */
@@ -50,7 +52,7 @@
 }
 
 .btn-secondary:not(:disabled):hover {
-    border: 2px solid;
+    border-width: 2px;
 
     transition: border 0.3s;
 }
@@ -71,9 +73,8 @@
 }
 
 .btn-secondary.black:not(:disabled):hover {
-    border: 2px solid var(--btn-color-default-secondary-black);
-    
-    transition: border 0.3s, border-color 0.5s;
+    border-width: 2px;
+    border-color: var(--btn-color-default-secondary-black);
 }
 
 .btn-secondary.black:not(:disabled):active {
@@ -96,7 +97,21 @@
 }
 
 .btn-order {
-    width: 332px;
+    max-width: 332px;
+    width: 100%;
+}
+
+/* Madal buttons */
+
+.reply-form > .btn-call-me-back,
+.reply-form > .btn-call-me-back {
+    max-width: 588px;
+    width: 100%;
+}
+
+.btn-calculate-price {
+    max-width: 767px;
+    width: 100%;
 }
 
 /* Toggle language button */
@@ -113,7 +128,7 @@
     height: 37px;
     border: none;
 
-    transition: all 0.5s ease;
+    transition: border-width 0.5s ease-in-out, padding 0.5s ease;
 }
   
 .toggle-btn .active {
@@ -124,9 +139,7 @@
 
 .toggle-btn .active:not(:disabled):hover {
     padding: 0.4rem;
-    border: 2px solid;
-
-    transition: border 0.3s, padding 0.3s;
+    border-width: 2px;
 }
 
 .toggle-btn .active:not(:disabled):active {

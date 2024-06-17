@@ -23,25 +23,17 @@
     transition: all 0.3s;
 }
 
-.styled-input:hover {
-    padding: 0 1.5rem 2rem 1.5rem;
-    border: 1px solid var(--input-minor-color);
-
-    transition: height 0.5s, padding 0.5s, border 0.5s;
-}
-
 .styled-input:focus {
-    height: 63px;
+    height: 67px;
     padding-top: 2.5rem;
     padding-left: 1.5rem;
-    border: 1px solid var(--input-minor-color);
 
     transition: height 0.3s, border 0.3s, border-color 0.3s;
 }
 
 .styled-input:not(:focus),
 .styled-input:not(:placeholder-shown) {
-    height: 63px;
+    height: 67px;
     padding-top: 2.5rem;
     padding-left: 1.5rem;
 
@@ -49,7 +41,7 @@
 }
 
 .styled-input.invalid:not(:placeholder-shown) {
-    height: 63px;
+    height: 67px;
     padding-top: 2.5rem;
     padding-left: 1.5rem;
     border: 1px solid var(--input-error);
@@ -62,7 +54,7 @@
     top: 1rem;
     left: 1.5rem;
     
-    height: 63px;
+    height: 67px;
 }
 
 .floating-label {
@@ -73,4 +65,10 @@
     pointer-events: none;
 
     transition: 0.3s ease all;
+}
+
+/* Modal Inputs */
+
+.call-me-back-form .styled-input:not(.disabled) {
+    background-color: var(--input-primary-color);
 }
