@@ -1,0 +1,70 @@
+.footer {
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    padding: 6rem 6rem 0 6rem;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-bottom: 6rem;
+}
+
+.contacts h3,
+.feedback h3,
+.schedule h3,
+.be-our-pertner h3 {
+    padding-bottom: 1.5rem;
+}
+
+.contacts-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.contacts-item:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.feedback a:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+.schedule p {
+    max-width: 185px;
+}
+
+.be-our-pertner {
+    max-width: 185px;
+}
+
+.be-our-pertner p {
+    margin-bottom: 1rem;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: self-start;
+}
+
+.footer-bottom footer:first-of-type {
+    margin-right: 1.5rem;
+}
+
+.social-media-links {
+    margin-right: auto;
+}

@@ -43,10 +43,29 @@
     max-height: auto;
 }
 
+.transport-quality {
+    margin-bottom: 0.5rem;
+}
+
 .transport-description {
+    margin-bottom: 0.5rem;
     max-width: 332px;
+}
+
+.transport-price {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .transport-price span:first-child {
     vertical-align: text-top;
+
+    margin-right: 0.5rem;
+}
+
+.price {
+    margin-right: 0.5rem;
 }

@@ -23,7 +23,7 @@
         <div class="header-container">
             <div class="top-bar">
                 <div class="logo-container">
-                    <img src="../assets/images/header/logo-light.png" alt="Logo">
+                    <img src="../assets/images/header/logo-light.png" alt="logo-light">
                     <span>Трансфер в аэропорт города Москва</span>
                 </div>
 
@@ -36,7 +36,7 @@
 
                 <div class="contact-info">
                     <div class="location">
-                        <a class="" href="https://www.google.com/maps/place/%D0%A8%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%82%D1%8C%D0%B5%D0%B2%D0%BE+-+%D0%B0%D1%8D%D1%80%D0%BE%D0%BF%D0%BE%D1%80%D1%82+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%90.%D0%A1.+%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0/@55.9730464,37.334241,12.65z/data=!4m10!1m2!2m1!1z0LDRjdGA0L7Qv9C-0YDRgiDQvNC-0YHQutCy0LA!3m6!1s0x46b53c20c24e7149:0x5f49767ab403ed07!8m2!3d55.9736482!4d37.412503!15sCh3QsNGN0YDQvtC_0L7RgNGCINC80L7RgdC60LLQsFofIh3QsNGN0YDQvtC_0L7RgNGCINC80L7RgdC60LLQsJIBFWludGVybmF0aW9uYWxfYWlycG9ydJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VONWEwOXlXRlZSRUFF4AEA!16zL20vMDFuNTN0?entry=ttu"
+                        <a class="" href="https://yandex.ru/maps/org/mezhdunarodny_aeroport_sheremetyevo_im_a_s_pushkina/1101237450/?from=mapframe&ll=37.388151%2C55.974854&z=13"
                          target="_blank" rel="noopener noreferrer">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="location-icon">
                                 <path class="path-fill" d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" fill="#F2F2F2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -55,7 +55,7 @@
                             2a@gmail.com
                         </a>
                     </div>
-                    <button type="button" class="btn btn-secondary btn-call-me-back">
+                    <button id="btn-call-me-back" type="button" class="btn btn-secondary btn-call-me-back">
                         Перезвоните мне
                     </button>
                 </div>
@@ -76,8 +76,8 @@
                         легковыми автомобилями, минивэнами, микроавтобусами и автобусами.
                     </p>
                     <div class="text-wrapper">
-                        <button type="button" class="btn btn-primary btn-sm">
-                            Рассчитать стоимость
+                        <button id="btn-get-transfer-price" type="button" class="btn btn-primary btn-sm">
+                            Расчитать стоимость
                         </button>
                         <p>
                             или спросите в <a href="#">WhatsApp</a>, <a href="#">Telegram</a>
@@ -311,6 +311,7 @@
                         Как к вам обращаться?
                     </label>
                 </div>
+
                 <div class="input-container">
                     <input type="email"  id="email" class="styled-input"
                      placeholder=" " required>
@@ -320,6 +321,7 @@
                         Ваша электронная почта
                     </label>
                 </div>
+
                 <div class="input-container">
                     <input type="tel"  id="telephone" class="styled-input"
                     pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
@@ -330,6 +332,7 @@
                         Ваш номер телефона
                     </label>
                 </div>
+
                 <div class="input-container">
                     <input type="text"  id="message" class="styled-input"
                     placeholder=" ">
@@ -337,8 +340,9 @@
                         Ваше сообщение (не обязательно)
                     </label>
                 </div>
+
                 <button class="btn btn-primary btn-lg" type="submit">
-                    Рассчитать стоимость
+                    Расчитать стоимость
                 </button>
             </form>
             <p class="personal-data-processing">
@@ -552,7 +556,7 @@
 
     <section id="second-calculator" class="calculator">
         <div class="calculator-container">
-            <h2>Получите расчет стоимости трансфера</h2>
+            <h2>Оставьте заявку на расчет стоимости</h2>
             <form class="calculator-form" action="/calculate-transfer-price" method="post">
                 <div class="input-container">
                     <input type="text"  id="name" class="styled-input"
@@ -563,6 +567,7 @@
                         Как к вам обращаться?
                     </label>
                 </div>
+
                 <div class="input-container">
                     <input type="email"  id="email" class="styled-input"
                      placeholder=" " required>
@@ -572,8 +577,9 @@
                         Ваша электронная почта
                     </label>
                 </div>
+
                 <div class="input-container">
-                    <input type="tel"  id="telephone" class="styled-input"
+                    <input type="tel" id="telephone" class="styled-input"
                     pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
                     placeholder=" " required>
                     <label for="telephone" class="floating-label"
@@ -582,6 +588,7 @@
                         Ваш номер телефона
                     </label>
                 </div>
+
                 <div class="input-container">
                     <input type="text"  id="message" class="styled-input"
                     placeholder=" ">
@@ -589,8 +596,9 @@
                         Ваше сообщение (не обязательно)
                     </label>
                 </div>
+
                 <button class="btn btn-primary btn-lg" type="submit">
-                    Рассчитать стоимость
+                    Расчитать стоимость
                 </button>
             </form>
             <p class="personal-data-processing">
@@ -603,8 +611,236 @@
     </section>
 
     <section id="footer" class="footer">
+        <div class="footer-top">
+            <div class="logo-container">
+                <img src="../assets/images/footer/footer-site-logo.png" alt="logo-dark">
+                <span>Трансфер в аэропорт города Москва</span>
+            </div>
 
+            <section class="contacts">
+                <h3>Контакты</h3>
+                <div class="contacts-item">
+                    <a class="number" href="tel:+" target="_blank" 
+                    rel="noopener noreferrer">+74951084848</a>
+                    <a class="content" href="http://" target="_blank" 
+                    rel="noopener noreferrer">Хабаровск</a>
+                </div>
+                <div class="contacts-item">
+                    <a class="number" href="tel:+" target="_blank" 
+                    rel="noopener noreferrer">+74951084848</a>
+                    <a class="content" href="http://" target="_blank" 
+                    rel="noopener noreferrer">Москва</a>
+                </div>
+                <div class="contacts-item">
+                    <a class="number" href="tel:+" target="_blank" 
+                    rel="noopener noreferrer">+74951084848</a>
+                    <a class="content" href="http://" target="_blank" 
+                    rel="noopener noreferrer">Сочи</a>
+                </div>
+                <div class="contacts-item">
+                    <a class="number" href="tel:+" target="_blank" 
+                    rel="noopener noreferrer">+74951084848</a>
+                    <a class="content" href="http://" target="_blank" 
+                    rel="noopener noreferrer">Владивосток</a>
+                </div>
+                <div class="contacts-item">
+                    <a class="number" href="tel:+" target="_blank" 
+                    rel="noopener noreferrer">+74951084848</a>
+                    <a class="content" href="http://" target="_blank" 
+                    rel="noopener noreferrer">WhatsApp</a>
+                    <a class="content" href="http://" target="_blank" 
+                    rel="noopener noreferrer">Telegram</a>
+                </div>
+            </section>
+
+            <section class="feedback">
+                <h3>Обратная связь</h3>
+                <a class="feedback-link" href="http://" target="_blank"
+                rel="noopener noreferrer">2a@gmail.com</a>
+                <a class="feedback-link" href="http://" target="_blank"
+                rel="noopener noreferrer">info@2a.com</a>
+                <a class="feedback-link" href="http://" target="_blank" 
+                rel="noopener noreferrer">2a@gmail.com</a>
+            </section>
+
+            <section class="schedule">
+                <h3>Режим работы</h3>
+                <p>ежедневно с 8:00 до 20:00 (МСК)</p>
+            </section>
+
+            <section class="be-our-pertner">
+                <h3>Стать нашим партнером</h3>
+                <p>и получай бонусы уже сегодня</p>
+                <button id="btn-become-our-partner" type="button"
+                 class="btn btn-secondary black btn-text-me">
+                 Напиши мне
+                </button>
+            </section>
+        </div>
+
+        <div class="footer-bottom">
+            <footer>© 2003 - 2024 Восток экспресс, ИП Решовский Николай Николаевич.</footer>
+
+            <div class="social-media-links">
+                <a class="social-media-link" href="http://" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a class="social-media-link" href="http://" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a class="social-media-link" href="http://" target="_blank" rel="noopener noreferrer">Vk</a>
+            </div>
+
+            <footer>
+                <span class="design-by">Design by</span>
+                <span class="special-symbols">
+                    <svg width="29" height="19" viewBox="0 0 29 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 18.3636C3.12121 18.3636 2.36742 18.0568 1.73864 17.4432C1.11742 16.822 0.810606 16.0682 0.818182 15.1818C0.810606 14.3182 1.11742 13.5795 1.73864 12.9659C2.36742 12.3523 3.12121 12.0455 4 12.0455C4.83333 12.0455 5.56818 12.3523 6.20455 12.9659C6.84849 13.5795 7.17424 14.3182 7.18182 15.1818C7.17424 15.7727 7.01894 16.3106 6.71591 16.7955C6.42045 17.2727 6.03409 17.6553 5.55682 17.9432C5.07955 18.2235 4.56061 18.3636 4 18.3636ZM4 6.63636C3.12121 6.63636 2.36742 6.32955 1.73864 5.71591C1.11742 5.0947 0.810606 4.34091 0.818182 3.45455C0.810606 2.59091 1.11742 1.85227 1.73864 1.23864C2.36742 0.625 3.12121 0.318182 4 0.318182C4.83333 0.318182 5.56818 0.625 6.20455 1.23864C6.84849 1.85227 7.17424 2.59091 7.18182 3.45455C7.17424 4.04545 7.01894 4.58333 6.71591 5.06818C6.42045 5.54545 6.03409 5.92803 5.55682 6.21591C5.07955 6.49621 4.56061 6.63636 4 6.63636ZM11.3182 12.1364C11.2576 10.5833 11.4091 9.23485 11.7727 8.09091C12.1439 6.94697 12.7235 6.06439 13.5114 5.44318C14.3068 4.81439 15.303 4.5 16.5 4.5C17.1742 4.5 17.8371 4.63258 18.4886 4.89773C19.1477 5.16288 19.8939 5.66667 20.7273 6.40909C21.0833 6.7197 21.3977 6.98106 21.6705 7.19318C21.9508 7.39773 22.2879 7.5 22.6818 7.5C23.1439 7.5 23.5379 7.30682 23.8636 6.92045C24.197 6.52651 24.3485 5.87121 24.3182 4.95455H28.8636C28.9318 6.50758 28.7727 7.85606 28.3864 9C28 10.1439 27.4091 11.0303 26.6136 11.6591C25.8182 12.2803 24.8409 12.5909 23.6818 12.5909C22.947 12.5909 22.2424 12.4432 21.5682 12.1477C20.9015 11.8523 20.1818 11.3636 19.4091 10.6818C18.9924 10.3106 18.6629 10.0379 18.4205 9.86364C18.1856 9.68182 17.8788 9.59091 17.5 9.59091C17.0227 9.59091 16.625 9.78788 16.3068 10.1818C15.9886 10.5682 15.8409 11.2197 15.8636 12.1364H11.3182Z" fill="#222222"/>
+                        </svg>
+                </span>
+            </footer>
+        </div>
     </section>
+
+    <div id="modal-call-me-back" class="modal">
+        <div class="modal-container">
+            <h4>Перезвоните мне</h4>
+            <span class="close-icon">
+                <img src="../assets/images/modals/close-window-btn.svg" alt="close-icon">
+            </span>
+            <form class="reply-form" action="/call-me-back" method="post">
+                <div class="input-container">
+                    <input type="text"  id="name" class="styled-input"
+                    pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
+                    <label for="name" class="floating-label"
+                    data-original-text="Как к вам обращаться?"
+                    data-error-message="Как к вам обращаться? (не верный ввод)">
+                        Как к вам обращаться?
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="tel" id="telephone" class="styled-input"
+                    pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
+                    placeholder=" " required>
+                    <label for="telephone" class="floating-label"
+                    data-original-text="Ваша номер телефона"
+                    data-error-message="Ваш номер телефона (не верный ввод)">
+                        Ваш номер телефона
+                    </label>
+                </div>
+
+                <button class="btn btn-primary btn-call-me-back" type="submit">
+                    Перезвоните мне
+                </button>
+            </form>
+
+            <p class="personal-data-processing">
+                Нажимая на кнопку, вы даете согласие на <a href="" target="_blank"
+                rel="noopener noreferrer">обработку персональных данных</a>
+                 и соглашаетесь с <a href="" target="_blank"
+                rel="noopener noreferrer">публичной офертой</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="modal-become-our-partner" class="modal">
+        <div class="modal-container">
+            <h4>Стать нашим партнером</h4>
+            <span class="close-icon">
+                <img src="../assets/images/modals/close-window-btn.svg" alt="close-icon">
+            </span>
+            <form class="reply-form" action="/become-our-partner" method="post">
+                <div class="input-container">
+                    <input type="text"  id="name" class="styled-input"
+                    pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
+                    <label for="name" class="floating-label"
+                    data-original-text="Как к вам обращаться?"
+                    data-error-message="Как к вам обращаться? (не верный ввод)">
+                        Как к вам обращаться?
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="tel" id="telephone" class="styled-input"
+                    pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
+                    placeholder=" " required>
+                    <label for="telephone" class="floating-label"
+                    data-original-text="Ваша номер телефона"
+                    data-error-message="Ваш номер телефона (не верный ввод)">
+                        Ваш номер телефона
+                    </label>
+                </div>
+
+                <button class="btn btn-primary btn-call-me-back" type="submit">
+                    Перезвоните мне
+                </button>
+            </form>
+
+            <p class="personal-data-processing">
+                Нажимая на кнопку, вы даете согласие на <a href="" target="_blank"
+                rel="noopener noreferrer">обработку персональных данных</a>
+                 и соглашаетесь с <a href="" target="_blank"
+                rel="noopener noreferrer">публичной офертой</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="modal-get-transfer-price" class="modal">
+        <div class="modal-container">
+            <h4>Получите расчет стоимости трансфера</h4>
+            <span class="close-icon">
+                <img src="../assets/images/modals/close-window-btn.svg" alt="close-icon">
+            </span>
+            <form class="calculator-form" action="/calculate-transfer-price" method="post">
+                <div class="input-container">
+                    <input type="text"  id="name" class="styled-input"
+                    pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
+                    <label for="name" class="floating-label"
+                    data-original-text="Как к вам обращаться?"
+                    data-error-message="Как к вам обращаться? (не верный ввод)">
+                        Как к вам обращаться?
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="email"  id="email" class="styled-input"
+                     placeholder=" " required>
+                    <label for="email" class="floating-label"
+                    data-original-text="Ваша электронная почта"
+                    data-error-message="Ваша электронная почта (не верный ввод)">
+                        Ваша электронная почта
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="tel" id="telephone" class="styled-input"
+                    pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
+                    placeholder=" " required>
+                    <label for="telephone" class="floating-label"
+                    data-original-text="Ваша номер телефона"
+                    data-error-message="Ваш номер телефона (не верный ввод)">
+                        Ваш номер телефона
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="text"  id="message" class="styled-input"
+                    placeholder=" ">
+                    <label for="message" class="floating-label">
+                        Ваше сообщение (не обязательно)
+                    </label>
+                </div>
+
+                <button class="btn btn-primary btn-calculate-price" type="submit">
+                    Расчитать стоимость
+                </button>
+            </form>
+
+            <p class="personal-data-processing">
+                Нажимая на кнопку, вы даете согласие на <a href="" target="_blank"
+                rel="noopener noreferrer">обработку персональных данных</a>
+                 и соглашаетесь с <a href="" target="_blank"
+                rel="noopener noreferrer">публичной офертой</a>
+            </p>
+        </div>
+    </div>
 
     <script type="module" src="/moscow/src/main.js" defer></script>
 

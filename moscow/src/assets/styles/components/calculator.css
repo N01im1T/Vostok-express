@@ -27,7 +27,7 @@
     flex-wrap: wrap;
     gap: 0.5rem;
 
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 
 .styled-input:hover .calculator-form {

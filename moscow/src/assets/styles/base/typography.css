@@ -25,7 +25,7 @@ h1{
     font-weight: var(--weight-medium);
     font-size: 6rem;
     color: var(--text-color);
-    line-height: 1.2;
+    line-height: 115%;
 }
 
 h2{
@@ -33,7 +33,7 @@ h2{
     font-weight: var(--weight-medium);
     font-size: 4rem;
     color: var(--text-color-dark);
-    line-height: 1.159;
+    line-height: 115%;
 }
 
 h3{
@@ -41,7 +41,15 @@ h3{
     font-weight: var(--weight-semibold);
     font-size: 2.25rem;
     color: var(--text-color-dark);
-    line-height: 1.14;
+    line-height: 115%;
+}
+
+h4{
+    font-family: var(--font-medium);
+    font-weight: var(--weight-medium);
+    font-size: 2.25rem;
+    color: var(--text-color-dark);
+    line-height: 115%;
 }
 
 a {
@@ -97,7 +105,7 @@ p {
 /* Inputs */
 
 .input-container {
-    font-family: var(--font-refular);
+    font-family: var(--font-regular);
     font-weight: var(--weight-regular);
 }
 
@@ -131,11 +139,26 @@ p {
 
 .floating-label {
     font-size: 1rem;
-    color: var(--input-secondary-color);
+    color: var(--input-minor-color);
 }
 
 /* Modals */
 
+.modal-container h4,
+.modal-container p {
+    color: var(--text-color-dark);
+    text-align: left;
+}
+
+.modal-container p a {
+    color: var(--text-color-dark);
+    text-decoration: underline;
+    text-underline-offset: 3.5px;
+}
+
+.modal-container p a:hover {
+    text-decoration: none;
+}
 
 /* Header */
 
@@ -206,12 +229,11 @@ p {
     text-align: left;
 }
 
-.main-content-wraper p {
+.main-content-wraper p,
+.text-wrapper p,
+.car-info-item p {
     font-size: 1.5rem;
-}
-
-.text-wrapper p {
-    font-size: 1.5rem;
+    line-height: 130%;
 }
 
 .text-wrapper p a{
@@ -230,10 +252,7 @@ p {
     font-family: var(--font-medium);
     font-weight: var(--weight-medium);
     font-size: 4rem;
-}
-
-.car-info-item p{
-    font-size: 1.5rem;
+    line-height: 115%;
 }
 
 /* Transport */
@@ -248,28 +267,37 @@ p {
     font-size: 1.25rem;
 }
 
+.passanger-amount,
+.luggage-amount {
+    line-height: 120%;
+}
+
 .transport-quality {
     font-family: var(--font-bold);
     font-weight: var(--weight-bold);
     font-size: 2rem;
+    line-height: 110%;
 }
 
 .transport-description {
     font-family: var(--font-regular);
     font-weight: var(--weight-regular);
     font-size: 1rem;
+    line-height: 120%;
 }
 
 .transport-price {
     font-family: var(--font-bold);
     font-weight: var(--weight-bold);
     font-size: 2.5rem;
+    line-height: 110%;
 }
 
 .transport-price span:first-child {
     font-family: var(--font-extrabold);
     font-weight: var(--weight-extrabold);
     font-size: 1.25rem;
+    line-height: 120%;
 }
 
 /* Calculator */
@@ -282,6 +310,7 @@ p {
 
 .personal-data-processing {
     font-size: 1.125rem;
+    line-height: 140%;
     text-align: center;
     word-wrap:break-word;
 }
@@ -307,6 +336,7 @@ p {
 .advantages-about-company p,
 .advantages-about-supporting p {
     text-align: left;
+    line-height: 140%;
 }
 
 /* Steps */
@@ -327,6 +357,10 @@ p {
     fill: #333;
 }
 
+.step p {
+    line-height: 140%;
+}
+
 /* Airport transfer */
 
 .text h2 {
@@ -335,7 +369,7 @@ p {
 
 .text p {
     font-size: 1.5rem;
-    line-height: 1.6;
+    line-height: 130%;
 }
 
 /* About company */
@@ -345,16 +379,23 @@ p {
     color: var(--text-color-dark);
 }
 
+.about-company-text p {
+    text-align: left;
+    line-height: 130%;
+}
+
 .about-company-advantages {
     font-family: var(--font-black);
     font-weight: var(--weight-black);
     font-size: 6rem;
+    line-height: 110%;
 }
 
 .advantage-item p {
     font-family: var(--font-medium);
     font-weight: var(--weight-medium);
     font-size: 1.5rem;
+    line-height: 110%;
 }
 
 .highlight-symbol {
@@ -362,15 +403,87 @@ p {
 }
 
 .awards-slider-content a {
+    font-family: var(--font-bold);
+    font-weight: var(--weight-bold);
+    line-height: 130%;
     color: var(--text-color-dark);
     text-decoration: underline dotted;
     text-underline-offset: 3.5px;
     text-underline-position: below;
-    transition: text-decoration 0.4s ease;
 }
 
 .awards-slider-content a:hover {
     text-decoration: none;
+    
+    transition: text-decoration 0.4s ease;
+}
+
+.awards-slider-content p {
+    line-height: 110%;
+}
+
+/* Footer */
+
+.footer{
+    font-family: var(--font-regular);
+    font-weight: var(--weight-regular);
+    font-size: 1.25rem;
+    color: var(--text-color-dark);
+}
+
+.logo-container span {
+    font-size: 1rem;
+}
+
+.contacts h3,
+.feedback h3,
+.schedule h3,
+.be-our-pertner h3 {
+    font-family: var(--font-bold);
+    font-weight: var(--weight-bold);
+    font-size: 1.5rem;
+    line-height: 110%;
+} 
+
+.contacts a,
+.feedback a,
+.social-media-links a {
+    color: var(--text-color-dark);
+    line-height: 130%;
+}
+
+.schedule p {
+    line-height: 130%;
+}
+
+.number,
+.feedback-link {
+    font-family: var(--font-semibold);
+    font-weight: var(--weight-semibold);
+    line-height: 130%;
+}
+
+.content,
+.social-media-link {
+    text-decoration: underline;
+    text-underline-offset: 3.5px;
+    line-height: 130%;
+}
+
+.content:hover,
+.social-media-link:hover {
+    text-decoration: none;
+}
+
+.design-by {
+    font-family: var(--font-regular);
+    font-weight: var(--weight-regular);
+    font-size: 1.25rem;
+    line-height: 130%;
+}
+
+.special-symbols {
+    vertical-align: middle;
 }
 
 @media (max-width: 1440px) {
