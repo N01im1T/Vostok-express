@@ -117,9 +117,10 @@
 /* Toggle language button */
 
 .toggle-btn {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1.5rem;
 
     background-color: var(--primary-color);
@@ -128,31 +129,37 @@
     height: 37px;
     border: none;
 
-    transition: border-width 0.5s ease-in-out, padding 0.5s ease;
+    transition: all 0.5s ease-in-out;
 }
   
-.toggle-btn .active {
+.toggle-btn [aria-selected="true"] {
     padding: 0.5rem;
     border: 1px solid;
     border-radius: 1rem;
 }
 
-.toggle-btn .active:not(:disabled):hover {
-    padding: 0.4rem;
+.toggle-btn [aria-selected="true"]:not(:disabled):hover {
     border-width: 2px;
 }
 
-.toggle-btn .active:not(:disabled):active {
+.toggle-btn [aria-selected="true"]:not(:disabled):active {
     border-color: var(--toggle-btn-click);
 }
 
 .toggle-btn:disabled {
-    .active {
-        padding: 0.4rem;
-        border: 2px solid;
-        border-color: var(--toggle-btn-disable);
-    }
-
     pointer-events: none;
     cursor: not-allowed;
+}
+
+.toggle-btn:disabled [aria-selected="true"] {
+    border: 2px solid;
+    border-color: var(--toggle-btn-disable);
+}
+
+#ru[aria-selected="true"] ~ {
+    transform: translateX(100%);
+}
+
+#en[aria-selected="true"] ~ {
+    transform: translateX(0);
 }
