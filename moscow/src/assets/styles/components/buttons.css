@@ -35,6 +35,7 @@
 
 .btn-sm {
     width: 246px;
+    min-width: 246px;
 }
 
 .btn-lg {
@@ -90,10 +91,12 @@
 
 .btn-text-me {
     width: 148px;
+    min-width: 148px;
 }
 
 .btn-call-me-back {
     width: 216px;
+    min-width: 216px;
 }
 
 .btn-order {
@@ -162,4 +165,8 @@
 
 #en[aria-selected="true"] ~ {
     transform: translateX(0);
+}
+
+@media (max-width: 1440px) {
+    
 }

@@ -6,6 +6,7 @@ const modals = () => {
     var btnCallMeBack = document.getElementById("btn-call-me-back");
     var btnBecomeOurPartner = document.getElementById("btn-become-our-partner");
     var btnGetTransferPrice = document.getElementById("btn-get-transfer-price");
+    var btnGetTransferPrice2 = document.getElementById("btn-get-transfer-price-2");
 
     const modals = [modalCallMeBack, modalBecomeOurPartner, modalGetTransferPrice];
 
@@ -18,6 +19,10 @@ const modals = () => {
     });
 
     btnGetTransferPrice.addEventListener('click', function() {
+        toggleDiv(modalGetTransferPrice);
+    });
+
+    btnGetTransferPrice2.addEventListener('click', function() {
         toggleDiv(modalGetTransferPrice);
     });
 
