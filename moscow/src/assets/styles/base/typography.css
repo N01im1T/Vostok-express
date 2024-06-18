@@ -164,6 +164,7 @@ p {
 
 .logo-container span {
     text-align: start;
+    color: var(--text-color);
 }
 
 .location a:active .path-fill {
@@ -428,6 +429,10 @@ p {
     font-family: var(--font-regular);
     font-weight: var(--weight-regular);
     font-size: 1.25rem;
+    color: var(--text-color-dark);
+}
+
+.logo-container {
     color: var(--text-color-dark);
 }
 
