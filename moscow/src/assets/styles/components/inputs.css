@@ -1,7 +1,8 @@
 .input-container {
     position: relative;
-
-    width: 300px;
+    flex: 1 1 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
 }
 
 .input-container.disabled > .styled-input{   
@@ -71,4 +72,10 @@
 
 .call-me-back-form .styled-input:not(.disabled) {
     background-color: var(--input-primary-color);
+}
+
+@media (max-width: 623px) {
+    .input-container {
+        flex: 1 1 100%;
+    }
 }

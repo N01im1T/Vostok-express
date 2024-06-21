@@ -13,13 +13,14 @@
 
 .transport-card-goods-passanger img,
 .transport-card-goods-luggage img{
-    vertical-align:text-top;
+    vertical-align: text-top;
 }
 
 .transport-card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    grid-gap: 4.5rem;
+    column-gap: 4.5rem;
+    row-gap: 1.5rem;
     
     padding-right: 4rem;
     padding-left: 4rem;
@@ -68,4 +69,98 @@
 
 .price {
     margin-right: 0.5rem;
+}
+
+@media (max-width: 1440px) {
+    .transport-card-container {
+        column-gap: 6.375rem;
+        row-gap: 0.5rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .transport {
+        padding: 4rem 0 4rem;
+    }
+
+    .transport-card-container {
+        column-gap: 3.375rem;
+
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+
+    .transport h2 {
+        margin-bottom: 3.5rem;
+        padding-left: 4rem;
+    }
+}
+
+@media (max-width: 1152px) {
+    .transport-card {
+        max-width: 332px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .transport-card-container {
+        column-gap: 0.5rem;
+
+        margin-right: 4rem;
+        margin-left: 4rem;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .transport h2 {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .transport-card-container {
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+    }
+}
+
+@media (max-width: 684px) {
+    .transport-card-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    .transport-card {
+        margin: 0rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 543px) {
+    .transport-card {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 489px) {
+
+    .transport {
+        margin: 0 0.5rem 0 0.5rem;
+        padding: 1.5rem 0 1.5rem;
+    }
+
+    .transport h2 {
+        padding-left: 1rem;
+    }
+
+    .transport-card-container {
+        margin: 0;
+        padding: 0 1rem 0 1rem;
+    }
+}
+
+@media (max-width: 330px) {
+    .transport-card {
+        max-width: 290px;
+    }
 }

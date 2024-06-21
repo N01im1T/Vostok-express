@@ -19,7 +19,7 @@
 }
 
 .calculator-container h2 {
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 
 .calculator-form {
@@ -30,16 +30,6 @@
     margin-bottom: 3rem;
 }
 
-.styled-input:hover .calculator-form {
-    gap: 0.4rem;
-}
-
-.input-container {
-    flex: 1 1 calc(50% - 20px);
-    display: flex;
-    flex-direction: column;
-}
-
 .calculator-form button{
     flex: 1 1 100%;
     align-self: center;
@@ -47,4 +37,35 @@
 
 .personal-data-processing {
     max-width: 588px;
+}
+
+@media (max-width: 1000px) {
+    .calculator {
+        padding: 2rem 1.5rem 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 623px) {
+    .calculator-form {
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+        max-width: 527px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 489px) {
+    .calculator {
+        margin: 0 0.5rem 0 0.5rem;
+        padding: 1.5rem 1rem 1.5rem 1rem;
+    }
+
+    .calculator-container h2 {
+        margin-bottom: 1rem;
+    }
+    
+    .calculator-form {
+        margin-bottom: 1rem;
+    }
 }

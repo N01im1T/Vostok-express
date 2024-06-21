@@ -32,17 +32,19 @@
 }
 
 .modal-container {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
     background-color: #FFFFFF;
 
     max-width: 668px;
     width: 100%;
-    margin: 15% auto;
     padding: 2.5rem;
     border-radius: 1.5rem;
 
     animation: slideIn 0.5s;
+    transform: translate(-50%, -50%);
 }
 
 .modal-container:has(.calculator-form) {
@@ -50,8 +52,8 @@
 }
 
 @keyframes slideIn {
-    from {transform: translateY(-50px); opacity: 0;} 
-    to {transform: translateY(0); opacity: 1;}
+    from {transform: translate(-50%, -60%); opacity: 0;} 
+    to {transform: translate(-50%, -50%); opacity: 1;}
 }
 
 .modal-content.slide-out {
@@ -59,8 +61,8 @@
 }
 
 @keyframes slideOut {
-    from {transform: translateY(0); opacity: 1;}
-    to {transform: translateY(-50px); opacity: 0;}
+    from {transform: translate(-50%, -50%); opacity: 1;}
+    to {transform: translate(-50%, -60%); opacity: 0;}
 }
 
 .modal-container h4{
@@ -85,4 +87,50 @@
 
 .modal-container > .calculator-form {
     margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+    .modal-container:has(.calculator-form) {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-container {
+        max-width: 580px;
+    }
+
+    .modal-container:has(.calculator-form) {
+        max-width: 580px;
+    }
+}
+
+@media (max-width: 622px) {
+    .modal-container {
+        max-width: 400px;
+    }
+
+    .modal-container:has(.calculator-form) h4 {
+        max-width: 250px;
+    }
+
+    .modal-container:has(.calculator-form) {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 420px) {
+    .modal-container {
+        max-width: 289px;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+
+    .modal-container h4,
+    .modal-container:has(.calculator-form) h4  {
+        max-width: 233px;
+    }
+
+    .modal-container:has(.calculator-form) {
+        max-width: 289px;
+    }
 }

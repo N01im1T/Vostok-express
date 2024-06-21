@@ -23,7 +23,8 @@
     padding-bottom: 6rem;
 }
 
-.about-company-text h3 {
+.about-company-text h3,
+.about-company-awards h3 {
     margin-bottom: 3rem;
 }
 
@@ -54,10 +55,6 @@
     padding-bottom: 6rem;
 }
 
-.about-company-awards h3 {
-    margin-bottom: 3rem;
-}
-
 .awards-slider .awards-slider-content:not(:first-child) {
     margin-top: 2rem;
 }
@@ -69,4 +66,92 @@
 .awards-slider-content::before {
     content: url(/moscow/public/assets/images/about-company/file-icon.svg);
     vertical-align: text-top;
+}
+
+@media (max-width: 1440px) {
+    .about-company-text {
+        max-width: 657px;
+    }
+
+    .about-company-awards {
+        max-width: 378px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .about-company {
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+
+    .about-company-text {
+        max-width: 529px;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .about-company-awards {
+        max-width: 465px;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-company {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .about-company-text h3,
+    .about-company-awards h3 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-company-container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .about-company-text {
+        max-width: 672px;
+        padding-bottom: 2rem;
+    }
+
+    .about-company-awards {
+        max-width: 672px;
+        padding-bottom: 6rem;
+    }
+}
+
+@media (max-width: 489px) {
+    .about-company {
+        margin: 0 0.5rem 0 0.5rem;
+        padding: 0 1rem 0 1rem;
+    }
+
+    .about-company-text,
+    .about-company-awards {
+        padding: 1.5rem 0 1.5rem 0;
+    }
+
+    .about-company-text h3,
+    .about-company-awards h3 {
+        margin-bottom: 1rem;
+    }
+
+    .about-company-text p {
+        margin-bottom: 1.5rem;
+    }
+
+    .about-company-advantages {
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    .advantage-item p {
+        margin-bottom: 0;
+    }
 }
