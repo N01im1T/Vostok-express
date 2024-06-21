@@ -9,7 +9,6 @@
 
 .airport-transfer-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: space-between;
@@ -43,4 +42,66 @@
     height: 100%;
     border: 0;
     border-radius: 50%;
+}
+
+@media (max-width: 1440px) {
+    .map iframe {
+        max-width: 555px;
+        max-height: 555px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .airport-transfer {
+        padding: 4rem 4rem 4rem 4rem;
+    }
+
+    .map {
+        align-items: flex-start;
+    }
+
+    .map iframe {
+        max-width: 393px;
+        max-height: 393px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .airport-transfer {
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .airport-transfer-container {
+        flex-direction: column-reverse;
+        row-gap: 1.5rem;
+    }
+
+    .map {
+        justify-content: flex-start;
+    }
+
+    .map iframe {
+        position: static;
+        min-height: 393px;
+    }
+}
+
+@media (max-width: 768px) {
+    .airport-transfer-container > .text h2,
+    .airport-transfer-container > .text p {
+        max-width: 618px;
+    }
+}
+
+@media (max-width: 489px) {
+    .airport-transfer {
+        margin: 0 0.5rem 0 0.5rem;
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .map iframe {
+        max-width: 256px;
+        max-height: 256px;
+        min-height: 256px;
+    }
 }

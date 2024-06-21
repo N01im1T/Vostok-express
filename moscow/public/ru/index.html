@@ -21,10 +21,18 @@
 <body>
     <header class="header">
         <div class="header-container">
-            <div class="top-bar">
-                <a class="logo-container" href="http://" target="_blank" 
+            <div class="top-bar deactive">
+                <a class="logo-container" href="http://" target="_blank"
                 rel="noopener noreferrer">
-                    <img src="../assets/images/header/logo-light.png" alt="logo-light">
+                    <img src="../assets/images/header/logo-light.png"
+                    alt="logo-light">
+                    <span>Трансфер в аэропорт города Москва</span>
+                </a>
+
+                <a class="dark-logo-container" href="http://" target="_blank"
+                rel="noopener noreferrer">
+                    <img src="../assets/images/header/logo-dark.png"
+                    alt="logo-dark">
                     <span>Трансфер в аэропорт города Москва</span>
                 </a>
 
@@ -39,7 +47,7 @@
                 <div class="contact-info">
                     <div class="location">
                         <a class="" href="https://yandex.ru/maps/org/mezhdunarodny_aeroport_sheremetyevo_im_a_s_pushkina/1101237450/?from=mapframe&ll=37.388151%2C55.974854&z=13"
-                         target="_blank" rel="noopener noreferrer">
+                            target="_blank" rel="noopener noreferrer">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="location-icon">
                                 <path class="path-fill" d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" fill="#F2F2F2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path class="path-stroke" d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -47,25 +55,38 @@
                             Москва
                         </a>
                     </div>
+
                     <div class="email">
                         <a href="tel:+7999074-67-78" target="_blank"
-                         rel="noopener noreferrer">
+                            rel="noopener noreferrer">
                             +7(999)074-67-78
                         </a>
+
                         <a href="mailto:2a@gmail.com" target="_blank"
-                         rel="noopener noreferrer">
+                            rel="noopener noreferrer">
                             2a@gmail.com
                         </a>
                     </div>
+
                     <button id="btn-call-me-back" type="button" class="btn btn-secondary btn-call-me-back">
                         Перезвоните мне
                     </button>
                 </div>
+
+                <button class="mobile-burger-btn" type="button">
+                    <img src="../assets/images/header/burger-icon.svg"
+                    alt="burger-icon">
+                </button>
+
+                <button class="mobile-btn-close-top-bar" type="button">
+                    <img src="../assets/images/header/close-icon.svg"
+                    alt="close-icon">
+                </button>
             </div>
             
             <div class="header-main-content">
                 <div class="main-content-wraper">
-                    <h1>
+                    <h1 class="main-content-header">
                         Трансфер <img class="emoji"
                         src="../assets/images/header/airplane-emoji.png"
                         alt="airplane-emoji"> в аэропорт города <img 
@@ -73,7 +94,7 @@
                         src="../assets/images/header/round_pushpin-emoji.png"
                         alt="airplane-emoji"> Москва
                     </h1>
-                    <p>
+                    <p class="main-content-wraper-text">
                         Или обратно по предварительному заказу по любым направлениям
                         легковыми автомобилями, минивэнами, микроавтобусами и автобусами.
                     </p>
@@ -336,9 +357,9 @@
                 </div>
 
                 <div class="input-container">
-                    <input type="text"  id="message" class="styled-input"
+                    <input type="text"  id="message" class="styled-input message-input"
                     placeholder=" ">
-                    <label for="message" class="floating-label">
+                    <label for="message" class="floating-label message-label">
                         Ваше сообщение (не обязательно)
                     </label>
                 </div>
@@ -358,9 +379,10 @@
 
     <section id="advantages" class="advantages">
         <div class="advantages-container">
-            <div class="advantages-about-company" aria-labelledby="advantages-about-company-heading">
+            <div class="advantages-about-company" 
+            aria-labelledby="advantages-about-company-heading">
                 <img src="../assets/images/advantages/sport_utility_vehicle-emoji.png"
-                 alt="sport_utility_vehicle-emoji">
+                alt="sport_utility_vehicle-emoji">
 
                 <h3 id="advantages-about-company-heading">
                     О трансферной компании в городе Москва
@@ -397,7 +419,7 @@
             <div class="steps-container">
                 <div class="step" aria-labelledby="first-step-heading">
                     <div class="step-number">
-                        <svg width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="step-svg-1" width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M96 40C96 44.5 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 96 35.5 96 40Z" fill="#F2C94C" />
                             <text x="39" y="41" class="centered-text"  dominant-baseline="middle">1</text>
                         </svg>
@@ -407,7 +429,7 @@
                 </div>
                 <div class="step" aria-labelledby="second-step-heading">
                     <div class="step-number">
-                        <svg width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="step-svg-2" width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M96 40C96 44.5 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 96 35.5 96 40Z" fill="#F2C94C" />
                             <text x="39" y="41" class="centered-text"  dominant-baseline="middle">2</text>
                         </svg>
@@ -417,7 +439,7 @@
                 </div>
                 <div class="step" aria-labelledby="third-step-heading">
                     <div class="step-number">
-                        <svg width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="step-svg-3" width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M96 40C96 44.5 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 96 35.5 96 40Z" fill="#F2C94C" />
                             <text x="39" y="41" class="centered-text"  dominant-baseline="middle">3</text>
                         </svg>
@@ -427,7 +449,7 @@
                 </div>
                 <div class="step" aria-labelledby="fourth-step-heading">
                     <div class="step-number">
-                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="step-svg-4" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M80 40C80 65.5 61.3248 80 39.5062 80C17.6875 80 0 62.0914 0 40C0 17.9086 17.6875 0 39.5062 0C61.3248 0 80 17.5 80 40Z" fill="#F2C94C" />
                             <text x="39" y="41" class="centered-text" dominant-baseline="middle">4</text>
                         </svg>
@@ -449,8 +471,7 @@
                 <button id="btn-get-transfer-price-2" type="button" class="btn btn-primary btn-sm">Рассчитать стоимость</button>
             </div>
             <div id="map" class="map">
-                <iframe 
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A7990650d664c4d0fae96bd0ff792687199a97c88d7e7bdc5da6c61c23b1a7c35&amp;source=constructor" 
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7990650d664c4d0fae96bd0ff792687199a97c88d7e7bdc5da6c61c23b1a7c35&amp;source=constructor" 
                 width="640" height="640" frameborder="0">
                 </iframe>
             </div>
@@ -459,7 +480,8 @@
 
     <section id="about-company" class="about-company">
         <div class="about-company-container">
-                <section class="about-company-text" aria-labelledby="about-company-heading">
+                <section class="about-company-text" 
+                aria-labelledby="about-company-heading">
                     <h3 id="about-company-heading">О компании</h3>
                     <p>У нас вы можете заказать чартерные перелеты на самолетах любого размера и класса, ВИП-перелеты в личных и корпоративных целях. Наши преимущества — самые высокие стандарты качества обслуживания на борту, всесторонняя помощь при прохождении аэропортовых процедур, а самое главное трансфер до места назначения на наших авто, абсолютная безопасность и конфиденциальность.</p>
                     <div class="about-company-advantages">
@@ -506,57 +528,93 @@
                         <ul class="awards-slider splide__list">
                             <li class="awards-slider-slide splide__slide">
                                 <div class="awards-slider-content">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Почетная грамота</a>
+                                    <a href="http://" target="_blank" 
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
                                     <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
                                 </div>
                                 <div class="awards-slider-content">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Грамота</a>
+                                    <a href="http://" target="_blank" 
+                                    rel="noopener noreferrer">
+                                        Грамота
+                                    </a>
                                     <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
                                 </div>
                                 <div class="awards-slider-content">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Почетная грамота</a>
-                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                </div>
-                            </li>
-                            <li class="awards-slider-slide splide__slide">
-                                <div class="awards-slider-content">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Почетная грамота</a>
-                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                </div>
-                                <div class="awards-slider-content">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Грамота</a>
-                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                </div>
-                                <div class="awards-slider-content">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Почетная грамота</a>
+                                    <a href="http://" target="_blank" 
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
                                     <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
                                 </div>
                             </li>
                             <li class="awards-slider-slide splide__slide">
                                 <div class="awards-slider-content">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Почетная грамота</a>
+                                    <a href="http://" target="_blank" 
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
                                     <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
                                 </div>
                                 <div class="awards-slider-content">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Грамота</a>
+                                    <a href="http://" target="_blank" 
+                                    rel="noopener noreferrer">
+                                        Грамота
+                                    </a>
                                     <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
                                 </div>
                                 <div class="awards-slider-content">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Почетная грамота</a>
+                                    <a href="http://" target="_blank" 
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
                                     <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
                                 </div>
                             </li>
                             <li class="awards-slider-slide splide__slide">
                                 <div class="awards-slider-content">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Почетная грамота</a>
+                                    <a href="http://" target="_blank" 
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
                                     <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
                                 </div>
                                 <div class="awards-slider-content">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Грамота</a>
+                                    <a href="http://" target="_blank" 
+                                    rel="noopener noreferrer">
+                                        Грамота
+                                    </a>
                                     <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
                                 </div>
                                 <div class="awards-slider-content">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer">Почетная грамота</a>
+                                    <a href="http://" target="_blank" 
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                            </li>
+                            <li class="awards-slider-slide splide__slide">
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank" 
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank" 
+                                    rel="noopener noreferrer">
+                                        Грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank" 
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
                                     <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
                                 </div>
                             </li>
@@ -607,9 +665,9 @@
                 </div>
 
                 <div class="input-container">
-                    <input type="text"  id="message" class="styled-input"
+                    <input type="text"  id="message" class="styled-input message-input"
                     placeholder=" ">
-                    <label for="message" class="floating-label">
+                    <label for="message" class="floating-label  message-label">
                         Ваше сообщение (не обязательно)
                     </label>
                 </div>
@@ -629,71 +687,73 @@
 
     <section id="footer" class="footer">
         <div class="footer-top">
-            <a class="logo-container" href="http://" target="_blank" 
+            <a class="footer-logo-container" href="http://" target="_blank" 
             rel="noopener noreferrer">
                 <img src="../assets/images/footer/footer-site-logo.png" alt="logo-dark">
                 <span>Трансфер в аэропорт города Москва</span>
             </a>
 
-            <section class="contacts" aria-labelledby="contacts-section-heading">
-                <h3 id="contacts-section-heading">Контакты</h3>
-                <div class="contacts-item">
-                    <a class="number" href="tel:+" target="_blank" 
-                    rel="noopener noreferrer">+74951084848</a>
-                    <a class="content" href="http://" target="_blank" 
-                    rel="noopener noreferrer">Хабаровск</a>
-                </div>
-                <div class="contacts-item">
-                    <a class="number" href="tel:+" target="_blank" 
-                    rel="noopener noreferrer">+74951084848</a>
-                    <a class="content" href="http://" target="_blank" 
-                    rel="noopener noreferrer">Москва</a>
-                </div>
-                <div class="contacts-item">
-                    <a class="number" href="tel:+" target="_blank" 
-                    rel="noopener noreferrer">+74951084848</a>
-                    <a class="content" href="http://" target="_blank" 
-                    rel="noopener noreferrer">Сочи</a>
-                </div>
-                <div class="contacts-item">
-                    <a class="number" href="tel:+" target="_blank" 
-                    rel="noopener noreferrer">+74951084848</a>
-                    <a class="content" href="http://" target="_blank" 
-                    rel="noopener noreferrer">Владивосток</a>
-                </div>
-                <div class="contacts-item">
-                    <a class="number" href="tel:+" target="_blank" 
-                    rel="noopener noreferrer">+74951084848</a>
-                    <a class="content" href="http://" target="_blank" 
-                    rel="noopener noreferrer">WhatsApp</a>
-                    <a class="content" href="http://" target="_blank" 
-                    rel="noopener noreferrer">Telegram</a>
-                </div>
-            </section>
+            <div class="footer-top-wrapper">
+                <section class="contacts" aria-labelledby="contacts-section-heading">
+                    <h3 id="contacts-section-heading">Контакты</h3>
+                    <div class="contacts-item">
+                        <a class="number" href="tel:+" target="_blank"
+                        rel="noopener noreferrer">+74951084848</a>
+                        <a class="content" href="http://" target="_blank"
+                        rel="noopener noreferrer">Хабаровск</a>
+                    </div>
+                    <div class="contacts-item">
+                        <a class="number" href="tel:+" target="_blank"
+                        rel="noopener noreferrer">+74951084848</a>
+                        <a class="content" href="http://" target="_blank"
+                        rel="noopener noreferrer">Москва</a>
+                    </div>
+                    <div class="contacts-item">
+                        <a class="number" href="tel:+" target="_blank"
+                        rel="noopener noreferrer">+74951084848</a>
+                        <a class="content" href="http://" target="_blank"
+                        rel="noopener noreferrer">Сочи</a>
+                    </div>
+                    <div class="contacts-item">
+                        <a class="number" href="tel:+" target="_blank"
+                        rel="noopener noreferrer">+74951084848</a>
+                        <a class="content" href="http://" target="_blank"
+                        rel="noopener noreferrer">Владивосток</a>
+                    </div>
+                    <div class="contacts-item">
+                        <a class="number" href="tel:+" target="_blank"
+                        rel="noopener noreferrer">+74951084848</a>
+                        <a class="content" href="http://" target="_blank"
+                        rel="noopener noreferrer">WhatsApp</a>
+                        <a class="content" href="http://" target="_blank"
+                        rel="noopener noreferrer">Telegram</a>
+                    </div>
+                </section>
 
-            <section class="feedback" aria-labelledby="feedback-section-heading">
-                <h3 id="feedback-section-heading">Обратная связь</h3>
-                <a class="feedback-link" href="http://" target="_blank"
-                rel="noopener noreferrer">2a@gmail.com</a>
-                <a class="feedback-link" href="http://" target="_blank"
-                rel="noopener noreferrer">info@2a.com</a>
-                <a class="feedback-link" href="http://" target="_blank" 
-                rel="noopener noreferrer">2a@gmail.com</a>
-            </section>
+                <section class="feedback" aria-labelledby="feedback-section-heading">
+                    <h3 id="feedback-section-heading">Обратная связь</h3>
+                    <a class="feedback-link" href="http://" target="_blank"
+                    rel="noopener noreferrer">2a@gmail.com</a>
+                    <a class="feedback-link" href="http://" target="_blank"
+                    rel="noopener noreferrer">info@2a.com</a>
+                    <a class="feedback-link" href="http://" target="_blank"
+                    rel="noopener noreferrer">2a@gmail.com</a>
+                </section>
 
-            <section class="schedule" aria-labelledby="schedule-section-heading">
-                <h3 id="schedule-section-heading">Режим работы</h3>
-                <p>ежедневно с 8:00 до 20:00 (МСК)</p>
-            </section>
+                <section class="schedule" aria-labelledby="schedule-section-heading">
+                    <h3 id="schedule-section-heading">Режим работы</h3>
+                    <p>ежедневно с 8:00 до 20:00 (МСК)</p>
+                </section>
 
-            <section class="be-our-pertner" aria-labelledby="partnership-section-heading">
-                <h3 id="partnership-section-heading">Стать нашим партнером</h3>
-                <p>и получай бонусы уже сегодня</p>
-                <button id="btn-become-our-partner" type="button"
-                 class="btn btn-secondary black btn-text-me">
-                 Напиши мне
-                </button>
-            </section>
+                <section class="be-our-partner" aria-labelledby="partnership-section-heading">
+                    <h3 id="partnership-section-heading">Стать нашим партнером</h3>
+                    <p>и получай бонусы уже сегодня</p>
+                    <button id="btn-become-our-partner" type="button"
+                     class="btn btn-secondary black btn-text-me">
+                     Напиши мне
+                    </button>
+                </section>
+            </div>
         </div>
 
         <div class="footer-bottom">
@@ -848,7 +908,7 @@
                     <input type="text"  id="message" class="styled-input"
                     placeholder=" ">
                     <label for="message" class="floating-label">
-                        Ваше сообщение (не обязательно)
+                        Ваше сообщение
                     </label>
                 </div>
 
@@ -865,6 +925,8 @@
             </p>
         </div>
     </div>
+
+    <div class="mobile-bar-overlay"></div>
 
     <script type="module" src="/moscow/src/main.js" defer></script>
 

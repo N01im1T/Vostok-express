@@ -15,6 +15,7 @@
     background-color: var(--btn-color-default-primary);
 
     height: 67px;
+    min-height: 67px;
     border: none;
 }
 
@@ -126,7 +127,7 @@
     justify-content: space-between;
     gap: 1.5rem;
 
-    background-color: var(--primary-color);
+    background-color: transparent;
 
     width: 85px;
     height: 37px;
@@ -167,6 +168,58 @@
     transform: translateX(0);
 }
 
-@media (max-width: 1440px) {
+/* Mobile Buttons */
+
+.mobile-burger-btn {
+    display: none;
+
+    background-color: transparent;
     
+    width: 32px;
+    height: 32px;
+    border: none;
+
+    transition: transform 0.3s ease;
+}
+
+.mobile-burger-btn:active {
+    transform: scale(1.1);
+}
+
+.mobile-btn-close-top-bar {
+    display: none;
+
+    background-color: transparent;
+
+    width: 32px;
+    height: 32px;
+    border: none;
+
+}
+
+@media (max-width: 1150px) {
+    /* Mobile Buttons */
+
+    .top-bar.mobile-bar.active > .mobile-burger-btn {
+        display: none;
+    }
+
+    .top-bar.mobile-bar.deactive > .mobile-burger-btn {
+        display: flex;
+    }
+
+    .mobile-bar > .mobile-btn-close-top-bar {
+        position: absolute;
+        display: block;
+        top: 2.5rem;
+        right: 1.5rem;
+    }
+}
+
+@media (max-width: 592px) {
+    .btn-sm {
+        max-width: 496px;
+        min-width: 272px;
+        width: 100%;
+    }
 }
