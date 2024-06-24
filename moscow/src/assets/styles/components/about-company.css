@@ -68,6 +68,78 @@
     vertical-align: text-top;
 }
 
+
+.awards-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.awards-slider-slide {
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.awards-slider-slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.awards-slides {
+    display: flex;
+
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+
+.grabbing {
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: 3rem;
+}
+
+.slider-controls .prev,
+.slider-controls .next {
+    background-color: transparent;
+
+    border: none;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+
+    margin: 0 1rem;
+}
+
+.pagination-dot {
+    background-color: var(--primary-color);
+
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    
+    cursor: pointer;
+}
+
+.pagination-dot.active {
+    background-color: #828282;
+}
+
 @media (max-width: 1440px) {
     .about-company-text {
         max-width: 657px;
@@ -124,7 +196,12 @@
         max-width: 672px;
         padding-bottom: 6rem;
     }
+
+    .slider-controls {
+        margin-top: 1.5rem;
+    }
 }
+
 
 @media (max-width: 489px) {
     .about-company {
@@ -153,5 +230,9 @@
 
     .advantage-item p {
         margin-bottom: 0;
+    }
+
+    .slider-controls {
+        margin-top: 3rem;
     }
 }
