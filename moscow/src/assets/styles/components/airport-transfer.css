@@ -81,8 +81,8 @@
     }
 
     .map iframe {
-        position: static;
-        min-height: 393px;
+        position: relative;
+        height: 393px;
     }
 }
 
