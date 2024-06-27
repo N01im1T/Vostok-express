@@ -21,7 +21,15 @@ const inputs = () => {
     
     document.querySelectorAll('input[type="tel"]').forEach(function (input) {
         input.addEventListener('input', function (e) {
-            this.value = this.value.replace(/[a-zA-Zа-яА-Я]/g, '');
+            this.value = this.value.replace(/\D/, '');
+        });
+
+        input.addEventListener('paste', function (e) {
+            e.preventDefault();
+        });
+      
+        input.addEventListener('drop', function (e) {
+            e.preventDefault();
         });
     });
 

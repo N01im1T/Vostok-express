@@ -4,24 +4,978 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vostok express</title>
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Vostok express">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Vostok express">
+    <title>Vostok Express: Transfers and Transport Services in the Best Traditions</title>
+    <link rel="alternate" href="https://ve/moscow/public/ru.org" hreflang="ru">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../assets/android-chrome-512x512.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../assets/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-    <link rel="icon" href="/moscow/public/assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="../assets/site.webmanifest">
     <link rel="mask-icon" href="../assets/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="/moscow/src/assets/styles/main.css">
+    <!-- Дополнить описанием страницы meta -->
+    <meta content="" id="meta-description" name="description">
+    <meta name="keywords" content="учить, испанский, немецкий, французский, португальский, итальянский, английский, бесплатно, уроки, курс, язык, исследование, карточки">
 </head>
 
 <body>
+    <header class="header">
+        <div class="header-container">
+            <div class="top-bar deactive">
+                <a class="logo-container" href="http://" target="_blank"
+                rel="noopener noreferrer">
+                    <img src="../assets/images/header/logo-light.png"
+                    alt="logo-light">
+                    <span>Transfer to the airport in Moscow</span>
+                </a>
 
+                <a class="dark-logo-container" href="http://" target="_blank"
+                rel="noopener noreferrer">
+                    <img src="../assets/images/header/logo-dark.png"
+                    alt="logo-dark">
+                    <span>Transfer to the airport in Moscow</span>
+                </a>
 
+                <div class="toggle-language-container">
+                    <button id="toggle-btn" class="toggle-btn" role="switch" aria-checked="true">
+                        <span id="ru" class="ru" aria-selected="false">RU</span>
+                        <span id="en" class="en" aria-selected="true">EN</span>
+                        <span class="indicator"></span>
+                    </button>
+                </div>
 
+                <div class="contact-info">
+                    <div class="location">
+                        <a class="" href="https://yandex.ru/maps/org/mezhdunarodny_aeroport_sheremetyevo_im_a_s_pushkina/1101237450/?from=mapframe&ll=37.388151%2C55.974854&z=13"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="location-icon">
+                                <path class="path-fill" d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" fill="#F2F2F2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="path-stroke" d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Moscow
+                        </a>
+                    </div>
+
+                    <div class="email">
+                        <a href="tel:+7999074-67-78" target="_blank"
+                            rel="noopener noreferrer">
+                            +7(999)074-67-78
+                        </a>
+
+                        <a href="mailto:2a@gmail.com" target="_blank"
+                            rel="noopener noreferrer">
+                            2a@gmail.com
+                        </a>
+                    </div>
+
+                    <button id="btn-call-me-back" type="button" class="btn btn-secondary btn-call-me-back">
+                        Call me back
+                    </button>
+                </div>
+
+                <button class="mobile-burger-btn" type="button">
+                    <img src="../assets/images/header/burger-icon.svg"
+                    alt="burger-icon">
+                </button>
+
+                <button class="mobile-btn-close-top-bar" type="button">
+                    <img src="../assets/images/header/close-icon.svg"
+                    alt="close-icon">
+                </button>
+            </div>
+            
+            <div class="header-main-content">
+                <div class="main-content-wraper">
+                    <h1 class="main-content-header">
+                        Transfer <img class="emoji"
+                        src="../assets/images/header/airplane-emoji.png"
+                        alt="airplane-emoji"> <br> to the airport <br>
+                        <img 
+                        class="emoji" 
+                        src="../assets/images/header/round_pushpin-emoji.png"
+                        alt="airplane-emoji"> in Moscow
+                    </h1>
+                    <p class="main-content-wraper-text eng">
+                        Or back with a prior reservation to any destination by cars, minivans, minibuses, and buses.
+                    </p>
+                    <div class="text-wrapper">
+                        <button type="button" class="btn btn-primary btn-sm btn-get-transfer-cost">
+                            Calculate cost
+                        </button>
+                        <p>
+                            or ask in <a href="#">WhatsApp</a>, <a href="#">Telegram</a>
+                        </p>
+                    </div>
+            
+                    <div class="car-info">
+                        <div class="car-info-item">
+                            <span>200+</span>
+                            <p>«Economy» and «Standard» class cars</p>
+                        </div>
+                        <div class="car-info-item">
+                            <span>100+</span>
+                            <p>«Economy» and «Standard» class cars</p>
+                        </div>
+                        <div class="car-info-item">
+                            <span>50+</span>
+                            <p>«Economy» and «Standard» class cars</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-section eng">
+                    <img src="../assets/images/header/khabarovsk-airport.png"
+                    alt="Moscow International Airport">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="transport" class="transport" aria-labelledby="transport-heading">
+        <h2 id="transport-heading">Choose the suitable transport</h2>
+
+        <div class="transport-card-container">
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Standart</span>
+                <p class="transport-description">Medium-sized cars with a spacious interior and luggage compartment.</p>
+                <p class="transport-price">
+                    <span>from</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Order</button>
+            </div>
+
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Standart</span>
+                <p class="transport-description">Medium-sized cars with a spacious interior and luggage compartment.</p>
+                <p class="transport-price">
+                    <span>from</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Order</button>
+            </div>
+
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Standart</span>
+                <p class="transport-description">Medium-sized cars with a spacious interior and luggage compartment.</p>
+                <p class="transport-price">
+                    <span>from</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Order</button>
+            </div>
+
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Standart</span>
+                <p class="transport-description">Medium-sized cars with a spacious interior and luggage compartment.</p>
+                <p class="transport-price">
+                    <span>from</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Order</button>
+            </div>
+
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Standart</span>
+                <p class="transport-description">Medium-sized cars with a spacious interior and luggage compartment.</p>
+                <p class="transport-price">
+                    <span>from</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Order</button>
+            </div>
+
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Standart</span>
+                <p class="transport-description">Medium-sized cars with a spacious interior and luggage compartment.</p>
+                <p class="transport-price">
+                    <span>from</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Order</button>
+            </div>
+
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Standart</span>
+                <p class="transport-description">Medium-sized cars with a spacious interior and luggage compartment.</p>
+                <p class="transport-price">
+                    <span>from</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Order</button>
+            </div>
+            
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Standart</span>
+                <p class="transport-description">Medium-sized cars with a spacious interior and luggage compartment.</p>
+                <p class="transport-price">
+                    <span>from</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Order</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator" aria-labelledby="calculator-heading">
+        <div class="calculator-container">
+            <h2 id="calculator-heading">Get the transfer cost</h2>
+            <form class="calculator-form" action="/calculate-transfer-price" method="post">
+                <div class="input-container">
+                    <input type="text"  id="name" class="styled-input"
+                    pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
+                    <label for="name" class="floating-label"
+                    data-original-text="How can we address you?"
+                    data-error-message="How can we address you? (incorrect input)">
+                        How can we address you?
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="email"  id="email" class="styled-input"
+                     placeholder=" " required>
+                    <label for="email" class="floating-label"
+                    data-original-text="Your e-mail"
+                    data-error-message="Your e-mail (incorrect input)">
+                        Your e-mail
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="tel"  id="telephone" class="styled-input"
+                    pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
+                    placeholder=" " required>
+                    <label for="telephone" class="floating-label"
+                    data-original-text="Your phone number"
+                    data-error-message="Your phone number (incorrect input)">
+                        Your phone number
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="text"  id="message" class="styled-input"
+                    placeholder=" ">
+                    <label for="message" class="floating-label">
+                        Your message (optional)
+                    </label>
+                </div>
+
+                <button class="btn btn-primary btn-lg" type="submit">
+                    Calculate cost
+                </button>
+            </form>
+            <p class="personal-data-processing">
+                By pressing the button you consent to the <a href="" target="_blank"
+                rel="noopener noreferrer">processing of personal data</a>
+                and agree to the <a href="" target="_blank"
+                rel="noopener noreferrer">public offer</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="advantages" class="advantages">
+        <div class="advantages-container">
+            <div class="advantages-about-company" 
+            aria-labelledby="advantages-about-company-heading">
+                <img src="../assets/images/advantages/sport_utility_vehicle-emoji.png"
+                alt="sport_utility_vehicle-emoji">
+
+                <h3 id="advantages-about-company-heading">
+                    About the transfer company in Moscow
+                </h3>
+
+                <p>
+                    We save customers from long-term search of reliable suppliers to organize transfers from the airport or railway station, and rent any vehicles in the city of Moscow. You and your customers will be absolutely certain that the services will be provided properly. As a direct performer, we link all the details into a consistent logical service chain:
+                </p>
+
+                <ul>
+                    <li>Transfers</li>
+                    <li>Car rental with driver</li>
+                    <li>VIP service</li>
+                    <li>Group and child transport</li>
+                    <li>Long-distance trips</li>
+                </ul>
+            </div>
+            <div class="advantages-about-supporting" 
+            aria-labelledby="advantages-about-supporting-heading">
+                <img src="../assets/images/advantages/telephone_receiver-emoji.png"
+                 alt="telephone_receiver-emoji">
+                <h3 id="advantages-about-company-heading">
+                    24-hour support in Russian and English
+                </h3>
+                 <p>
+                    The professionalism of our operators and managers will completely close your business trip or business trip to Moscow. Book services in the company "Vostok express" and be sure that we will put a little more effort than it will take to get you the necessary result.
+                 </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="steps" class="steps" aria-labelledby="steps-heading">
+        <h2 id="steps-heading">How to order a transfer</h2>
+            <div class="steps-container">
+                <div class="step" aria-labelledby="first-step-heading">
+                    <div class="step-number">
+                        <svg id="step-svg-1" width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M96 40C96 44.5 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 96 35.5 96 40Z" fill="#F2C94C" />
+                            <text x="39" y="41" class="centered-text"  dominant-baseline="middle">1</text>
+                        </svg>
+                    </div>
+                    <h3 id="first-step-heading">Submit a Request</h3>
+                    <p>By any available meyhod: phone, e&#8288;-&#8288;mail, personal account, messenger</p>
+                </div>
+                <div class="step" aria-labelledby="second-step-heading">
+                    <div class="step-number">
+                        <svg id="step-svg-2" width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M96 40C96 44.5 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 96 35.5 96 40Z" fill="#F2C94C" />
+                            <text x="39" y="41" class="centered-text"  dominant-baseline="middle">2</text>
+                        </svg>
+                    </div>
+                    <h3 id="second-step-heading">Choose an Option</h3>
+                    <p>We provide several options. You choose the most suitable one</p>
+                </div>
+                <div class="step" aria-labelledby="third-step-heading">
+                    <div class="step-number">
+                        <svg id="step-svg-3" width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M96 40C96 44.5 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 96 35.5 96 40Z" fill="#F2C94C" />
+                            <text x="39" y="41" class="centered-text"  dominant-baseline="middle">3</text>
+                        </svg>
+                    </div>
+                    <h3 id="third-step-heading">Receive a Quote</h3>
+                    <p>Make a prepayment to book the transport by any convenient method</p>
+                </div>
+                <div class="step" aria-labelledby="fourth-step-heading">
+                    <div class="step-number">
+                        <svg id="step-svg-4" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M80 40C80 65.5 61.3248 80 39.5062 80C17.6875 80 0 62.0914 0 40C0 17.9086 17.6875 0 39.5062 0C61.3248 0 80 17.5 80 40Z" fill="#F2C94C" />
+                            <text x="39" y="41" class="centered-text" dominant-baseline="middle">4</text>
+                        </svg>
+                    </div>
+                    <h3 id="fourth-step-heading">Schedule a Time</h3>
+                    <p>By any available method: phone, e&#8288;-&#8288;mail, personal account, messenger</p>
+                </div>
+            </div>
+    </section>
+
+    <section id="airport-transfer" class="airport-transfer" 
+    aria-labelledby="transfer-heading">
+        <div class="airport-transfer-container">
+            <div class="text">
+                <h2 id="transfer-heading">
+                    How to get to G.&#8288;I.&#8288;Nevelskoy Airport, Khabarovask
+                </h2>
+                <p>We recommend ordering a transfer to G.I. Nevelskoy Airport, Khabarovsk in advance to ensure that the car arrives exactly at the appointed time and the driver helps with your luggage. In case of a transfer from G.I. Nevelskoy Airport, we will track your flight and the driver will wait near the specified terminal. If necessary, the driver will meet you with a sign and help load your luggage.</p>
+                <button type="button" class="btn btn-primary btn-sm  btn-get-transfer-cost">Calculate cost</button>
+            </div>
+            <div id="map" class="map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae5dc7feb428121a66427e9d0c0544c79ab2883c99d982bb6e5f2bb75c2f186ea&amp;source=constructor" 
+                width="640" height="640" frameborder="0">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-company" class="about-company">
+        <div class="about-company-container">
+                <section class="about-company-text" 
+                aria-labelledby="about-company-heading">
+                    <h3 id="about-company-heading">About the Company</h3>
+                    <p>With us, you can book charter flights on aircraft of any size and class, VIP flights for personal and corporate purposes. Our advantages include the highest standards of onboard service, comprehensive assistance with airport procedures, and most importantly, transfer to your destination in our cars, with absolute safety and confidentiality.</p>
+                    <div class="about-company-advantages">
+                        <div class="advantage-item">
+                            <span class="highlight-number">
+                                3 000
+                            </span>
+                            <span class="highlight-symbol">
+                                +
+                            </span>
+                            <p>
+                                Vehicles in the fleet
+                            </p>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="highlight-number">
+                                50
+                            </span>
+                            <span class="highlight-symbol">
+                                +
+                            </span>
+                            <p>
+                                Partners worldwide
+                            </p>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="highlight-number">
+                                25
+                            </span>
+                            <span class="highlight-symbol">
+                                years
+                            </span>
+                            <p>
+                                In the market
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about-company-awards" class="about-company-awards" 
+                aria-labelledby="carousel-heading">
+                    <h3 id="carousel-heading">Awards and Recognitions</h3>
+                    <div class="awards-slider">
+                        <ul class="awards-slides">
+                            <li class="awards-slider-slide active">
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Certificate of Honor
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Certificate
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Certificate of Honor
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Certificate of Honor
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Certificate of Honor
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                            </li>
+                            <li class="awards-slider-slide">
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Most Honorable Certificate
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Certificate
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Certificate of Honor
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                            </li>
+                            <li class="awards-slider-slide">
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Best Certificate
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Certificate
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Most Honorable Certificate
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                            </li>
+                            <li class="awards-slider-slide">
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Excellent Certificate
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Certificate
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Certificate of Honor
+                                    </a>
+                                    <p>For conducting the St. Petersburg International Economic Forum and the Eastern Economic Forum.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="slider-controls">
+                        <button class="prev">
+                            <img src="../assets/images/about-company/left-arrow-icon.svg" alt="left-arrow-icon">
+                        </button>
+                        <div class="pagination">
+                            <button class="pagination-dot" data-index="0"></button>
+                            <button class="pagination-dot" data-index="1"></button>
+                            <button class="pagination-dot" data-index="2"></button>
+                            <button class="pagination-dot" data-index="3"></button>
+                        </div>
+                        <button class="next">
+                            <img src="../assets/images/about-company/right-arrow-icon.svg" alt="right-arrow-icon">
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <section id="second-calculator" class="calculator" 
+    aria-labelledby="second-calculator-heading">
+        <div class="calculator-container">
+            <h2 id="second-calculator-heading">
+                Submit a request for cost calculation
+            </h2>
+
+            <form class="calculator-form" action="/calculate-transfer-price" method="post">
+                <div class="input-container">
+                    <input type="text"  id="name" class="styled-input"
+                    pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
+                    <label for="name" class="floating-label"
+                    data-original-text="How should we address you?"
+                    data-error-message="How should we address you? (invalid input)">
+                        How should we address you?
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="email"  id="email" class="styled-input"
+                     placeholder=" " required>
+                    <label for="email" class="floating-label"
+                    data-original-text="Your email"
+                    data-error-message="Your email (invalid input)">
+                        Your email
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="tel" id="telephone" class="styled-input"
+                    pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
+                    placeholder=" " required>
+                    <label for="telephone" class="floating-label"
+                    data-original-text="Your phone number"
+                    data-error-message="Your phone number (invalid input)">
+                        Your phone number
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="text"  id="message" class="styled-input"
+                    placeholder=" ">
+                    <label for="message" class="floating-label">
+                        Your message (optional)
+                    </label>
+                </div>
+
+                <button class="btn btn-primary btn-lg" type="submit">
+                    Calculate price
+                </button>
+            </form>
+            <p class="personal-data-processing">
+                By clicking the button, you consent to the <a href="" target="_blank"
+                rel="noopener noreferrer">processing of personal data</a>
+                and agree to the <a href="" target="_blank"
+                rel="noopener noreferrer">public offer</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="footer" class="footer">
+        <div class="footer-top">
+            <a class="footer-logo-container" href="http://" target="_blank" 
+            rel="noopener noreferrer">
+                <img src="../assets/images/footer/footer-site-logo.png" alt="logo-dark">
+                <span>Transfer to the airport in Moscow</span>
+            </a>
+
+            <div class="footer-top-wrapper">
+                <section class="contacts" aria-labelledby="contacts-section-heading">
+                    <h3 id="contacts-section-heading">Contacts</h3>
+                    <div class="contacts-item">
+                        <a class="number" href="tel:+" target="_blank"
+                        rel="noopener noreferrer">+74951084848</a>
+                        <a class="content" href="http://" target="_blank"
+                        rel="noopener noreferrer">Khabarovsk</a>
+                    </div>
+                    <div class="contacts-item">
+                        <a class="number" href="tel:+" target="_blank"
+                        rel="noopener noreferrer">+74951084848</a>
+                        <a class="content" href="http://" target="_blank"
+                        rel="noopener noreferrer">Moscow</a>
+                    </div>
+                    <div class="contacts-item">
+                        <a class="number" href="tel:+" target="_blank"
+                        rel="noopener noreferrer">+74951084848</a>
+                        <a class="content" href="http://" target="_blank"
+                        rel="noopener noreferrer">Sochi</a>
+                    </div>
+                    <div class="contacts-item">
+                        <a class="number" href="tel:+" target="_blank"
+                        rel="noopener noreferrer">+74951084848</a>
+                        <a class="content" href="http://" target="_blank"
+                        rel="noopener noreferrer">Vladivostok</a>
+                    </div>
+                    <div class="contacts-item">
+                        <a class="number" href="tel:+" target="_blank"
+                        rel="noopener noreferrer">+74951084848</a>
+                        <a class="content" href="http://" target="_blank"
+                        rel="noopener noreferrer">WhatsApp</a>
+                        <a class="content" href="http://" target="_blank"
+                        rel="noopener noreferrer">Telegram</a>
+                    </div>
+                </section>
+
+                <section class="feedback" aria-labelledby="feedback-section-heading">
+                    <h3 id="feedback-section-heading">Feedback</h3>
+                    <a class="feedback-link" href="http://" target="_blank"
+                    rel="noopener noreferrer">2a@gmail.com</a>
+                    <a class="feedback-link" href="http://" target="_blank"
+                    rel="noopener noreferrer">info@2a.com</a>
+                    <a class="feedback-link" href="http://" target="_blank"
+                    rel="noopener noreferrer">2a@gmail.com</a>
+                </section>
+
+                <section class="schedule" aria-labelledby="schedule-section-heading">
+                    <h3 id="schedule-section-heading">Working hours</h3>
+                    <p>daily from 8:00 to 20:00 (Moscow time)</p>
+                </section>
+
+                <section class="be-our-partner" aria-labelledby="partnership-section-heading">
+                    <h3 id="partnership-section-heading">Become our partner</h3>
+                    <p>and start earning bonuses today</p>
+                    <button id="btn-become-our-partner" type="button"
+                     class="btn btn-secondary black btn-text-me">
+                        Message me
+                    </button>
+                </section>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <footer>© 2003 - 2024 Vostok Express, PE Reshovsky Nikolay Nikolayevich.</footer>
+
+            <div class="social-media-links">
+                <a class="social-media-link" href="http://" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a class="social-media-link" href="http://" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a class="social-media-link" href="http://" target="_blank" rel="noopener noreferrer">Vk</a>
+            </div>
+
+            <footer>
+                <span class="design-by">Design by</span>
+                <span class="special-symbols">
+                    <svg width="29" height="19" viewBox="0 0 29 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 18.3636C3.12121 18.3636 2.36742 18.0568 1.73864 17.4432C1.11742 16.822 0.810606 16.0682 0.818182 15.1818C0.810606 14.3182 1.11742 13.5795 1.73864 12.9659C2.36742 12.3523 3.12121 12.0455 4 12.0455C4.83333 12.0455 5.56818 12.3523 6.20455 12.9659C6.84849 13.5795 7.17424 14.3182 7.18182 15.1818C7.17424 15.7727 7.01894 16.3106 6.71591 16.7955C6.42045 17.2727 6.03409 17.6553 5.55682 17.9432C5.07955 18.2235 4.56061 18.3636 4 18.3636ZM4 6.63636C3.12121 6.63636 2.36742 6.32955 1.73864 5.71591C1.11742 5.0947 0.810606 4.34091 0.818182 3.45455C0.810606 2.59091 1.11742 1.85227 1.73864 1.23864C2.36742 0.625 3.12121 0.318182 4 0.318182C4.83333 0.318182 5.56818 0.625 6.20455 1.23864C6.84849 1.85227 7.17424 2.59091 7.18182 3.45455C7.17424 4.04545 7.01894 4.58333 6.71591 5.06818C6.42045 5.54545 6.03409 5.92803 5.55682 6.21591C5.07955 6.49621 4.56061 6.63636 4 6.63636ZM11.3182 12.1364C11.2576 10.5833 11.4091 9.23485 11.7727 8.09091C12.1439 6.94697 12.7235 6.06439 13.5114 5.44318C14.3068 4.81439 15.303 4.5 16.5 4.5C17.1742 4.5 17.8371 4.63258 18.4886 4.89773C19.1477 5.16288 19.8939 5.66667 20.7273 6.40909C21.0833 6.7197 21.3977 6.98106 21.6705 7.19318C21.9508 7.39773 22.2879 7.5 22.6818 7.5C23.1439 7.5 23.5379 7.30682 23.8636 6.92045C24.197 6.52651 24.3485 5.87121 24.3182 4.95455H28.8636C28.9318 6.50758 28.7727 7.85606 28.3864 9C28 10.1439 27.4091 11.0303 26.6136 11.6591C25.8182 12.2803 24.8409 12.5909 23.6818 12.5909C22.947 12.5909 22.2424 12.4432 21.5682 12.1477C20.9015 11.8523 20.1818 11.3636 19.4091 10.6818C18.9924 10.3106 18.6629 10.0379 18.4205 9.86364C18.1856 9.68182 17.8788 9.59091 17.5 9.59091C17.0227 9.59091 16.625 9.78788 16.3068 10.1818C15.9886 10.5682 15.8409 11.2197 15.8636 12.1364H11.3182Z" fill="#222222"/>
+                        </svg>
+                </span>
+            </footer>
+        </div>
+    </section>
+
+    <div id="modal-call-me-back" class="modal" 
+    aria-labelledby="modal-call-me-back-heading">
+        <div class="modal-container">
+            <h4 id="modal-call-me-back-heading">Call me back</h4>
+            <span class="close-icon">
+                <img src="../assets/images/modals/close-window-btn.svg" 
+                alt="close-icon">
+            </span>
+            <form class="reply-form" action="/call-me-back" method="post">
+                <div class="input-container">
+                    <input type="text"  id="name" class="styled-input"
+                    pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
+                    <label for="name" class="floating-label"
+                    data-original-text="How can we address you?"
+                    data-error-message="How can we address you? (incorrect input)">
+                        How can we address you?
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="tel" id="telephone" class="styled-input"
+                    pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
+                    placeholder=" " required>
+                    <label for="telephone" class="floating-label"
+                    data-original-text="Your email"
+                    data-error-message="Your email (incorrect input)">
+                        Your email
+                    </label>
+                </div>
+
+                <button class="btn btn-primary btn-call-me-back" type="submit">
+                    Call me back
+                </button>
+`            </form>
+
+            <p class="personal-data-processing">
+                By clicking the button, you consent to the 
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    processing of personal data
+                </a> 
+                and agree to the 
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    public offer
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div id="modal-become-our-partner" class="modal" 
+    aria-labelledby="modal-partnership-heading">
+        <div class="modal-container">
+            <h4 id="modal-partnership-heading">Become our partner</h4>
+            <span class="close-icon">
+                <img src="../assets/images/modals/close-window-btn.svg" alt="close-icon">
+            </span>
+            <form class="reply-form" action="/become-our-partner" method="post">
+                <div class="input-container">
+                    <input type="text"  id="name" class="styled-input"
+                    pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
+                    <label for="name" class="floating-label"
+                    data-original-text="How can we address you?"
+                    data-error-message="How can we address you? (incorrect input)">
+                        How can we address you?
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="tel" id="telephone" class="styled-input"
+                    pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
+                    placeholder=" " required>
+                    <label for="telephone" class="floating-label"
+                    data-original-text="Your phone number"
+                    data-error-message="Your phone number (incorrect input)">
+                        Your phone number
+                    </label>
+                </div>
+
+                <button class="btn btn-primary btn-call-me-back" type="submit">
+                    Call me back
+                </button>
+            </form>
+
+            <p class="personal-data-processing">
+                By clicking the button, you consent to the 
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    processing of personal data
+                </a> 
+                and agree to the 
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    public offer
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div id="modal-get-transfer-price" class="modal" 
+    aria-labelledby="modal-transfer-calculator-heading">
+        <div class="modal-container">
+            <h4 id="modal-transfer-calculator-heading">
+                Get the cost of the transfer
+            </h4>
+            <span class="close-icon">
+                <img src="../assets/images/modals/close-window-btn.svg" alt="close-icon">
+            </span>
+            <form class="calculator-form" action="/calculate-transfer-price" method="post">
+                <div class="input-container">
+                    <input type="text"  id="name" class="styled-input"
+                    pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
+                    <label for="name" class="floating-label"
+                    data-original-text="How can we address you?"
+                    data-error-message="How can we address you? (incorrect input)">
+                        How can we address you?
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="email"  id="email" class="styled-input"
+                     placeholder=" " required>
+                    <label for="email" class="floating-label"
+                    data-original-text="Your e-mail"
+                    data-error-message="Your e-mail (incorrect input)">
+                        Your e-mail
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="tel" id="telephone" class="styled-input"
+                    pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
+                    placeholder=" " required>
+                    <label for="telephone" class="floating-label"
+                    data-original-text="Your phone number"
+                    data-error-message="Your phone number (icorrect input)">
+                        Your phone number
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="text"  id="message" class="styled-input"
+                    placeholder=" ">
+                    <label for="message" class="floating-label">
+                        Your message
+                    </label>
+                </div>
+
+                <button class="btn btn-primary btn-calculate-price" type="submit">
+                    Calculate cost
+                </button>
+            </form>
+
+            <p class="personal-data-processing">
+                By clicking the button, you consent to the 
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    processing of personal data
+                </a> 
+                and agree to the 
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    public offer
+                </a>
+            </p>
+        </div>
+    </div>
    
     <script type="module" src="/moscow/src/main.js"></script>
 

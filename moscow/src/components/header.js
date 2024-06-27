@@ -1,9 +1,11 @@
 const header = () => {
     const topBar = document.querySelector('.top-bar');
-    const mobileBarOverlay = document.querySelector('.mobile-bar-overlay');
     const burgerBtn = document.querySelector('.mobile-burger-btn');
     const closeBtn = document.querySelector('.mobile-btn-close-top-bar');
     const callMeBackBtn = document.getElementById('btn-call-me-back');
+
+    const mobileBarOverlay = document.createElement('div');
+    mobileBarOverlay.classList.add('mobile-bar-overlay');
 
     function handleResize() {
         if (window.innerWidth > 1150) {
@@ -11,7 +13,7 @@ const header = () => {
             topBar.classList.remove('active');
             topBar.classList.remove('deactive');
             callMeBackBtn.classList.remove('black');
-            mobileBarOverlay.style.display = 'none';
+            mobileBarOverlay.remove();
             burgerBtn.style.display = 'none';
         } else if (topBar.classList.contains('active')) {
             burgerBtn.style.display = 'none';
@@ -28,7 +30,7 @@ const header = () => {
         topBar.classList.remove('deactive');
         topBar.classList.add('active');
         callMeBackBtn.classList.add('black');
-        mobileBarOverlay.style.display = 'block';
+        document.body.appendChild(mobileBarOverlay);
         burgerBtn.style.display = 'none';
     });
 
@@ -38,7 +40,7 @@ const header = () => {
         callMeBackBtn.classList.remove('black');
         burgerBtn.style.display = 'block';
         topBar.classList.remove('mobile-bar');
-        mobileBarOverlay.style.display = 'none';
+        mobileBarOverlay.remove();
     });
 
     mobileBarOverlay.addEventListener('click', function() {
@@ -46,7 +48,7 @@ const header = () => {
         topBar.classList.add('deactive');
         setTimeout(() => {
             topBar.classList.remove('mobile-bar');
-            mobileBarOverlay.style.display = 'none';
+            mobileBarOverlay.remove();
         }, 500);
     });
 }

@@ -4,7 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Восток экспресс</title>
+    <meta http-equiv="Content-Language" content="ru">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Восток экспресс">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Восток экспресс">
+    <title>Восток Экспресс: Трансферы и Транспортные Услуги в Лучших Традициях</title>
+    <link rel="alternate" href="https://ve/moscow/public/en.org" hreflang="en">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../assets/android-chrome-512x512.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../assets/android-chrome-192x192.png">
@@ -16,6 +23,10 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="/moscow/src/assets/styles/main.css">
+    <meta content="" id="meta-description" name="description">
+    <!-- Дополнить описанием страницы meta -->
+    <meta content="" id="meta-description" name="description">
+    <meta name="keywords" content="учить, испанский, немецкий, французский, португальский, итальянский, английский, бесплатно, уроки, курс, язык, исследование, карточки">
 </head>
 
 <body>
@@ -89,7 +100,7 @@
                     <h1 class="main-content-header">
                         Трансфер <img class="emoji"
                         src="../assets/images/header/airplane-emoji.png"
-                        alt="airplane-emoji"> в аэропорт города <img 
+                        alt="airplane-emoji"> <br> в аэропорт города <br> <img 
                         class="emoji" 
                         src="../assets/images/header/round_pushpin-emoji.png"
                         alt="airplane-emoji"> Москва
@@ -99,7 +110,7 @@
                         легковыми автомобилями, минивэнами, микроавтобусами и автобусами.
                     </p>
                     <div class="text-wrapper">
-                        <button id="btn-get-transfer-price" type="button" class="btn btn-primary btn-sm">
+                        <button type="button" class="btn btn-primary btn-sm btn-get-transfer-cost">
                             Расчитать стоимость
                         </button>
                         <p>
@@ -131,555 +142,588 @@
         </div>
     </header>
 
-    <main>
-        <section id="transport" class="transport" aria-labelledby="transport-heading">
-            <h2 id="transport-heading">Выберете подходящий транспорт</h2>
-            <div class="transport-card-container">
-                <div class="transport-card">
-                    <div class="transport-card-goods">
-                        <div class="transport-card-goods-passanger">
-                            <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
-                            <span class="passenger-amount">4</span>
-                        </div>
-                        <div class="transport-card-goods-luggage">
-                            <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
-                            <span class="luggage-amount">2</span>
-                        </div>
+    <section id="transport" class="transport" aria-labelledby="transport-heading">
+        <h2 id="transport-heading">Выберете подходящий транспорт</h2>
+
+        <div class="transport-card-container">
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
                     </div>
-                    <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
-                    <span class="transport-quality">Стандарт</span>
-                    <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
-                    <p class="transport-price">
-                        <span>от</span>
-                        <span class="price">13 000</span>
-                        <span class="currency">₽</span>
-                    </p>
-                    <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
                 </div>
-                <div class="transport-card">
-                    <div class="transport-card-goods">
-                        <div class="transport-card-goods-passanger">
-                            <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
-                            <span class="passenger-amount">4</span>
-                        </div>
-                        <div class="transport-card-goods-luggage">
-                            <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
-                            <span class="luggage-amount">2</span>
-                        </div>
-                    </div>
-                    <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
-                    <span class="transport-quality">Стандарт</span>
-                    <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
-                    <p class="transport-price">
-                        <span>от</span>
-                        <span class="price">13 000</span>
-                        <span class="currency">₽</span>
-                    </p>
-                    <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
-                </div>
-                <div class="transport-card">
-                    <div class="transport-card-goods">
-                        <div class="transport-card-goods-passanger">
-                            <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
-                            <span class="passenger-amount">4</span>
-                        </div>
-                        <div class="transport-card-goods-luggage">
-                            <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
-                            <span class="luggage-amount">2</span>
-                        </div>
-                    </div>
-                    <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
-                    <span class="transport-quality">Стандарт</span>
-                    <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
-                    <p class="transport-price">
-                        <span>от</span>
-                        <span class="price">13 000</span>
-                        <span class="currency">₽</span>
-                    </p>
-                    <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
-                </div>
-                <div class="transport-card">
-                    <div class="transport-card-goods">
-                        <div class="transport-card-goods-passanger">
-                            <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
-                            <span class="passenger-amount">4</span>
-                        </div>
-                        <div class="transport-card-goods-luggage">
-                            <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
-                            <span class="luggage-amount">2</span>
-                        </div>
-                    </div>
-                    <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
-                    <span class="transport-quality">Стандарт</span>
-                    <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
-                    <p class="transport-price">
-                        <span>от</span>
-                        <span class="price">13 000</span>
-                        <span class="currency">₽</span>
-                    </p>
-                    <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
-                </div>
-                <div class="transport-card">
-                    <div class="transport-card-goods">
-                        <div class="transport-card-goods-passanger">
-                            <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
-                            <span class="passenger-amount">4</span>
-                        </div>
-                        <div class="transport-card-goods-luggage">
-                            <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
-                            <span class="luggage-amount">2</span>
-                        </div>
-                    </div>
-                    <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
-                    <span class="transport-quality">Стандарт</span>
-                    <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
-                    <p class="transport-price">
-                        <span>от</span>
-                        <span class="price">13 000</span>
-                        <span class="currency">₽</span>
-                    </p>
-                    <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
-                </div>
-                <div class="transport-card">
-                    <div class="transport-card-goods">
-                        <div class="transport-card-goods-passanger">
-                            <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
-                            <span class="passenger-amount">4</span>
-                        </div>
-                        <div class="transport-card-goods-luggage">
-                            <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
-                            <span class="luggage-amount">2</span>
-                        </div>
-                    </div>
-                    <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
-                    <span class="transport-quality">Стандарт</span>
-                    <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
-                    <p class="transport-price">
-                        <span>от</span>
-                        <span class="price">13 000</span>
-                        <span class="currency">₽</span>
-                    </p>
-                    <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
-                </div>
-                <div class="transport-card">
-                    <div class="transport-card-goods">
-                        <div class="transport-card-goods-passanger">
-                            <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
-                            <span class="passenger-amount">4</span>
-                        </div>
-                        <div class="transport-card-goods-luggage">
-                            <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
-                            <span class="luggage-amount">2</span>
-                        </div>
-                    </div>
-                    <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
-                    <span class="transport-quality">Стандарт</span>
-                    <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
-                    <p class="transport-price">
-                        <span>от</span>
-                        <span class="price">13 000</span>
-                        <span class="currency">₽</span>
-                    </p>
-                    <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
-                </div>
-        
-                <div class="transport-card">
-                    <div class="transport-card-goods">
-                        <div class="transport-card-goods-passanger">
-                            <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
-                            <span class="passenger-amount">4</span>
-                        </div>
-                        <div class="transport-card-goods-luggage">
-                            <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
-                            <span class="luggage-amount">2</span>
-                        </div>
-                    </div>
-                    <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
-                    <span class="transport-quality">Стандарт</span>
-                    <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
-                    <p class="transport-price">
-                        <span>от</span>
-                        <span class="price">13 000</span>
-                        <span class="currency">₽</span>
-                    </p>
-                    <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
-                </div>
-            </div>
-        </section>
-        <section id="calculator" class="calculator" aria-labelledby="calculator-heading">
-            <div class="calculator-container">
-                <h2 id="calculator-heading">Получите расчет стоимости трансфера</h2>
-                <form class="calculator-form" action="/calculate-transfer-price" method="post">
-                    <div class="input-container">
-                        <input type="text"  id="name" class="styled-input"
-                        pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
-                        <label for="name" class="floating-label"
-                        data-original-text="Как к вам обращаться?"
-                        data-error-message="Как к вам обращаться? (не верный ввод)">
-                            Как к вам обращаться?
-                        </label>
-                    </div>
-                    <div class="input-container">
-                        <input type="email"  id="email" class="styled-input"
-                         placeholder=" " required>
-                        <label for="email" class="floating-label"
-                        data-original-text="Ваша электронная почта"
-                        data-error-message="Ваша электронная почта (не верный ввод)">
-                            Ваша электронная почта
-                        </label>
-                    </div>
-                    <div class="input-container">
-                        <input type="tel"  id="telephone" class="styled-input"
-                        pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
-                        placeholder=" " required>
-                        <label for="telephone" class="floating-label"
-                        data-original-text="Ваша номер телефона"
-                        data-error-message="Ваш номер телефона (не верный ввод)">
-                            Ваш номер телефона
-                        </label>
-                    </div>
-                    <div class="input-container">
-                        <input type="text"  id="message" class="styled-input message-input"
-                        placeholder=" ">
-                        <label for="message" class="floating-label message-label">
-                            Ваше сообщение (не обязательно)
-                        </label>
-                    </div>
-                    <button class="btn btn-primary btn-lg" type="submit">
-                        Расчитать стоимость
-                    </button>
-                </form>
-                <p class="personal-data-processing">
-                    Нажимая на кнопку, вы даете согласие на <a href="" target="_blank"
-                    rel="noopener noreferrer">обработку персональных данных</a>
-                     и соглашаетесь с <a href="" target="_blank"
-                    rel="noopener noreferrer">публичной офертой</a>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Стандарт</span>
+                <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
+                <p class="transport-price">
+                    <span>от</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
                 </p>
+                <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
             </div>
-        </section>
-        <section id="advantages" class="advantages">
-            <div class="advantages-container">
-                <div class="advantages-about-company"
-                aria-labelledby="advantages-about-company-heading">
-                    <img src="../assets/images/advantages/sport_utility_vehicle-emoji.png"
-                    alt="sport_utility_vehicle-emoji">
-                    <h3 id="advantages-about-company-heading">
-                        О трансферной компании в городе Москва
-                    </h3>
-                    <p>
-                        Мы избавляем клиентов от длительных поисков надежных поставщиков по организации трансферов из аэропорта или вокзала, и аренды любого автотранспорта в городе Москва. Вы и Ваши клиенты будут находиться в полной определенности, что оказание услуг пройдет должным образом. Являясь прямым исполнителем, мы связываем все детали в выверенные логические цепочки услуг:
-                    </p>
-                    <ul>
-                        <li>Трансферы</li>
-                        <li>Аренда автомобилей с водителем</li>
-                        <li>VIP обслуживание</li>
-                        <li>Групповые и детские перевозки</li>
-                        <li>Междугородние поездки</li>
-                    </ul>
-                </div>
-                <div class="advantages-about-supporting"
-                aria-labelledby="advantages-about-supporting-heading">
-                    <img src="../assets/images/advantages/telephone_receiver-emoji.png"
-                     alt="telephone_receiver-emoji">
-                    <h3 id="advantages-about-company-heading">
-                        Круглосуточная поддержка на русском и английском языке
-                    </h3>
-                     <p>
-                        Профессионализм наших операторов и менеджеров позволит полностью закрыть Ваши потребности в деловой поездке или командировке в город Москва. Закажите услуги в компании “Восток Экспресс” и будьте уверены, что мы приложим чуть больше усилий, чем потребуется для получения Вами необходимого результата.
-                     </p>
-                </div>
-            </div>
-        </section>
-        <section id="steps" class="steps" aria-labelledby="steps-heading">
-            <h2 id="steps-heading">Как заказать трансфер</h2>
-                <div class="steps-container">
-                    <div class="step" aria-labelledby="first-step-heading">
-                        <div class="step-number">
-                            <svg id="step-svg-1" width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M96 40C96 44.5 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 96 35.5 96 40Z" fill="#F2C94C" />
-                                <text x="39" y="41" class="centered-text"  dominant-baseline="middle">1</text>
-                            </svg>
-                        </div>
-                        <h3 id="first-step-heading">Оформите заявку</h3>
-                        <p>Любым доступным способом: по телефону, e&#8288;-&#8288;mail, личный кабинет, мессенджер</p>
+
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
                     </div>
-                    <div class="step" aria-labelledby="second-step-heading">
-                        <div class="step-number">
-                            <svg id="step-svg-2" width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M96 40C96 44.5 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 96 35.5 96 40Z" fill="#F2C94C" />
-                                <text x="39" y="41" class="centered-text"  dominant-baseline="middle">2</text>
-                            </svg>
-                        </div>
-                        <h3 id="second-step-heading">Подберите варинат</h3>
-                        <p>Мы предоставляем несколько вариантов. Вы выбираете подходящий</p>
-                    </div>
-                    <div class="step" aria-labelledby="third-step-heading">
-                        <div class="step-number">
-                            <svg id="step-svg-3" width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M96 40C96 44.5 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 96 35.5 96 40Z" fill="#F2C94C" />
-                                <text x="39" y="41" class="centered-text"  dominant-baseline="middle">3</text>
-                            </svg>
-                        </div>
-                        <h3 id="third-step-heading">Получите расчет</h3>
-                        <p>Внесите предоплату для бронирования автотранспорта любым удобным способом</p>
-                    </div>
-                    <div class="step" aria-labelledby="fourth-step-heading">
-                        <div class="step-number">
-                            <svg id="step-svg-4" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M80 40C80 65.5 61.3248 80 39.5062 80C17.6875 80 0 62.0914 0 40C0 17.9086 17.6875 0 39.5062 0C61.3248 0 80 17.5 80 40Z" fill="#F2C94C" />
-                                <text x="39" y="41" class="centered-text" dominant-baseline="middle">4</text>
-                            </svg>
-                        </div>
-                        <h3 id="fourth-step-heading">Назначьте время</h3>
-                        <p>Любым доступным способом: по телефону, e&#8288;-&#8288;mail, личный кабинет, мессенджер</p>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
                     </div>
                 </div>
-        </section>
-        <section id="airport-transfer" class="airport-transfer"
-        aria-labelledby="transfer-heading">
-            <div class="airport-transfer-container">
-                <div class="text">
-                    <h2 id="transfer-heading">
-                        Как добраться до аэропорта им. Г. И. Невельского г. Хабаровск
-                    </h2>
-                    <p>Предлагаем заблаговременно заказать трансфер до аэропорта им. Г. И. Невельского, г. Хабаровск и быть уверенным, что автомобиль прибудет точно в назначенное время, а водитель поможет с багажом. В случае трансфера из аэропорта им. Г. И. Невельского, мы отследим Ваш рейс и водитель будет ждать возле указанного терминала. При необходимости, встретит Вас с табличкой и поможет погрузить багаж.</p>
-                    <button id="btn-get-transfer-price-2" type="button" class="btn btn-primary btn-sm">Рассчитать стоимость</button>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Стандарт</span>
+                <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
+                <p class="transport-price">
+                    <span>от</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
+            </div>
+
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
                 </div>
-                <div id="map" class="map">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7990650d664c4d0fae96bd0ff792687199a97c88d7e7bdc5da6c61c23b1a7c35&amp;source=constructor"
-                    width="640" height="640" frameborder="0">
-                    </iframe>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Стандарт</span>
+                <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
+                <p class="transport-price">
+                    <span>от</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
+            </div>
+
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Стандарт</span>
+                <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
+                <p class="transport-price">
+                    <span>от</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
+            </div>
+
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Стандарт</span>
+                <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
+                <p class="transport-price">
+                    <span>от</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
+            </div>
+
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Стандарт</span>
+                <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
+                <p class="transport-price">
+                    <span>от</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
+            </div>
+
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Стандарт</span>
+                <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
+                <p class="transport-price">
+                    <span>от</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
+            </div>
+            
+            <div class="transport-card">
+                <div class="transport-card-goods">
+                    <div class="transport-card-goods-passanger">
+                        <img src="../assets/images/transport/user-icon.svg" alt="passenger-icon">
+                        <span class="passenger-amount">4</span>
+                    </div>
+
+                    <div class="transport-card-goods-luggage">
+                        <img src="../assets/images/transport/briefcase-icon.svg" alt="luggage-icon">
+                        <span class="luggage-amount">2</span>
+                    </div>
+                </div>
+                <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="">
+                <span class="transport-quality">Стандарт</span>
+                <p class="transport-description">Средние автомобили с просторным салоном и багажным отделением.</p>
+                <p class="transport-price">
+                    <span>от</span>
+                    <span class="price">13 000</span>
+                    <span class="currency">₽</span>
+                </p>
+                <button class="btn btn-secondary btn-order black" type="button">Заказать</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator" aria-labelledby="calculator-heading">
+        <div class="calculator-container">
+            <h2 id="calculator-heading">Получите расчет стоимости трансфера</h2>
+            <form class="calculator-form" action="/submit" method="post">
+                <div class="input-container">
+                    <input type="text"  id="name" class="styled-input"
+                    pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
+                    <label for="name" class="floating-label"
+                    data-original-text="Как к вам обращаться?"
+                    data-error-message="Как к вам обращаться? (не верный ввод)">
+                        Как к вам обращаться?
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="email"  id="email" class="styled-input"
+                     placeholder=" " required>
+                    <label for="email" class="floating-label"
+                    data-original-text="Ваша электронная почта"
+                    data-error-message="Ваша электронная почта (не верный ввод)">
+                        Ваша электронная почта
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="tel"  id="telephone" class="styled-input"
+                    pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
+                    placeholder=" " required>
+                    <label for="telephone" class="floating-label"
+                    data-original-text="Ваша номер телефона"
+                    data-error-message="Ваш номер телефона (не верный ввод)">
+                        Ваш номер телефона
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="text"  id="message" class="styled-input message-input"
+                    placeholder=" ">
+                    <label for="message" class="floating-label message-label">
+                        Ваше сообщение (не обязательно)
+                    </label>
+                </div>
+
+                <button class="btn btn-primary btn-lg" type="submit">
+                    Расчитать стоимость
+                </button>
+            </form>
+            <p class="personal-data-processing">
+                Нажимая на кнопку, вы даете согласие на <a href="" target="_blank"
+                rel="noopener noreferrer">обработку персональных данных</a>
+                 и соглашаетесь с <a href="" target="_blank"
+                rel="noopener noreferrer">публичной офертой</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="advantages" class="advantages">
+        <div class="advantages-container">
+            <div class="advantages-about-company" 
+            aria-labelledby="advantages-about-company-heading">
+                <img src="../assets/images/advantages/sport_utility_vehicle-emoji.png"
+                alt="sport_utility_vehicle-emoji">
+
+                <h3 id="advantages-about-company-heading">
+                    О трансферной компании в городе Москва
+                </h3>
+
+                <p>
+                    Мы избавляем клиентов от длительных поисков надежных поставщиков по организации трансферов из аэропорта или вокзала, и аренды любого автотранспорта в городе Москва. Вы и Ваши клиенты будут находиться в полной определенности, что оказание услуг пройдет должным образом. Являясь прямым исполнителем, мы связываем все детали в выверенные логические цепочки услуг:
+                </p>
+
+                <ul>
+                    <li>Трансферы</li>
+                    <li>Аренда автомобилей с водителем</li>
+                    <li>VIP обслуживание</li>
+                    <li>Групповые и детские перевозки</li>
+                    <li>Междугородние поездки</li>
+                </ul>
+            </div>
+            <div class="advantages-about-supporting" 
+            aria-labelledby="advantages-about-supporting-heading">
+                <img src="../assets/images/advantages/telephone_receiver-emoji.png"
+                 alt="telephone_receiver-emoji">
+                <h3 id="advantages-about-company-heading">
+                    Круглосуточная поддержка на русском и английском языке
+                </h3>
+                 <p>
+                    Профессионализм наших операторов и менеджеров позволит полностью закрыть Ваши потребности в деловой поездке или командировке в город Москва. Закажите услуги в компании “Восток Экспресс” и будьте уверены, что мы приложим чуть больше усилий, чем потребуется для получения Вами необходимого результата.
+                 </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="steps" class="steps" aria-labelledby="steps-heading">
+        <h2 id="steps-heading">Как заказать трансфер</h2>
+            <div class="steps-container">
+                <div class="step" aria-labelledby="first-step-heading">
+                    <div class="step-number">
+                        <svg id="step-svg-1" width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M96 40C96 44.5 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 96 35.5 96 40Z" fill="#F2C94C" />
+                            <text x="39" y="41" class="centered-text"  dominant-baseline="middle">1</text>
+                        </svg>
+                    </div>
+                    <h3 id="first-step-heading">Оформите заявку</h3>
+                    <p>Любым доступным способом: по телефону, e&#8288;-&#8288;mail, личный кабинет, мессенджер</p>
+                </div>
+                <div class="step" aria-labelledby="second-step-heading">
+                    <div class="step-number">
+                        <svg id="step-svg-2" width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M96 40C96 44.5 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 96 35.5 96 40Z" fill="#F2C94C" />
+                            <text x="39" y="41" class="centered-text"  dominant-baseline="middle">2</text>
+                        </svg>
+                    </div>
+                    <h3 id="second-step-heading">Подберите варинат</h3>
+                    <p>Мы предоставляем несколько вариантов. Вы выбираете подходящий</p>
+                </div>
+                <div class="step" aria-labelledby="third-step-heading">
+                    <div class="step-number">
+                        <svg id="step-svg-3" width="96" height="80" viewBox="0 0 96 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M96 40C96 44.5 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0C62.0914 0 96 35.5 96 40Z" fill="#F2C94C" />
+                            <text x="39" y="41" class="centered-text"  dominant-baseline="middle">3</text>
+                        </svg>
+                    </div>
+                    <h3 id="third-step-heading">Получите расчет</h3>
+                    <p>Внесите предоплату для бронирования автотранспорта любым удобным способом</p>
+                </div>
+                <div class="step" aria-labelledby="fourth-step-heading">
+                    <div class="step-number">
+                        <svg id="step-svg-4" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M80 40C80 65.5 61.3248 80 39.5062 80C17.6875 80 0 62.0914 0 40C0 17.9086 17.6875 0 39.5062 0C61.3248 0 80 17.5 80 40Z" fill="#F2C94C" />
+                            <text x="39" y="41" class="centered-text" dominant-baseline="middle">4</text>
+                        </svg>
+                    </div>
+                    <h3 id="fourth-step-heading">Назначьте время</h3>
+                    <p>Любым доступным способом: по телефону, e&#8288;-&#8288;mail, личный кабинет, мессенджер</p>
                 </div>
             </div>
-        </section>
-        <section id="about-company" class="about-company">
-            <div class="about-company-container">
-                    <section class="about-company-text"
-                    aria-labelledby="about-company-heading">
-                        <h3 id="about-company-heading">О компании</h3>
-                        <p>У нас вы можете заказать чартерные перелеты на самолетах любого размера и класса, ВИП-перелеты в личных и корпоративных целях. Наши преимущества — самые высокие стандарты качества обслуживания на борту, всесторонняя помощь при прохождении аэропортовых процедур, а самое главное трансфер до места назначения на наших авто, абсолютная безопасность и конфиденциальность.</p>
-                        <div class="about-company-advantages">
-                            <div class="advantage-item">
-                                <span class="highlight-number">
-                                    3 000
-                                </span>
-                                <span class="highlight-symbol">
-                                    +
-                                </span>
-                                <p>
-                                    Автомобилей в автопарке
-                                </p>
-                            </div>
-                            <div class="advantage-item">
-                                <span class="highlight-number">
-                                    50
-                                </span>
-                                <span class="highlight-symbol">
-                                    +
-                                </span>
-                                <p>
-                                    Партнеров по всему миру
-                                </p>
-                            </div>
-                            <div class="advantage-item">
-                                <span class="highlight-number">
-                                    25
-                                </span>
-                                <span class="highlight-symbol">
-                                    лет
-                                </span>
-                                <p>
-                                    На рынке
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="about-company-awards" class="about-company-awards"
-                    aria-labelledby="carousel-heading">
-                        <h3 id="carousel-heading">Награды и благодарности</h3>
-                        <div class="awards-slider">
-                            <ul class="awards-slides">
-                                <li class="awards-slider-slide active">
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Почетная грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Почетная грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Почетная грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Почетная грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                </li>
-                                <li class="awards-slider-slide">
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Самая почетная грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Почетная грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                </li>
-                                <li class="awards-slider-slide">
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Лучшая грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Почетная грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                </li>
-                                <li class="awards-slider-slide">
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Отличная грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                    <div class="awards-slider-content">
-                                        <a href="http://" target="_blank"
-                                        rel="noopener noreferrer">
-                                            Почетная грамота
-                                        </a>
-                                        <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="slider-controls">
-                            <button class="prev">
-                                <img src="../assets/images/about-company/left-arrow-icon.svg" alt="left-arrow-icon">
-                            </button>
-                            <div class="pagination">
-                                <button class="pagination-dot" data-index="0"></button>
-                                <button class="pagination-dot" data-index="1"></button>
-                                <button class="pagination-dot" data-index="2"></button>
-                                <button class="pagination-dot" data-index="3"></button>
-                            </div>
-                            <button class="next">
-                                <img src="../assets/images/about-company/right-arrow-icon.svg" alt="right-arrow-icon">
-                            </button>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </section>
-        <section id="second-calculator" class="calculator"
-        aria-labelledby="second-calculator-heading">
-            <div class="calculator-container">
-                <h2 id="second-calculator-heading">
-                    Оставьте заявку на расчет стоимости
+    </section>
+
+    <section id="airport-transfer" class="airport-transfer" 
+    aria-labelledby="transfer-heading">
+        <div class="airport-transfer-container">
+            <div class="text">
+                <h2 id="transfer-heading">
+                    Как добраться до аэропорта им. Г. И. Невельского г. Хабаровск
                 </h2>
-                <form class="calculator-form" action="/calculate-transfer-price" method="post">
-                    <div class="input-container">
-                        <input type="text"  id="name" class="styled-input"
-                        pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
-                        <label for="name" class="floating-label"
-                        data-original-text="Как к вам обращаться?"
-                        data-error-message="Как к вам обращаться? (не верный ввод)">
-                            Как к вам обращаться?
-                        </label>
-                    </div>
-                    <div class="input-container">
-                        <input type="email"  id="email" class="styled-input"
-                         placeholder=" " required>
-                        <label for="email" class="floating-label"
-                        data-original-text="Ваша электронная почта"
-                        data-error-message="Ваша электронная почта (не верный ввод)">
-                            Ваша электронная почта
-                        </label>
-                    </div>
-                    <div class="input-container">
-                        <input type="tel" id="telephone" class="styled-input"
-                        pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
-                        placeholder=" " required>
-                        <label for="telephone" class="floating-label"
-                        data-original-text="Ваша номер телефона"
-                        data-error-message="Ваш номер телефона (не верный ввод)">
-                            Ваш номер телефона
-                        </label>
-                    </div>
-                    <div class="input-container">
-                        <input type="text"  id="message" class="styled-input message-input"
-                        placeholder=" ">
-                        <label for="message" class="floating-label  message-label">
-                            Ваше сообщение (не обязательно)
-                        </label>
-                    </div>
-                    <button class="btn btn-primary btn-lg" type="submit">
-                        Расчитать стоимость
-                    </button>
-                </form>
-                <p class="personal-data-processing">
-                    Нажимая на кнопку, вы даете согласие на <a href="" target="_blank"
-                    rel="noopener noreferrer">обработку персональных данных</a>
-                     и соглашаетесь с <a href="" target="_blank"
-                    rel="noopener noreferrer">публичной офертой</a>
-                </p>
+                <p>Предлагаем заблаговременно заказать трансфер до аэропорта им. Г. И. Невельского, г. Хабаровск и быть уверенным, что автомобиль прибудет точно в назначенное время, а водитель поможет с багажом. В случае трансфера из аэропорта им. Г. И. Невельского, мы отследим Ваш рейс и водитель будет ждать возле указанного терминала. При необходимости, встретит Вас с табличкой и поможет погрузить багаж.</p>
+                <button type="button" class="btn btn-primary btn-sm btn-get-transfer-cost">Рассчитать стоимость</button>
             </div>
-        </section>
-    </main>
+            <div id="map" class="map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7990650d664c4d0fae96bd0ff792687199a97c88d7e7bdc5da6c61c23b1a7c35&amp;source=constructor" 
+                width="640" height="640" frameborder="0">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-company" class="about-company">
+        <div class="about-company-container">
+                <section class="about-company-text" 
+                aria-labelledby="about-company-heading">
+                    <h3 id="about-company-heading">О компании</h3>
+                    <p>У нас вы можете заказать чартерные перелеты на самолетах любого размера и класса, ВИП-перелеты в личных и корпоративных целях. Наши преимущества — самые высокие стандарты качества обслуживания на борту, всесторонняя помощь при прохождении аэропортовых процедур, а самое главное трансфер до места назначения на наших авто, абсолютная безопасность и конфиденциальность.</p>
+                    <div class="about-company-advantages">
+                        <div class="advantage-item">
+                            <span class="highlight-number">
+                                3 000
+                            </span>
+                            <span class="highlight-symbol">
+                                +
+                            </span>
+                            <p>
+                                Автомобилей в автопарке
+                            </p>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="highlight-number">
+                                50
+                            </span>
+                            <span class="highlight-symbol">
+                                +
+                            </span>
+                            <p>
+                                Партнеров по всему миру
+                            </p>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="highlight-number">
+                                25
+                            </span>
+                            <span class="highlight-symbol">
+                                лет
+                            </span>
+                            <p>
+                                На рынке
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about-company-awards" class="about-company-awards" 
+                aria-labelledby="carousel-heading">
+                    <h3 id="carousel-heading">Награды и благодарности</h3>
+                    <div class="awards-slider">
+                        <ul class="awards-slides">
+                            <li class="awards-slider-slide active">
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                            </li>
+                            <li class="awards-slider-slide">
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Самая почетная грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                            </li>
+                            <li class="awards-slider-slide">
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Лучшая грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                            </li>
+                            <li class="awards-slider-slide">
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Отличная грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                                <div class="awards-slider-content">
+                                    <a href="http://" target="_blank"
+                                    rel="noopener noreferrer">
+                                        Почетная грамота
+                                    </a>
+                                    <p>За проведение Петербургского международного экономического форума и Восточного экономического форума. </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="slider-controls">
+                        <button class="prev">
+                            <img src="../assets/images/about-company/left-arrow-icon.svg" alt="left-arrow-icon">
+                        </button>
+                        <div class="pagination">
+                            <button class="pagination-dot" data-index="0"></button>
+                            <button class="pagination-dot" data-index="1"></button>
+                            <button class="pagination-dot" data-index="2"></button>
+                            <button class="pagination-dot" data-index="3"></button>
+                        </div>
+                        <button class="next">
+                            <img src="../assets/images/about-company/right-arrow-icon.svg" alt="right-arrow-icon">
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <section id="second-calculator" class="calculator" 
+    aria-labelledby="second-calculator-heading">
+        <div class="calculator-container">
+            <h2 id="second-calculator-heading">
+                Оставьте заявку на расчет стоимости
+            </h2>
+
+            <form class="calculator-form" action="/submit" method="post">
+                <div class="input-container">
+                    <input type="text"  id="name" class="styled-input"
+                    pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
+                    <label for="name" class="floating-label"
+                    data-original-text="Как к вам обращаться?"
+                    data-error-message="Как к вам обращаться? (не верный ввод)">
+                        Как к вам обращаться?
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="email"  id="email" class="styled-input"
+                     placeholder=" " required>
+                    <label for="email" class="floating-label"
+                    data-original-text="Ваша электронная почта"
+                    data-error-message="Ваша электронная почта (не верный ввод)">
+                        Ваша электронная почта
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="tel" id="telephone" class="styled-input"
+                    pattern="\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,3}?\)?[-.\s]?)?[\d-\s]{5,10}"
+                    placeholder=" " required>
+                    <label for="telephone" class="floating-label"
+                    data-original-text="Ваша номер телефона"
+                    data-error-message="Ваш номер телефона (не верный ввод)">
+                        Ваш номер телефона
+                    </label>
+                </div>
+
+                <div class="input-container">
+                    <input type="text"  id="message" class="styled-input message-input"
+                    placeholder=" ">
+                    <label for="message" class="floating-label  message-label">
+                        Ваше сообщение (не обязательно)
+                    </label>
+                </div>
+
+                <button class="btn btn-primary btn-lg" type="submit">
+                    Расчитать стоимость
+                </button>
+            </form>
+            <p class="personal-data-processing">
+                Нажимая на кнопку, вы даете согласие на <a href="" target="_blank"
+                rel="noopener noreferrer">обработку персональных данных</a>
+                 и соглашаетесь с <a href="" target="_blank"
+                rel="noopener noreferrer">публичной офертой</a>
+            </p>
+        </div>
+    </section>
 
     <section id="footer" class="footer">
         <div class="footer-top">
@@ -780,7 +824,7 @@
                 <img src="../assets/images/modals/close-window-btn.svg" 
                 alt="close-icon">
             </span>
-            <form class="reply-form" action="/call-me-back" method="post">
+            <form class="reply-form" action="/submit" method="post">
                 <div class="input-container">
                     <input type="text"  id="name" class="styled-input"
                     pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
@@ -823,7 +867,7 @@
             <span class="close-icon">
                 <img src="../assets/images/modals/close-window-btn.svg" alt="close-icon">
             </span>
-            <form class="reply-form" action="/become-our-partner" method="post">
+            <form class="reply-form" action="/submit" method="post">
                 <div class="input-container">
                     <input type="text"  id="name" class="styled-input"
                     pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
@@ -868,7 +912,7 @@
             <span class="close-icon">
                 <img src="../assets/images/modals/close-window-btn.svg" alt="close-icon">
             </span>
-            <form class="calculator-form" action="/calculate-transfer-price" method="post">
+            <form class="calculator-form" action="/submit" method="post">
                 <div class="input-container">
                     <input type="text"  id="name" class="styled-input"
                     pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
@@ -921,8 +965,6 @@
             </p>
         </div>
     </div>
-
-    <div class="mobile-bar-overlay"></div>
 
     <script type="module" src="/moscow/src/main.js" defer></script>
 
