@@ -1,12 +1,11 @@
 const modals = () => {
-    var modalCallMeBack = document.getElementById("modal-call-me-back");
-    var modalBecomeOurPartner = document.getElementById("modal-become-our-partner");
-    var modalGetTransferPrice = document.getElementById("modal-get-transfer-price");
+    var modalCallMeBack = document.getElementById('modal-call-me-back');
+    var modalBecomeOurPartner = document.getElementById('modal-become-our-partner');
+    var modalGetTransferPrice = document.getElementById('modal-get-transfer-price');
 
-    var btnCallMeBack = document.getElementById("btn-call-me-back");
-    var btnBecomeOurPartner = document.getElementById("btn-become-our-partner");
-    var btnGetTransferPrice = document.getElementById("btn-get-transfer-price");
-    var btnGetTransferPrice2 = document.getElementById("btn-get-transfer-price-2");
+    var btnCallMeBack = document.getElementById('btn-call-me-back');
+    var btnBecomeOurPartner = document.getElementById('btn-become-our-partner');
+    var btnsGetTransferPrice = document.querySelectorAll('.btn-get-transfer-cost');
 
     const modals = [modalCallMeBack, modalBecomeOurPartner, modalGetTransferPrice];
 
@@ -18,12 +17,10 @@ const modals = () => {
         toggleDiv(modalBecomeOurPartner);
     });
 
-    btnGetTransferPrice.addEventListener('click', function() {
-        toggleDiv(modalGetTransferPrice);
-    });
-
-    btnGetTransferPrice2.addEventListener('click', function() {
-        toggleDiv(modalGetTransferPrice);
+    btnsGetTransferPrice.forEach(btn => {
+        btn.addEventListener('click', function() {
+            toggleDiv(modalGetTransferPrice);
+        });
     });
 
     modals.forEach(modal => {

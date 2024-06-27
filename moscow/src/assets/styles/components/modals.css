@@ -133,4 +133,9 @@
     .modal-container:has(.calculator-form) {
         max-width: 289px;
     }
+
+    .close-icon {
+        top: 2rem;
+        right: 1rem;
+    }
 }

@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const { type } = require('os');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev
@@ -16,24 +17,24 @@ const optimization = () => {
     const confObj = {
         splitChunks: {
             chunks: 'all',
-            // minSize: 20000,
-            // minRemainingSize: 0,
-            // minChunks: 1,
-            // maxAsyncRequests: 30,
-            // maxInitialRequests: 30,
-            // enforceSizeThreshold: 50000,
-            // cacheGroups: {
-            //     defaultVendors: {
-            //         test: /[\\/]node_modules[\\/]/,
-            //         priority: -10,
-            //         reuseExistingChunk: true,
-            //     },
-            //     default: {
-            //         minChunks: 2,
-            //         priority: -20,
-            //         reuseExistingChunk: true,
-            //     },
-            // },
+            minSize: 20000,
+            minRemainingSize: 0,
+            minChunks: 1,
+            maxAsyncRequests: 30,
+            maxInitialRequests: 30,
+            enforceSizeThreshold: 50000,
+            cacheGroups: {
+                defaultVendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10,
+                    reuseExistingChunk: true,
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true,
+                },
+            },
         },
     };
 
@@ -266,8 +267,8 @@ module.exports = {
     },
     output: {
         filename: `[name]/${filename('js')}`,
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: ''
+        path: path.join(__dirname, 'dist'),
+        publicPath: '/'
     },
     optimization: optimization(),
     module: {
@@ -287,10 +288,25 @@ module.exports = {
             },
             {
                 test: /\.(?:|gif|png|jpg|jpeg|svg)$/,
+                type: 'asset',
                 use: [{
-                    loader: 'file-loader',
+                    loader: ImageMinimizerPlugin.loader,
                     options: {
-                        name: `[name]/${filename('[ext]')}`
+                        minimizerOptions: {
+                            plugins: [
+                            ['gifsicle', { interlaced: true }],
+                            ['jpegtran', { progressive: true }],
+                            ['optipng', { optimizationLevel: 5 }],
+                            ['svgo', {
+                                plugins: [
+                                {
+                                    removeViewBox: false,
+                                },
+                                ],
+                            }],
+                            ],
+                        
+                        }
                     }
                 }]
             },
