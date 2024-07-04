@@ -223,3 +223,9 @@
         width: 100%;
     }
 }
+
+@media (max-width: 335px) {
+    .btn-sm {
+        min-width: 200px;
+    }
+}
