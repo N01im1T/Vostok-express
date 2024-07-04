@@ -477,6 +477,18 @@ p {
     text-decoration: none;
 }
 
+.company-link {
+    font-family: var(--font-regular);
+    font-weight: var(--weight-regular);
+    font-size: 1.5rem;
+    color: var(--prymary-color);
+}
+
+.company-link:hover {
+    font-family: var(--font-bold);
+    font-weight: var(--weight-bold);
+}
+
 .design-by {
     font-family: var(--font-regular);
     font-weight: var(--weight-regular);
