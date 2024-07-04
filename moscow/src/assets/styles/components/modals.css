@@ -89,6 +89,10 @@
     margin-bottom: 2rem;
 }
 
+.modal-container .personal-data-processing {
+    max-width: 400px;
+}
+
 @media (max-width: 900px) {
     .modal-container:has(.calculator-form) {
         max-width: 720px;
