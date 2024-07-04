@@ -33,7 +33,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    gap: 5rem;
+    gap: 3.5rem;
 }
 
 .contacts h3,
@@ -45,7 +45,6 @@
 
 .contacts-item {
     display: flex;
-    /* flex-direction: row; */
     justify-content: flex-start;
     gap: 1rem;
 }
@@ -62,7 +61,7 @@
 }
 
 .schedule p {
-    max-width: 199px;
+    max-width: 200px;
 }
 
 .be-our-partner {
