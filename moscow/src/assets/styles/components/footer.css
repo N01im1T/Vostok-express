@@ -77,11 +77,17 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: self-start;
+    align-items: center;
 }
 
 .footer-bottom footer:first-of-type {
     margin-right: 1.5rem;
+}
+
+.company-link {
+    display: inline-block;
+    width: auto;
+    height: auto;
 }
 
 .social-media-links {
@@ -160,6 +166,7 @@
     .footer-bottom {
         flex-direction: column;
         flex-wrap: nowrap;
+        align-items: start;
         row-gap: 1.5rem;
     }
 
