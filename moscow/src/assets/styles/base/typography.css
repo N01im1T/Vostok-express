@@ -140,6 +140,8 @@ p {
 .floating-label {
     font-size: 1rem;
     color: var(--input-minor-color);
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* Modals */

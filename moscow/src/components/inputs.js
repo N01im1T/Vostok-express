@@ -32,44 +32,6 @@ const inputs = () => {
             e.preventDefault();
         });
     });
-
-    // Processing below 683px
-
-    const messageLabel = document.querySelectorAll('.message-label');
-    const messageInput = document.querySelectorAll('.message-input');
-
-    function updateLabelText() {
-        if (window.innerWidth < 683 && window.innerWidth > 623 ||
-            window.innerWidth < 340
-        ) {
-            messageLabel.forEach(label => {
-                label.textContent = "Ваше сообщение (не обязате..)";
-            });
-        } else {
-            messageLabel.forEach(label => {
-                label.textContent = "Ваше сообщение (не обязательно)";
-            });
-        }
-    }
-
-    function handleFocus() {
-        messageLabel.forEach(label => {
-            label.textContent = "Ваше сообщение (не обязательно)";
-        });
-    }
-    
-    function handleBlur() {
-        updateLabelText();
-    }
-
-    updateLabelText();
-
-    window.addEventListener("resize", updateLabelText);
-
-    messageInput.forEach(input => {
-        input.addEventListener("focus", handleFocus);
-        input.addEventListener("blur", handleBlur);
-    });
 }
 
 export default inputs;
