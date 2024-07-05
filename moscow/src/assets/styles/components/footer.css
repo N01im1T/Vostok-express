@@ -153,6 +153,12 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .footer-top-wrapper > section:last-child {
+        margin-left: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .footer-top {
         flex-direction: column;
@@ -166,6 +172,10 @@
         flex-wrap: nowrap;
         justify-content: space-between;
         gap: 1rem;
+    }
+
+    .footer-top-wrapper > section {
+        margin: 0;
     }
 
     .contacts h3,
