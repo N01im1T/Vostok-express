@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     steps();
     aboutCompany();
     buttons();
-    inputs();
     modals();
+    inputs();
     forms();
 });

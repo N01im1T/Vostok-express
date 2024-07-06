@@ -71,7 +71,7 @@ const forms = () => {
         input.addEventListener('invalid', () => {
             if (input.validity.valueMissing) {
                 input.setCustomValidity(message.fillField);
-            } else if (input.validity.patternMismatch) {
+            } else {
                 input.setCustomValidity(message.invalidFormat);
             }
         });
