@@ -1,6 +1,6 @@
-const forms = () => {
-    const form = document.querySelectorAll('form'),
-    inputs = document.querySelectorAll('input');
+const forms = (container = document) => {
+    const form = container.querySelectorAll('form'),
+        inputs = container.querySelectorAll('input');
 
     const lang = document.documentElement.lang || 'en';
 

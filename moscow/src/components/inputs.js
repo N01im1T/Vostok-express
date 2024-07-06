@@ -1,5 +1,5 @@
-const inputs = () => {
-    document.querySelectorAll('.styled-input').forEach(input => {
+const inputs = (container = document) => {
+    container.querySelectorAll('.styled-input').forEach(input => {
         if (input.id !== 'message') {    
             input.addEventListener('input', () => {
                 const label = input.nextElementSibling;
@@ -19,7 +19,7 @@ const inputs = () => {
         }   
     });
     
-    document.querySelectorAll('input[type="tel"]').forEach(function (input) {
+    container.querySelectorAll('input[type="tel"]').forEach(function (input) {
         input.addEventListener('input', function (e) {
             this.value = this.value.replace(/\D/, '');
         });
