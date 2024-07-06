@@ -11,10 +11,22 @@ const { type } = require('os');
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev
 
-const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+const filename = (ext) => 
+    isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 
 const optimization = () => {
     const confObj = {
+        minimizer: [
+            "...",
+            new ImageMinimizerPlugin({
+                minimizer: {
+                    implementation: ImageMinimizerPlugin.squooshMinify,
+                    options: {
+                        //Options
+                    }
+                },
+            }),
+        ],
         splitChunks: {
             chunks: 'all',
             minSize: 20000,
@@ -39,10 +51,7 @@ const optimization = () => {
     };
 
     if (isProd) {
-        confObj.minimizer = [
-            new TerserPlugin(),
-            new CssMinimizerPlugin(),
-        ];
+        confObj.minimizer = [new TerserPlugin(), new CssMinimizerPlugin()];
     }
 
     return confObj;
@@ -52,22 +61,38 @@ const plugins = () => {
     const basePlugins = [
         new CopyWebpackPlugin({
             patterns: [
-                { from: path.resolve(__dirname, 'moscow/public/assets'),
-                to: path.resolve(__dirname, 'dist/moscow/public/assets') },
-                // { from: path.resolve(__dirname, 'saint-petersburg/public/assets'),
-                // to: path.resolve(__dirname, 'dist/saint-petersburg/public/assets') },
-                // { from: path.resolve(__dirname, 'kazan/public/assets'),
-                // to: path.resolve(__dirname, 'dist/kazan/public/assets') },
-                // { from: path.resolve(__dirname, 'ekaterinburg/public/assets'),
-                // to: path.resolve(__dirname, 'dist/ekaterinburg/public/assets') },
-                // { from: path.resolve(__dirname, 'sochi/public/assets'),
-                // to: path.resolve(__dirname, 'dist/sochi/public/assets') },
-                // { from: path.resolve(__dirname, 'ufa/public/assets'),
-                // to: path.resolve(__dirname, 'dist/ufa/public/assets') },
-                // { from: path.resolve(__dirname, 'sevastopol/public/assets'),
-                // to: path.resolve(__dirname, 'dist/sevastopol/public/assets') },
-                // { from: path.resolve(__dirname, 'rostov-on-don/public/assets'),
-                // to: path.resolve(__dirname, 'dist/rostov-on-don/public/assets') }
+                { 
+                    from: path.resolve(__dirname, 'moscow/public/assets'),
+                    to: path.resolve(__dirname, 'dist/moscow/public/assets')
+                },
+                // { 
+                //     from: path.resolve(__dirname, 'saint-petersburg/public/assets'),
+                //     to: path.resolve(__dirname, 'dist/saint-petersburg/public/assets')
+                // },
+                // { 
+                //     from: path.resolve(__dirname, 'kazan/public/assets'),
+                //     to: path.resolve(__dirname, 'dist/kazan/public/assets')
+                // },
+                // {
+                //     from: path.resolve(__dirname, 'ekaterinburg/public/assets'),
+                //     to: path.resolve(__dirname, 'dist/ekaterinburg/public/assets')
+                // },
+                // {
+                //     from: path.resolve(__dirname, 'sochi/public/assets'),
+                //     to: path.resolve(__dirname, 'dist/sochi/public/assets')
+                // },
+                // {
+                //     from: path.resolve(__dirname, 'ufa/public/assets'),
+                //     to: path.resolve(__dirname, 'dist/ufa/public/assets')
+                // },
+                // {
+                //     from: path.resolve(__dirname, 'sevastopol/public/assets'),
+                //     to: path.resolve(__dirname, 'dist/sevastopol/public/assets')
+                // },
+                // {
+                //     from: path.resolve(__dirname, 'rostov-on-don/public/assets'),
+                //     to: path.resolve(__dirname, 'dist/rostov-on-don/public/assets')
+                // }
             ]
         }),
         new CleanWebpackPlugin(),
