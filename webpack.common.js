@@ -9,7 +9,7 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const { type } = require('os');
 
 const isDev = process.env.NODE_ENV === 'development';
-const isProd = !isDev
+const isProd = !isDev;
 
 const filename = (ext) => 
     isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
@@ -23,7 +23,7 @@ const optimization = () => {
                     implementation: ImageMinimizerPlugin.squooshMinify,
                     options: {
                         //Options
-                    }
+                    },
                 },
             }),
         ],
@@ -63,41 +63,41 @@ const plugins = () => {
             patterns: [
                 { 
                     from: path.resolve(__dirname, 'moscow/public/assets'),
-                    to: path.resolve(__dirname, 'dist/moscow/public/assets')
+                    to: path.resolve(__dirname, 'dist/moscow/public/assets'),
                 },
                 // { 
                 //     from: path.resolve(__dirname, 'saint-petersburg/public/assets'),
-                //     to: path.resolve(__dirname, 'dist/saint-petersburg/public/assets')
+                //     to: path.resolve(__dirname, 'dist/saint-petersburg/public/assets'),
                 // },
                 // { 
                 //     from: path.resolve(__dirname, 'kazan/public/assets'),
-                //     to: path.resolve(__dirname, 'dist/kazan/public/assets')
+                //     to: path.resolve(__dirname, 'dist/kazan/public/assets'),
                 // },
                 // {
                 //     from: path.resolve(__dirname, 'ekaterinburg/public/assets'),
-                //     to: path.resolve(__dirname, 'dist/ekaterinburg/public/assets')
+                //     to: path.resolve(__dirname, 'dist/ekaterinburg/public/assets'),
                 // },
                 // {
                 //     from: path.resolve(__dirname, 'sochi/public/assets'),
-                //     to: path.resolve(__dirname, 'dist/sochi/public/assets')
+                //     to: path.resolve(__dirname, 'dist/sochi/public/assets'),
                 // },
                 // {
                 //     from: path.resolve(__dirname, 'ufa/public/assets'),
-                //     to: path.resolve(__dirname, 'dist/ufa/public/assets')
+                //     to: path.resolve(__dirname, 'dist/ufa/public/assets'),
                 // },
                 // {
                 //     from: path.resolve(__dirname, 'sevastopol/public/assets'),
-                //     to: path.resolve(__dirname, 'dist/sevastopol/public/assets')
+                //     to: path.resolve(__dirname, 'dist/sevastopol/public/assets'),
                 // },
                 // {
                 //     from: path.resolve(__dirname, 'rostov-on-don/public/assets'),
-                //     to: path.resolve(__dirname, 'dist/rostov-on-don/public/assets')
-                // }
-            ]
+                //     to: path.resolve(__dirname, 'dist/rostov-on-don/public/assets'),
+                // },
+            ],
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: `[name]/${filename('css')}`
+            filename: `[name]/${filename('css')}`,
         }),
         new HtmlWebpackPlugin({
             filename: 'moscow/en/index.html',
@@ -105,7 +105,7 @@ const plugins = () => {
             chunks: ['moscow/en'],
             minify: {
                 collapseWhitespace: isProd
-            }
+            },
         }),
         new HtmlWebpackPlugin({
             filename: 'moscow/ru/index.html',
@@ -113,7 +113,7 @@ const plugins = () => {
             chunks: ['moscow/ru'],
             minify: {
                 collapseWhitespace: isProd
-            }
+            },
         }),
         // new HtmlWebpackPlugin({
         //     filename: 'saint-petersburg/en/index.html',
@@ -233,39 +233,42 @@ const plugins = () => {
         basePlugins.push(
             new ImageMinimizerPlugin({
                 minimizer: {
-                  implementation: ImageMinimizerPlugin.imageminMinify,
-                  options: {
-                    plugins: [
-                      ["gifsicle", { interlaced: true }],
-                      ["jpegtran", { progressive: true }],
-                      ["optipng", { optimizationLevel: 5 }],
-                      [
-                        "svgo",
-                        {
-                          plugins: [
-                            {
-                              name: "preset-default",
-                              params: {
-                                overrides: {
-                                  removeViewBox: false,
-                                  addAttributesToSVGElement: {
-                                    params: {
-                                      attributes: [
-                                        { xmlns: "http://www.w3.org/2000/svg" },
-                                      ],
-                                    },
-                                  },
+                    implementation: ImageMinimizerPlugin.imageminMinify,
+                    options: {
+                        plugins: [
+                            ["gifsicle", { interlaced: true }],
+                            ["jpegtran", { progressive: true }],
+                            ["optipng", { optimizationLevel: 5 }],
+                            [
+                                "svgo",
+                                {
+                                    plugins: [
+                                        {
+                                            name: "preset-default",
+                                            params: {
+                                                overrides: {
+                                                    removeViewBox: false,
+                                                },
+                                            },
+                                        },
+                                        {
+                                            name: "addAttributesToSVGElement",
+                                            params: {
+                                                attributes: [
+                                                    {
+                                                        xmlns: "http://www.w3.org/2000/svg"
+                                                    },
+                                                ],
+                                            },
+                                        },
+                                    ],
                                 },
-                              },
-                            },
-                          ],
-                        },
-                      ],
-                    ],
-                  },
+                            ],
+                        ],
+                    },
                 },
-              }),
-        )
+            })
+        );
     }
 
     return basePlugins;
@@ -291,16 +294,16 @@ module.exports = {
         // 'rostov-on-don/ru': './rostov-on-don/src/index.js'
     },
     output: {
-        filename: `[name]/${filename('js')}`,
-        path: path.join(__dirname, 'dist'),
-        publicPath: '/'
+        filename: `[name]/${filename("js")}`,
+        path: path.join(__dirname, "dist"),
+        publicPath: "/",
     },
     optimization: optimization(),
     module: {
         rules: [
             {
                 test: /\.html$/,
-                loader: 'html-loader',
+                loader: "html-loader",
             },
             {
                 test: /\.css$/,
@@ -308,41 +311,23 @@ module.exports = {
                     {
                         loader:MiniCssExtractPlugin.loader,
                     },
-                    'css-loader'
-                ]
+                    'css-loader',
+                ],
             },
             {
                 test: /\.(?:|gif|png|jpg|jpeg|svg)$/,
                 type: 'asset',
-                use: [{
-                    loader: ImageMinimizerPlugin.loader,
-                    options: {
-                        minimizerOptions: {
-                            plugins: [
-                            ['gifsicle', { interlaced: true }],
-                            ['jpegtran', { progressive: true }],
-                            ['optipng', { optimizationLevel: 5 }],
-                            ['svgo', {
-                                plugins: [
-                                {
-                                    removeViewBox: false,
-                                },
-                                ],
-                            }],
-                            ],
-                        
-                        }
-                    }
-                }]
             },
             {
                 test: /\.(?:|woff2)$/,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: `[name]/${filename('[ext]')}`
-                    }
-                }]
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: `[name]/${filename('[ext]')}`
+                        },
+                    },
+                ],
             },
             {
                 test: /\.js$/,

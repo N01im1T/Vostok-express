@@ -190,8 +190,7 @@ p {
     font-weight: var(--weight-semibold);
     font-size: 1.25rem;
     text-decoration: underline dotted;
-    text-underline-offset: 6px;
-    text-underline-position: below;
+    text-underline-offset: 3.5px;
 }
 
 .location a:not(.disabled):hover {
@@ -322,8 +321,6 @@ p {
 .personal-data-processing a {
     text-decoration: underline;
     text-underline-offset: 3.5px;
-    text-underline-position: below;
-
 }
 
 .personal-data-processing a:hover {
@@ -413,7 +410,6 @@ p {
     color: var(--text-color-dark);
     text-decoration: underline dotted;
     text-underline-offset: 3.5px;
-    text-underline-position: below;
 }
 
 .awards-slider-content a:hover {

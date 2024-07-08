@@ -11,7 +11,6 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: space-between;
 }
 
 .airport-transfer-container>* {

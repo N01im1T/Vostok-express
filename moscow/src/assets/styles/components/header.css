@@ -185,7 +185,6 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: space-between;
     gap: 2rem;
 
     margin-top: 2.25rem;
