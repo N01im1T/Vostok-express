@@ -1,3 +1,5 @@
+import './assets/styles/main.css';
+
 import header from './components/header.js';
 import footer from './components/footer.js';
 import transport from './components/transport.js';
@@ -6,7 +8,7 @@ import aboutCompany from './components/about-company.js';
 import buttons from './components/buttons.js';
 import inputs from './components/inputs.js';
 import modals from './components/modals.js';
-import forms from './components/forms.js'
+import forms from './components/forms.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     "use strict";
