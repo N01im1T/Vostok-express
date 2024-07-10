@@ -1,5 +1,6 @@
 import { default as applyInputs } from './inputs.js';
 import { default as applyForms } from './forms.js';
+import closeIcon from '../assets/images/modals/close-window-btn.svg';
 
 const modals = () => {
     const language = document.documentElement.lang;
@@ -14,7 +15,7 @@ const modals = () => {
     const closeButton = document.createElement('button');
     closeButton.classList.add('close-icon');
     closeButton.innerHTML = `
-        <img src="../assets/images/modals/close-window-btn.svg" alt="close-icon">
+        <img src="${closeIcon}" alt="close-icon">
     `;
 
     const form = document.createElement('form');
