@@ -69,7 +69,7 @@ const generateHtmlPlugins = (cities) => {
             return new HtmlWebpackPlugin({
                 filename: `${city}/public/${lang}/index.html`,
                 template: `./${city}/public/${lang}/index.html`,
-                chunks: [`${city}/public/${lang}`],
+                chunks: [city],
                 minify: {
                     collapseWhitespace: isProd,
                 },
@@ -89,8 +89,8 @@ module.exports = {
     entry,
     output: {
         filename: (pathData) => {
-            const name = pathData.chunk.name;
-            return `${name}/src/${filename('js')}`;
+            const city = pathData.chunk.name;
+            return `${city}/src/${filename('js')}`;
         },
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/',
@@ -114,8 +114,9 @@ module.exports = {
                 type: 'asset/resource',
                 generator: {
                     filename: (pathData) => {
-                        const name = pathData.filename.split('/')[0];
-                        return `${name}/public/assets/${filename('[ext]')}`;
+                        const city = pathData.filename.split('/')[0];
+                        const ext = path.extname(pathData.filename).replace('.', '');
+                        return `${city}/public/assets/[name].[contenthash].${ext}`;
                     },
                 },
             },
@@ -124,8 +125,9 @@ module.exports = {
                 type: 'asset/resource',
                 generator: {
                     filename: (pathData) => {
-                        const name = pathData.filename.split('/')[0];
-                        return `${name}/public/assets/fonts/${filename('[ext]')}`;
+                        const city = pathData.filename.split('/')[0];
+                        const ext = path.extname(pathData.filename).replace('.', '');
+                        return `${city}/public/assets/[name].[contenthash].${ext}`;
                     },
                 },
             },
@@ -140,8 +142,8 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: (pathData) => {
-                const name = pathData.chunk.name;
-                return `${name}/src/${filename('css')}`;
+                const city = pathData.chunk.name;
+                return `${city}/src/${filename('css')}`;
             },
         }),
         ...generateHtmlPlugins(cities),
