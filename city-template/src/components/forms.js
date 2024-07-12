@@ -49,6 +49,8 @@ const forms = (container = document) => {
 
       const formData = new FormData(item);
 
+      formData.append("action", "submit_form");
+
       // Add server
       postData("", formData)
         .then((res) => {
