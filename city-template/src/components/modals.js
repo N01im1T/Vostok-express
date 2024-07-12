@@ -1,6 +1,6 @@
 import { default as applyInputs } from "./inputs.js";
 import { default as applyForms } from "./forms.js";
-import closeIcon from "/moscow/public/assets/images/modals/close-window-btn.svg";
+import closeIcon from "/city-template/public/assets/images/modals/close-window-btn.svg";
 
 const modals = () => {
   const language = document.documentElement.lang;

@@ -63,35 +63,12 @@ const optimization = () => {
   return config;
 };
 
-const generateHtmlPlugins = (cities) => {
-  return cities.flatMap((city) => {
-    return ["en", "ru"].map((lang) => {
-      return new HtmlWebpackPlugin({
-        filename: `${city}/public/${lang}/index.html`,
-        template: `./${city}/public/${lang}/index.html`,
-        chunks: [city],
-        minify: {
-          collapseWhitespace: isProd,
-        },
-      });
-    });
-  });
-};
-
-const cities = ["moscow"];
-
-const entry = cities.reduce((acc, city) => {
-  acc[city] = `./${city}/src/main.js`;
-  return acc;
-}, {});
-
 module.exports = {
-  entry,
+  entry: [
+    path.resolve(__dirname, './city-template/src/main.js'),
+  ],
   output: {
-    filename: (pathData) => {
-      const city = pathData.chunk.name;
-      return `${city}/src/${filename("js")}`;
-    },
+    filename: `src/${filename("js")}`,
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
   },
@@ -114,10 +91,9 @@ module.exports = {
         type: "asset/resource",
         generator: {
           filename: (pathData) => {
-            const city = pathData.filename.split("/")[0];
             const ext = path.extname(pathData.filename).replace(".", "");
-            return `${city}/public/assets/[name].[contenthash].${ext}`;
-          },
+            return `public/assets/[name].[contenthash].${ext}`;
+          }
         },
       },
       {
@@ -125,10 +101,9 @@ module.exports = {
         type: "asset/resource",
         generator: {
           filename: (pathData) => {
-            const city = pathData.filename.split("/")[0];
             const ext = path.extname(pathData.filename).replace(".", "");
-            return `${city}/public/assets/[name].[contenthash].${ext}`;
-          },
+            return `public/assets/[name].[contenthash].${ext}`;
+          }
         },
       },
       {
@@ -141,11 +116,14 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: (pathData) => {
-        const city = pathData.chunk.name;
-        return `${city}/src/${filename("css")}`;
+      filename: `src/${filename("css")}`,
+    }),
+    new HtmlWebpackPlugin({
+      filename: `public/ru/index.html`,
+      template: path.resolve(__dirname, `city-template/public/ru/index.html`),
+      minify: {
+        collapseWhitespace: isProd,
       },
     }),
-    ...generateHtmlPlugins(cities),
   ],
 };

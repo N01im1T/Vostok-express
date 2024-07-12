@@ -64,7 +64,7 @@
 }
 
 .awards-slider-content::before {
-  content: url(/moscow/public/assets/images/about-company/file-icon.svg);
+  content: url(/city-template/public/assets/images/about-company/file-icon.svg);
   vertical-align: text-top;
 }
 

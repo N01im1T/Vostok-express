@@ -13,9 +13,9 @@ const buttons = () => {
 
   function switchLanguage(language) {
     if (language === "ru") {
-      window.location.href = "/moscow/public/ru/index.html";
+      window.location.href = "/city-template/public/ru/index.html";
     } else if (language === "en") {
-      window.location.href = "/moscow/public/en/index.html";
+      window.location.href = "/city-template/public/en/index.html";
     }
   }
 
