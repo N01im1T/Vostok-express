@@ -1,147 +1,147 @@
 .steps {
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
-    padding: 6rem 6rem 6rem 6rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  padding: 6rem 6rem 6rem 6rem;
 }
 
 .steps h2 {
-    margin-bottom: 3.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .steps-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2rem;
 }
 
 .steps-container > * {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 
-    max-width: 396px;
-    padding-top: 3rem;
-    padding-bottom: 6rem;
+  max-width: 396px;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
 }
 
 .step-number {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .step-number svg {
-    width: 96px;
-    height: 80px;
+  width: 96px;
+  height: 80px;
 }
 
 .centered-text {
-    text-anchor: middle;
+  text-anchor: middle;
 }
 
 .step p {
-    max-height: 50px;
-    margin-top: 0.5rem;
+  max-height: 50px;
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 1440px) {
-    .step h3 {
-        max-width: 197px;
-    }
+  .step h3 {
+    max-width: 197px;
+  }
 
-    .step p {
-        max-height: 75px;
-    }
+  .step p {
+    max-height: 75px;
+  }
 }
 
 @media (max-width: 1280px) {
-    .steps {
-        justify-content: space-between;
+  .steps {
+    justify-content: space-between;
 
-        padding: 4rem 4rem 4rem 4rem;
-    }
+    padding: 4rem 4rem 4rem 4rem;
+  }
 
-    .steps-container > * {
-        padding-top: 0px;
-    }
+  .steps-container > * {
+    padding-top: 0px;
+  }
 }
 
 @media (max-width: 1000px) {
-    .steps {
-        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-    }
+  .steps {
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  }
 
-    .steps-container {
-        column-gap: 2rem;
-        row-gap: 2rem;
-    }
+  .steps-container {
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
 
-    .steps-container > * {
-        margin-bottom: 4rem;
-        padding-bottom: 0px;
-    }
+  .steps-container > * {
+    margin-bottom: 4rem;
+    padding-bottom: 0px;
+  }
 }
 
 @media (max-width: 900px) {
-    .steps-container {
-        flex-wrap: wrap;
-    }
+  .steps-container {
+    flex-wrap: wrap;
+  }
 
-    .steps-container > * {
-        max-width: 320px;
-        margin-bottom: 0;
-    }
+  .steps-container > * {
+    max-width: 320px;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 767px) {
-    .steps-container {
-        column-gap: 0.5rem;
-        row-gap: 0.5rem;
-    }
+  .steps-container {
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+  }
 
-    .steps-container > * {
-        max-width: 300px;
-    }
+  .steps-container > * {
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 704px) {
-    .steps-container > * {
-        max-width: 280px;
-    }
+  .steps-container > * {
+    max-width: 280px;
+  }
 }
 
 @media (max-width: 664px) {
-    .steps-container {
-        margin-bottom: 1rem;
-    }
+  .steps-container {
+    margin-bottom: 1rem;
+  }
 
-    .steps-container > * {
-        max-width: 250px;
-    }
+  .steps-container > * {
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 615px) {
-    .steps-container {
-        margin-bottom: 0;
-    }
+  .steps-container {
+    margin-bottom: 0;
+  }
 
-    .steps-container > * {
-        max-width: 555px;
-    }
+  .steps-container > * {
+    max-width: 555px;
+  }
 }
 
 @media (max-width: 489px) {
-    .steps {
-        margin: 0 0.5rem 0 0.5rem;
-        padding: 1.5rem 1rem 1.5rem 1rem;
-    }
+  .steps {
+    margin: 0 0.5rem 0 0.5rem;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+  }
 
-    .steps h2 {
-        margin-bottom: 1rem;
-    }
+  .steps h2 {
+    margin-bottom: 1rem;
+  }
 
-    .step h3 {
-        max-width: 246px;
-    }
+  .step h3 {
+    max-width: 246px;
+  }
 }

@@ -1,5 +1,3 @@
-const transport = () => {
-    
-}
+const transport = () => {};
 
 export default transport;

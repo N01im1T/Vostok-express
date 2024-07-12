@@ -1,60 +1,60 @@
 const aboutCompany = () => {
-    const slides = document.querySelectorAll('.awards-slider-slide');
-    const slider = document.querySelector('.awards-slider');
-    const slideList = document.querySelector('.awards-slides');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    const paginationDots = document.querySelectorAll('.pagination-dot');
-    var currentIndex = 0;
+  const slides = document.querySelectorAll(".awards-slider-slide");
+  const slider = document.querySelector(".awards-slider");
+  const slideList = document.querySelector(".awards-slides");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+  const paginationDots = document.querySelectorAll(".pagination-dot");
+  var currentIndex = 0;
 
-    function updateSliderHeight() {
-        var maxHeight = 0;
+  function updateSliderHeight() {
+    var maxHeight = 0;
 
-        slides.forEach(slide => {
-            const height = slide.scrollHeight;
-            if (height > maxHeight) {
-                maxHeight = height;
-            }
-        });
+    slides.forEach((slide) => {
+      const height = slide.scrollHeight;
+      if (height > maxHeight) {
+        maxHeight = height;
+      }
+    });
 
-        slider.style.height = maxHeight + 'px';
-    }
+    slider.style.height = maxHeight + "px";
+  }
 
-    function updateSlidePosition() {
-        slides.forEach((slide, index) => {
-            slide.classList.toggle('active', index === currentIndex);
-        });
-        paginationDots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex);
-        });
-        updateSliderHeight();
-    }
-
-    function showNextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateSlidePosition();
-    }
-
-    function showPrevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateSlidePosition();
-    }
-
-    prevButton.addEventListener('click', showPrevSlide);
-    nextButton.addEventListener('click', showNextSlide);
-
+  function updateSlidePosition() {
+    slides.forEach((slide, index) => {
+      slide.classList.toggle("active", index === currentIndex);
+    });
     paginationDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentIndex = index;
-            updateSlidePosition();
-        });
+      dot.classList.toggle("active", index === currentIndex);
     });
+    updateSliderHeight();
+  }
 
+  function showNextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
     updateSlidePosition();
+  }
 
-    window.addEventListener('resize', () => {
-        updateSliderHeight();
+  function showPrevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlidePosition();
+  }
+
+  prevButton.addEventListener("click", showPrevSlide);
+  nextButton.addEventListener("click", showNextSlide);
+
+  paginationDots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentIndex = index;
+      updateSlidePosition();
     });
-}
+  });
+
+  updateSlidePosition();
+
+  window.addEventListener("resize", () => {
+    updateSliderHeight();
+  });
+};
 
 export default aboutCompany;

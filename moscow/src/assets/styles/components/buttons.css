@@ -1,231 +1,232 @@
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border-radius: 24px;
+  border-radius: 24px;
 
-    transition: background-color 0.3s ease, border-color 0.3s ease,
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
     border-width 0.3s ease-in-out;
 }
 
 /* Primary buttons */
 
 .btn-primary {
-    background-color: var(--btn-color-default-primary);
+  background-color: var(--btn-color-default-primary);
 
-    height: 67px;
-    min-height: 67px;
-    border: none;
+  height: 67px;
+  min-height: 67px;
+  border: none;
 }
 
 .btn-primary:hover {
-    background-color: var(--btn-color-hover-primary);
+  background-color: var(--btn-color-hover-primary);
 }
 
 .btn-primary:active {
-    background-color: var(--btn-color-click-primary);
+  background-color: var(--btn-color-click-primary);
 }
 
 .btn-primary:disabled {
-    background-color: var(--btn-color-disable-primary);
-    
-    pointer-events: none;
-    cursor: not-allowed;
+  background-color: var(--btn-color-disable-primary);
+
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 .btn-sm {
-    width: 246px;
-    min-width: 246px;
+  width: 246px;
+  min-width: 246px;
 }
 
 .btn-lg {
-    max-width: 902px;
-    width: 100%;
+  max-width: 902px;
+  width: 100%;
 }
 
 /* Secondary buttons */
 
 .btn-secondary {
-    background-color: transparent;
+  background-color: transparent;
 
-    height: 59px;
-    border: 1px solid var(--btn-color-default-secondary);
+  height: 59px;
+  border: 1px solid var(--btn-color-default-secondary);
 }
 
 .btn-secondary:not(:disabled):hover {
-    border-width: 2px;
+  border-width: 2px;
 
-    transition: border 0.3s;
+  transition: border 0.3s;
 }
 
 .btn-secondary:not(:disabled):active {
-    border-color: var(--btn-color-click-secondary);
+  border-color: var(--btn-color-click-secondary);
 }
 
 .btn-secondary:disabled {
-    border-color: var(--btn-color-disable-secondary);
+  border-color: var(--btn-color-disable-secondary);
 
-    pointer-events: none;
-    cursor: not-allowed;
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 .btn-secondary.black {
-    border-color: var(--btn-color-default-secondary-black);
+  border-color: var(--btn-color-default-secondary-black);
 }
 
 .btn-secondary.black:not(:disabled):hover {
-    border-width: 2px;
-    border-color: var(--btn-color-default-secondary-black);
+  border-width: 2px;
+  border-color: var(--btn-color-default-secondary-black);
 }
 
 .btn-secondary.black:not(:disabled):active {
-    border-color: var(--btn-color-click-secondary-black);
+  border-color: var(--btn-color-click-secondary-black);
 }
 
 .btn-secondary.black:disabled {
-    border-color: var(--btn-color-disable-secondary-black);
+  border-color: var(--btn-color-disable-secondary-black);
 
-    pointer-events: none;
-    cursor: not-allowed;
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 .btn-text-me {
-    width: 148px;
-    min-width: 148px;
+  width: 148px;
+  min-width: 148px;
 }
 
 .btn-call-me-back {
-    width: 216px;
-    min-width: 216px;
+  width: 216px;
+  min-width: 216px;
 }
 
 .btn-order {
-    max-width: 332px;
-    width: 100%;
+  max-width: 332px;
+  width: 100%;
 }
 
 /* Madal buttons */
 
 .reply-form > .btn-call-me-back,
 .reply-form > .btn-call-me-back {
-    max-width: 588px;
-    width: 100%;
+  max-width: 588px;
+  width: 100%;
 }
 
 .btn-calculate-price {
-    max-width: 767px;
-    width: 100%;
+  max-width: 767px;
+  width: 100%;
 }
 
 /* Toggle language button */
 
 .toggle-btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
 
-    background-color: transparent;
+  background-color: transparent;
 
-    width: 85px;
-    height: 37px;
-    border: none;
+  width: 85px;
+  height: 37px;
+  border: none;
 
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-  
+
 .toggle-btn [aria-selected="true"] {
-    padding: 0.5rem;
-    border: 1px solid;
-    border-radius: 1rem;
+  padding: 0.5rem;
+  border: 1px solid;
+  border-radius: 1rem;
 }
 
 .toggle-btn [aria-selected="true"]:not(:disabled):hover {
-    border-width: 2px;
+  border-width: 2px;
 }
 
 .toggle-btn [aria-selected="true"]:not(:disabled):active {
-    border-color: var(--toggle-btn-click);
+  border-color: var(--toggle-btn-click);
 }
 
 .toggle-btn:disabled {
-    pointer-events: none;
-    cursor: not-allowed;
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 .toggle-btn:disabled [aria-selected="true"] {
-    border: 2px solid;
-    border-color: var(--toggle-btn-disable);
+  border: 2px solid;
+  border-color: var(--toggle-btn-disable);
 }
 
 #ru[aria-selected="true"] ~ {
-    transform: translateX(100%);
+  transform: translateX(100%);
 }
 
 #en[aria-selected="true"] ~ {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 /* Mobile Buttons */
 
 .mobile-burger-btn {
-    display: none;
+  display: none;
 
-    background-color: transparent;
-    
-    width: 32px;
-    height: 32px;
-    border: none;
+  background-color: transparent;
 
-    transition: transform 0.3s ease;
+  width: 32px;
+  height: 32px;
+  border: none;
+
+  transition: transform 0.3s ease;
 }
 
 .mobile-burger-btn:active {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .mobile-btn-close-top-bar {
-    display: none;
+  display: none;
 
-    background-color: transparent;
+  background-color: transparent;
 
-    width: 32px;
-    height: 32px;
-    border: none;
-
+  width: 32px;
+  height: 32px;
+  border: none;
 }
 
 @media (max-width: 1150px) {
-    /* Mobile Buttons */
+  /* Mobile Buttons */
 
-    .top-bar.mobile-bar.active > .mobile-burger-btn {
-        display: none;
-    }
+  .top-bar.mobile-bar.active > .mobile-burger-btn {
+    display: none;
+  }
 
-    .top-bar.mobile-bar.deactive > .mobile-burger-btn {
-        display: flex;
-    }
+  .top-bar.mobile-bar.deactive > .mobile-burger-btn {
+    display: flex;
+  }
 
-    .mobile-bar > .mobile-btn-close-top-bar {
-        position: absolute;
-        display: block;
-        top: 2.5rem;
-        right: 1.5rem;
-    }
+  .mobile-bar > .mobile-btn-close-top-bar {
+    position: absolute;
+    display: block;
+    top: 2.5rem;
+    right: 1.5rem;
+  }
 }
 
 @media (max-width: 592px) {
-    .btn-sm {
-        max-width: 496px;
-        min-width: 272px;
-        width: 100%;
-    }
+  .btn-sm {
+    max-width: 496px;
+    min-width: 272px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 335px) {
-    .btn-sm {
-        min-width: 200px;
-    }
+  .btn-sm {
+    min-width: 200px;
+  }
 }

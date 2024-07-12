@@ -1,661 +1,663 @@
 @font-face {
-    font-family: 'Inter';
-    src: url('/moscow/public/assets/fonts/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2') format('woff2');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Inter";
+  src: url("/moscow/public/assets/fonts/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('/moscow/public/assets/fonts/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7SUc.woff2') format('woff2');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Inter";
+  src: url("/moscow/public/assets/fonts/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7SUc.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-    font-family: var(--font-regular);
-    font-weight: var(--weight-regular);
-    color: var(--text-color);
+  font-family: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--text-color);
 }
 
-h1{
-    font-family: var(--font-medium);
-    font-weight: var(--weight-medium);
-    font-size: 6rem;
-    color: var(--text-color);
-    line-height: 115%;
+h1 {
+  font-family: var(--font-medium);
+  font-weight: var(--weight-medium);
+  font-size: 6rem;
+  color: var(--text-color);
+  line-height: 115%;
 }
 
-h2{
-    font-family: var(--font-medium);
-    font-weight: var(--weight-medium);
-    font-size: 4rem;
-    color: var(--text-color-dark);
-    line-height: 115%;
+h2 {
+  font-family: var(--font-medium);
+  font-weight: var(--weight-medium);
+  font-size: 4rem;
+  color: var(--text-color-dark);
+  line-height: 115%;
 }
 
-h3{
-    font-family: var(--font-semibold);
-    font-weight: var(--weight-semibold);
-    font-size: 2.25rem;
-    color: var(--text-color-dark);
-    line-height: 115%;
+h3 {
+  font-family: var(--font-semibold);
+  font-weight: var(--weight-semibold);
+  font-size: 2.25rem;
+  color: var(--text-color-dark);
+  line-height: 115%;
 }
 
-h4{
-    font-family: var(--font-medium);
-    font-weight: var(--weight-medium);
-    font-size: 2.25rem;
-    color: var(--text-color-dark);
-    line-height: 115%;
+h4 {
+  font-family: var(--font-medium);
+  font-weight: var(--weight-medium);
+  font-size: 2.25rem;
+  color: var(--text-color-dark);
+  line-height: 115%;
 }
 
 a {
-    color: var(--link);
-    text-decoration: none;
+  color: var(--link);
+  text-decoration: none;
 }
 
 p {
-    word-break: keep-all;
-    overflow-wrap: break-word;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* Buttons */
 
 .btn-primary,
 .btn-secondary {
-    font-family: var(--font-bold);
-    font-weight: var(--weight-bold);
-    font-size: 1rem;
+  font-family: var(--font-bold);
+  font-weight: var(--weight-bold);
+  font-size: 1rem;
 }
 
 .btn-primary:disabled {
-    color: var(--btn-text-color-disable-primary);
+  color: var(--btn-text-color-disable-primary);
 }
 
 .btn-secondary {
-    color: var(--btn-text-color-default-secondary);
+  color: var(--btn-text-color-default-secondary);
 }
 
 .btn-secondary:disabled {
-    color: var(--btn-text-color-disable-secondary);
+  color: var(--btn-text-color-disable-secondary);
 }
 
 .btn-secondary.black {
-    color: var(--btn-text-color-default-secondary-black);
+  color: var(--btn-text-color-default-secondary-black);
 }
 
 .btn-secondary.black:disabled {
-    color: var(--btn-text-color-disable-secondary-black);
+  color: var(--btn-text-color-disable-secondary-black);
 }
 
 .toggle-btn {
-    font-family: var(--font-semibold);
-    font-weight: var(--weight-semibold);
-    font-size: 1rem;
-    color: var(--text-color);
+  font-family: var(--font-semibold);
+  font-weight: var(--weight-semibold);
+  font-size: 1rem;
+  color: var(--text-color);
 }
 
 .toggle-btn:disabled {
-    color: var(--toggle-btn-disable);
+  color: var(--toggle-btn-disable);
 }
 
 /* Inputs */
 
 .input-container {
-    font-family: var(--font-regular);
-    font-weight: var(--weight-regular);
+  font-family: var(--font-regular);
+  font-weight: var(--weight-regular);
 }
 
-.input-container.disabled > .floating-label{
-    color: var(--input-disable);
-} 
+.input-container.disabled > .floating-label {
+  color: var(--input-disable);
+}
 
 .styled-input {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .styled-input:focus {
-    caret-color: var(--input-minor-color);
+  caret-color: var(--input-minor-color);
 }
 
 .styled-input:focus + .floating-label,
 .styled-input:not(:placeholder-shown) + .floating-label {
-    font-size: 10px;
-    color: var(--input-black-text);
-    caret-color: var(--input-black-text);
+  font-size: 10px;
+  color: var(--input-black-text);
+  caret-color: var(--input-black-text);
 }
 
 .styled-input.invalid:not(:placeholder-shown) + .floating-label {
-    color: var(--input-error);
+  color: var(--input-error);
 }
 
 .styled-input .invalid {
-    color: var(--input-error);
-    font-size: 10px;
+  color: var(--input-error);
+  font-size: 10px;
 }
 
 .floating-label {
-    font-size: 1rem;
-    color: var(--input-minor-color);
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  font-size: 1rem;
+  color: var(--input-minor-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Modals */
 
 .modal-container h4,
 .modal-container p {
-    color: var(--text-color-dark);
-    text-align: left;
+  color: var(--text-color-dark);
+  text-align: left;
 }
 
 .modal-container p a {
-    color: var(--text-color-dark);
-    text-decoration: underline;
-    text-underline-offset: 3.5px;
+  color: var(--text-color-dark);
+  text-decoration: underline;
+  text-underline-offset: 3.5px;
 }
 
 .modal-container p a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* Header */
 
 .logo-container span {
-    text-align: start;
-    color: var(--text-color);
+  text-align: start;
+  color: var(--text-color);
 }
 
 .location a:active .path-fill {
-    fill: var( --contact-info-click);
-    stroke: var( --contact-info-click);
+  fill: var(--contact-info-click);
+  stroke: var(--contact-info-click);
 }
 
 .location a.disabled .path-fill {
-    fill: var(--contact-info-disable);
-    stroke: var(--contact-info-disable);
+  fill: var(--contact-info-disable);
+  stroke: var(--contact-info-disable);
 
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 .location a.disabled .path-stroke {
-    stroke: var( --contact-info-click);
+  stroke: var(--contact-info-click);
 }
 
 .location a {
-    font-family: var(--font-semibold);
-    font-weight: var(--weight-semibold);
-    font-size: 1.25rem;
-    text-decoration: underline dotted;
-    text-underline-offset: 3.5px;
+  font-family: var(--font-semibold);
+  font-weight: var(--weight-semibold);
+  font-size: 1.25rem;
+  text-decoration: underline dotted;
+  text-underline-offset: 3.5px;
 }
 
 .location a:not(.disabled):hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .location a:active {
-    color: var(--contact-info-click);
+  color: var(--contact-info-click);
 }
 
 .location a.disabled {
-    color: var(--contact-info-disable);
+  color: var(--contact-info-disable);
 
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 .email a:first-of-type {
-    font-family: var(--font-bold);
-    font-weight: var(--weight-bold);
-    font-size: 1.5rem;
+  font-family: var(--font-bold);
+  font-weight: var(--weight-bold);
+  font-size: 1.5rem;
 }
 
 .email a:last-of-type {
-    font-family: var(--font-medium);
-    font-weight: var(--weight-medium);
-    font-size: 1rem;
+  font-family: var(--font-medium);
+  font-weight: var(--weight-medium);
+  font-size: 1rem;
 }
 
 .email a:active {
-    color: var(--contact-info-click);
+  color: var(--contact-info-click);
 }
 
 .email a.disabled {
-    color: var(--contact-info-disable);
+  color: var(--contact-info-disable);
 }
 
 .header-main-content {
-    text-align: left;
+  text-align: left;
 }
 
 .main-content-wraper p,
 .text-wrapper p,
 .car-info-item p {
-    font-size: 1.5rem;
-    line-height: 130%;
+  font-size: 1.5rem;
+  line-height: 130%;
 }
 
-.text-wrapper p a{
-    color: #2F80ED;
+.text-wrapper p a {
+  color: #2f80ed;
 }
 
-.text-wrapper p a:hover{
-    text-decoration: underline;
-    text-underline-offset: 3.5px;
+.text-wrapper p a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3.5px;
 }
 
 .car-info {
-    text-align: left;
+  text-align: left;
 }
 
-.car-info-item span{
-    font-family: var(--font-medium);
-    font-weight: var(--weight-medium);
-    font-size: 4rem;
-    line-height: 115%;
+.car-info-item span {
+  font-family: var(--font-medium);
+  font-weight: var(--weight-medium);
+  font-size: 4rem;
+  line-height: 115%;
 }
 
 /* Transport */
 
 .transport {
-    color: var(--text-color-dark);
+  color: var(--text-color-dark);
 }
 
 .transport-card-goods {
-    font-family: var(--font-regular);
-    font-weight: var(--weight-regular);
-    font-size: 1.25rem;
+  font-family: var(--font-regular);
+  font-weight: var(--weight-regular);
+  font-size: 1.25rem;
 }
 
 .passanger-amount,
 .luggage-amount {
-    line-height: 120%;
+  line-height: 120%;
 }
 
 .transport-quality {
-    font-family: var(--font-bold);
-    font-weight: var(--weight-bold);
-    font-size: 2rem;
-    line-height: 110%;
+  font-family: var(--font-bold);
+  font-weight: var(--weight-bold);
+  font-size: 2rem;
+  line-height: 110%;
 }
 
 .transport-description {
-    font-family: var(--font-regular);
-    font-weight: var(--weight-regular);
-    font-size: 1rem;
-    line-height: 120%;
+  font-family: var(--font-regular);
+  font-weight: var(--weight-regular);
+  font-size: 1rem;
+  line-height: 120%;
 }
 
 .transport-price {
-    font-family: var(--font-bold);
-    font-weight: var(--weight-bold);
-    font-size: 2.5rem;
-    line-height: 110%;
+  font-family: var(--font-bold);
+  font-weight: var(--weight-bold);
+  font-size: 2.5rem;
+  line-height: 110%;
 }
 
 .transport-price span:first-child {
-    font-family: var(--font-extrabold);
-    font-weight: var(--weight-extrabold);
-    font-size: 1.25rem;
-    line-height: 120%;
+  font-family: var(--font-extrabold);
+  font-weight: var(--weight-extrabold);
+  font-size: 1.25rem;
+  line-height: 120%;
 }
 
 /* Calculator */
 
 .calculator-container h2 {
-    text-align: center;
-    color: var(--text-color);
-    word-wrap: break-word;
+  text-align: center;
+  color: var(--text-color);
+  word-wrap: break-word;
 }
 
 .personal-data-processing {
-    font-size: 1.125rem;
-    line-height: 140%;
-    text-align: center;
-    word-wrap:break-word;
+  font-size: 1.125rem;
+  line-height: 140%;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .personal-data-processing a {
-    text-decoration: underline;
-    text-underline-offset: 3.5px;
+  text-decoration: underline;
+  text-underline-offset: 3.5px;
 }
 
 .personal-data-processing a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* Advantages */
 
 .advantages {
-    font-size: 1.125rem;
-    color: var(--text-color-dark)
+  font-size: 1.125rem;
+  color: var(--text-color-dark);
 }
 
 .advantages-about-company p,
 .advantages-about-supporting p {
-    text-align: left;
-    line-height: 140%;
+  text-align: left;
+  line-height: 140%;
 }
 
 /* Steps */
 
 .steps {
-    font-size: 1.125rem;
-    color: var(--text-color-dark);
+  font-size: 1.125rem;
+  color: var(--text-color-dark);
 }
 
 .step {
-    text-align: left;
+  text-align: left;
 }
 
 .centered-text {
-    font-family: var(--font-semibold);
-    font-weight: var(--weight-semibold);
-    font-size: 2.25rem;
-    fill: #333;
+  font-family: var(--font-semibold);
+  font-weight: var(--weight-semibold);
+  font-size: 2.25rem;
+  fill: #333;
 }
 
 .step p {
-    line-height: 140%;
+  line-height: 140%;
 }
 
 /* Airport transfer */
 
 .text h2 {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .text p {
-    font-size: 1.5rem;
-    line-height: 130%;
+  font-size: 1.5rem;
+  line-height: 130%;
 }
 
 /* About company */
 
 .about-company {
-    font-size: 1.25rem;
-    color: var(--text-color-dark);
+  font-size: 1.25rem;
+  color: var(--text-color-dark);
 }
 
 .about-company-text p {
-    text-align: left;
-    line-height: 130%;
+  text-align: left;
+  line-height: 130%;
 }
 
 .about-company-advantages {
-    font-family: var(--font-black);
-    font-weight: var(--weight-black);
-    font-size: 6rem;
-    line-height: 110%;
+  font-family: var(--font-black);
+  font-weight: var(--weight-black);
+  font-size: 6rem;
+  line-height: 110%;
 }
 
 .advantage-item p {
-    font-family: var(--font-medium);
-    font-weight: var(--weight-medium);
-    font-size: 1.5rem;
-    line-height: 110%;
+  font-family: var(--font-medium);
+  font-weight: var(--weight-medium);
+  font-size: 1.5rem;
+  line-height: 110%;
 }
 
 .highlight-symbol {
-    color: #F2C94C;
+  color: #f2c94c;
 }
 
 .awards-slider-content a {
-    font-family: var(--font-bold);
-    font-weight: var(--weight-bold);
-    line-height: 130%;
-    color: var(--text-color-dark);
-    text-decoration: underline dotted;
-    text-underline-offset: 3.5px;
+  font-family: var(--font-bold);
+  font-weight: var(--weight-bold);
+  line-height: 130%;
+  color: var(--text-color-dark);
+  text-decoration: underline dotted;
+  text-underline-offset: 3.5px;
 }
 
 .awards-slider-content a:hover {
-    text-decoration: none;
-    
-    transition: text-decoration 0.4s ease;
+  text-decoration: none;
+
+  transition: text-decoration 0.4s ease;
 }
 
 .awards-slider-content p {
-    line-height: 110%;
+  line-height: 110%;
 }
 
 /* Footer */
 
-.footer{
-    font-family: var(--font-regular);
-    font-weight: var(--weight-regular);
-    font-size: 1.25rem;
-    color: var(--text-color-dark);
+.footer {
+  font-family: var(--font-regular);
+  font-weight: var(--weight-regular);
+  font-size: 1.25rem;
+  color: var(--text-color-dark);
 }
 
 .footer-logo-container span {
-    font-size: 1rem;
-    color: var(--text-color-dark);
+  font-size: 1rem;
+  color: var(--text-color-dark);
 }
 
 .contacts h3,
 .feedback h3,
 .schedule h3,
 .be-our-partner h3 {
-    font-family: var(--font-bold);
-    font-weight: var(--weight-bold);
-    font-size: 1.5rem;
-    line-height: 110%;
-} 
+  font-family: var(--font-bold);
+  font-weight: var(--weight-bold);
+  font-size: 1.5rem;
+  line-height: 110%;
+}
 
 .contacts a,
 .feedback a,
 .social-media-links a {
-    color: var(--text-color-dark);
-    line-height: 130%;
+  color: var(--text-color-dark);
+  line-height: 130%;
 }
 
 .schedule p {
-    line-height: 130%;
+  line-height: 130%;
 }
 
 .number,
 .feedback-link {
-    font-family: var(--font-semibold);
-    font-weight: var(--weight-semibold);
-    line-height: 130%;
+  font-family: var(--font-semibold);
+  font-weight: var(--weight-semibold);
+  line-height: 130%;
 }
 
 .content,
 .social-media-link {
-    text-decoration: underline;
-    text-underline-offset: 3.5px;
-    line-height: 130%;
+  text-decoration: underline;
+  text-underline-offset: 3.5px;
+  line-height: 130%;
 }
 
 .content:hover,
 .social-media-link:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .company-link {
-    font-family: var(--font-regular);
-    font-weight: var(--weight-regular);
-    font-size: 1.5rem;
-    color: var(--prymary-color);
+  font-family: var(--font-regular);
+  font-weight: var(--weight-regular);
+  font-size: 1.5rem;
+  color: var(--prymary-color);
 }
 
 .company-link:hover {
-    font-family: var(--font-bold);
-    font-weight: var(--weight-bold);
+  font-family: var(--font-bold);
+  font-weight: var(--weight-bold);
 }
 
 .design-by {
-    font-family: var(--font-regular);
-    font-weight: var(--weight-regular);
-    font-size: 1.25rem;
-    line-height: 130%;
+  font-family: var(--font-regular);
+  font-weight: var(--weight-regular);
+  font-size: 1.25rem;
+  line-height: 130%;
 }
 
 .special-symbols svg {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 @media (max-width: 1440px) {
-    h1 {
-        font-size: 4rem;
-    }
+  h1 {
+    font-size: 4rem;
+  }
 
-    h2 {
-        font-size: 3rem;
-    }
+  h2 {
+    font-size: 3rem;
+  }
 
-    h3 {
-        font-size: 2.25rem;
-    }
+  h3 {
+    font-size: 2.25rem;
+  }
 
-    /* Header */
+  /* Header */
 
-    .car-info-item p {
-        font-size: 18px;
-    }
+  .car-info-item p {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 1280px) {
-    .step h3 {
-        font-size: 2rem;
-    }
+  .step h3 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 1150px) {
-    /* Buttons */
+  /* Buttons */
 
-    .toggle-btn {
-        color: var(--text-color-dark);
-    }
+  .toggle-btn {
+    color: var(--text-color-dark);
+  }
 
-    /* Mobile Header */
+  /* Mobile Header */
 
-    .dark-logo-container span {
-        text-align: start;
-        color: var(--text-color-dark);
-    }
+  .dark-logo-container span {
+    text-align: start;
+    color: var(--text-color-dark);
+  }
 
-    .mobile-bar > .contact-info > .location .path-fill {
-        fill: var( --text-color-dark);
-        stroke: var( --text-color-dark);
-    }
+  .mobile-bar > .contact-info > .location .path-fill {
+    fill: var(--text-color-dark);
+    stroke: var(--text-color-dark);
+  }
 
-    .mobile-bar > .contact-info > .location .path-stroke {
-        stroke: #ffffff;
-    }
+  .mobile-bar > .contact-info > .location .path-stroke {
+    stroke: #ffffff;
+  }
 
-    .mobile-bar > .contact-info > .location a {
-        color: var(--text-color-dark);
-    }
+  .mobile-bar > .contact-info > .location a {
+    color: var(--text-color-dark);
+  }
 
-    .mobile-bar > .contact-info > .email a {
-        color: var(--text-color-dark);
-    }
+  .mobile-bar > .contact-info > .email a {
+    color: var(--text-color-dark);
+  }
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 3rem;
-    }
+  h1 {
+    font-size: 3rem;
+  }
 
-    h2 {
-        font-size: 2.5rem;
-    }
+  h2 {
+    font-size: 2.5rem;
+  }
 
-    h3 {
-        font-size: 2.5rem;
-    }
+  h3 {
+    font-size: 2.5rem;
+  }
 
-    /* Header */
+  /* Header */
 
-    .car-info-item span {
-        font-size: 3rem;
-    }
+  .car-info-item span {
+    font-size: 3rem;
+  }
 
-    /* Steps */
+  /* Steps */
 
-    .steps h2 {
-        font-size: 3rem;
-    }
+  .steps h2 {
+    font-size: 3rem;
+  }
 
-    /* Airport transfer */
+  /* Airport transfer */
 
-    .airport-transfer-container > .text h2 {
-        font-size: 3rem;
-    }
+  .airport-transfer-container > .text h2 {
+    font-size: 3rem;
+  }
 
-    /* About company */
+  /* About company */
 
-    .about-company-text h3,
-    .about-company-awards h3 {
-        font-size: 2.25rem;
-    }
+  .about-company-text h3,
+  .about-company-awards h3 {
+    font-size: 2.25rem;
+  }
 }
 
 @media (max-width: 639px) {
-    h4 {
-        font-size: 1.5rem;
-    }
+  h4 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 465px) {
-    h1 {
-        font-size: 2.5rem;
-    }
+  h1 {
+    font-size: 2.5rem;
+  }
 
-    h2 {
-        font-size: 2.25rem;
-    }
+  h2 {
+    font-size: 2.25rem;
+  }
 
-    h3 {
-        font-size: 1.5rem;
-    }
+  h3 {
+    font-size: 1.5rem;
+  }
 
-    /* Header */
+  /* Header */
 
-    .logo-container span,
-    .dark-logo-container span {
-        font-size: 0.75rem;
-    }
+  .logo-container span,
+  .dark-logo-container span {
+    font-size: 0.75rem;
+  }
 
-    .main-content-wraper p {
-        font-size: 1rem;
-    }
+  .main-content-wraper p {
+    font-size: 1rem;
+  }
 
-    /* Advantages */
+  /* Advantages */
 
-    .advantages-about-company,
-    .advantages-about-supporting {
-        font-size: 1rem;
-    }
+  .advantages-about-company,
+  .advantages-about-supporting {
+    font-size: 1rem;
+  }
 
-    /* Steps */
+  /* Steps */
 
-    .steps h2 {
-        font-size: 2.25rem;
-    }
+  .steps h2 {
+    font-size: 2.25rem;
+  }
 
-    .step h3 {
-        font-size: 1.5rem;
-    }
+  .step h3 {
+    font-size: 1.5rem;
+  }
 
-    /* Airport transfer */
+  /* Airport transfer */
 
-    #transfer-heading {
-        font-size: 2.25rem;
-    }
+  #transfer-heading {
+    font-size: 2.25rem;
+  }
 
-    /* About company */
+  /* About company */
 
-    .about-company-advantages {
-        font-size: 3rem;
-    }
+  .about-company-advantages {
+    font-size: 3rem;
+  }
 
-    .advantage-item p {
-        font-size: 1rem;
-    }
+  .advantage-item p {
+    font-size: 1rem;
+  }
 }

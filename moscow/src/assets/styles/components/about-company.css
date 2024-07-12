@@ -1,238 +1,235 @@
 .about-company {
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
-    padding-right: 6rem;
-    padding-left: 6rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  padding-right: 6rem;
+  padding-left: 6rem;
 }
 
 .about-company-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .about-company-text {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
 
-    max-width: 991px;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+  max-width: 991px;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .about-company-text h3,
 .about-company-awards h3 {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
-.about-company-text p{
-    max-width: 991px;
-    margin-bottom: 3rem;
+.about-company-text p {
+  max-width: 991px;
+  margin-bottom: 3rem;
 }
 
 .about-company-advantages {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 
-.about-company-advantages>* {
-    flex-grow: 1;
+.about-company-advantages > * {
+  flex-grow: 1;
 }
 
 .about-company-awards {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
 
-    max-width: 524px;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+  max-width: 524px;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .awards-slider .awards-slider-content:not(:first-child) {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .awards-slider-content p {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
 
 .awards-slider-content::before {
-    content: url(/moscow/public/assets/images/about-company/file-icon.svg);
-    vertical-align: text-top;
+  content: url(/moscow/public/assets/images/about-company/file-icon.svg);
+  vertical-align: text-top;
 }
 
-
 .awards-slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    transition: height 0.3s ease;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.3s ease;
 }
 
 .awards-slider-slide {
-    display: none;
-    transition: opacity 0.3s ease-in-out;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .awards-slider-slide.active {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
 
 .awards-slides {
-    display: flex;
+  display: flex;
 
-    transition: transform 0.3s ease;
-    will-change: transform;
+  transition: transform 0.3s ease;
+  will-change: transform;
 }
 
-
 .grabbing {
-    -webkit-user-select: none; 
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
 }
 
 .slider-controls {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .slider-controls .prev,
 .slider-controls .next {
-    background-color: transparent;
+  background-color: transparent;
 
-    border: none;
-    cursor: pointer;
+  border: none;
+  cursor: pointer;
 }
 
 .pagination {
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 
-    margin: 0 1rem;
+  margin: 0 1rem;
 }
 
 .pagination-dot {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 
-    width: 12px;
-    height: 12px;
-    border: none;
-    border-radius: 50%;
-    
-    cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
 }
 
 .pagination-dot.active {
-    background-color: #828282;
+  background-color: #828282;
 }
 
 @media (max-width: 1440px) {
-    .about-company-text {
-        max-width: 657px;
-    }
+  .about-company-text {
+    max-width: 657px;
+  }
 
-    .about-company-awards {
-        max-width: 378px;
-    }
+  .about-company-awards {
+    max-width: 378px;
+  }
 }
 
 @media (max-width: 1280px) {
-    .about-company {
-        padding-right: 4rem;
-        padding-left: 4rem;
-    }
+  .about-company {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
 
-    .about-company-text {
-        max-width: 529px;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
+  .about-company-text {
+    max-width: 529px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 
-    .about-company-awards {
-        max-width: 465px;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
+  .about-company-awards {
+    max-width: 465px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 @media (max-width: 1000px) {
-    .about-company {
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
-    }
+  .about-company {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
 
-    .about-company-text h3,
-    .about-company-awards h3 {
-        margin-bottom: 1.5rem;
-    }
+  .about-company-text h3,
+  .about-company-awards h3 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .about-company-container {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
+  .about-company-container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 
-    .about-company-text {
-        max-width: 672px;
-        padding-bottom: 2rem;
-    }
+  .about-company-text {
+    max-width: 672px;
+    padding-bottom: 2rem;
+  }
 
-    .about-company-awards {
-        max-width: 672px;
-        padding-bottom: 6rem;
-    }
+  .about-company-awards {
+    max-width: 672px;
+    padding-bottom: 6rem;
+  }
 
-    .slider-controls {
-        margin-top: 1.5rem;
-    }
+  .slider-controls {
+    margin-top: 1.5rem;
+  }
 }
 
-
 @media (max-width: 489px) {
-    .about-company {
-        margin: 0 0.5rem 0 0.5rem;
-        padding: 0 1rem 0 1rem;
-    }
+  .about-company {
+    margin: 0 0.5rem 0 0.5rem;
+    padding: 0 1rem 0 1rem;
+  }
 
-    .about-company-text,
-    .about-company-awards {
-        padding: 1.5rem 0 1.5rem 0;
-    }
+  .about-company-text,
+  .about-company-awards {
+    padding: 1.5rem 0 1.5rem 0;
+  }
 
-    .about-company-text h3,
-    .about-company-awards h3 {
-        margin-bottom: 1rem;
-    }
+  .about-company-text h3,
+  .about-company-awards h3 {
+    margin-bottom: 1rem;
+  }
 
-    .about-company-text p {
-        margin-bottom: 1.5rem;
-    }
+  .about-company-text p {
+    margin-bottom: 1.5rem;
+  }
 
-    .about-company-advantages {
-        flex-direction: column;
-        row-gap: 1.5rem;
-    }
+  .about-company-advantages {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
 
-    .advantage-item p {
-        margin-bottom: 0;
-    }
+  .advantage-item p {
+    margin-bottom: 0;
+  }
 
-    .slider-controls {
-        margin-top: 3rem;
-    }
+  .slider-controls {
+    margin-top: 3rem;
+  }
 }

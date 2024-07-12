@@ -1,52 +1,52 @@
 :root {
-    --primary-color: #222222;
-    --secondary-color: #F2F2F2;
-    --background-color: #F2F2F2;
-    --text-color: #F2F2F2;
-    --text-color-dark: #222222;
-    --link: #F2F2F2;
-    --link-dark: #222222; 
-    
-    --btn-text-color-default-primary: #222222;
-    --btn-color-default-primary: #f2c94c;
-    --btn-color-hover-primary: #ffe184;
-    --btn-color-click-primary: #daad26;
-    --btn-color-disable-primary: #979797;
-    --btn-text-color-disable-primary: #e0e0e0;
-    --btn-color-default-secondary: #F2F2F2;
-    --btn-color-click-secondary: #222222;
-    --btn-color-disable-secondary: #333333;
-    --btn-color-default-secondary-black: #222222;
-    --btn-color-click-secondary-black: #F2F2F2;
-    --btn-color-disable-secondary-black: #828282;
-    --btn-text-color-default-secondary: #F2F2F2;
-    --btn-text-color-disable-secondary: #333333;
-    --btn-text-color-default-secondary-black: #222222;
-    --btn-text-color-disable-secondary-black: #828282;
-    --toggle-btn-click: #4f4f4f;
-    --toggle-btn-disable: #828282;
+  --primary-color: #222222;
+  --secondary-color: #f2f2f2;
+  --background-color: #f2f2f2;
+  --text-color: #f2f2f2;
+  --text-color-dark: #222222;
+  --link: #f2f2f2;
+  --link-dark: #222222;
 
-    --input-primary-color: #F2F2F2;
-    --input-secondary-color: #333333;
-    --input-minor-color: #828282;
-    --input-black-text: #222222;
-    --input-error: #eb5757;
-    --input-disable: #bdbdbd;
+  --btn-text-color-default-primary: #222222;
+  --btn-color-default-primary: #f2c94c;
+  --btn-color-hover-primary: #ffe184;
+  --btn-color-click-primary: #daad26;
+  --btn-color-disable-primary: #979797;
+  --btn-text-color-disable-primary: #e0e0e0;
+  --btn-color-default-secondary: #f2f2f2;
+  --btn-color-click-secondary: #222222;
+  --btn-color-disable-secondary: #333333;
+  --btn-color-default-secondary-black: #222222;
+  --btn-color-click-secondary-black: #f2f2f2;
+  --btn-color-disable-secondary-black: #828282;
+  --btn-text-color-default-secondary: #f2f2f2;
+  --btn-text-color-disable-secondary: #333333;
+  --btn-text-color-default-secondary-black: #222222;
+  --btn-text-color-disable-secondary-black: #828282;
+  --toggle-btn-click: #4f4f4f;
+  --toggle-btn-disable: #828282;
 
-    --contact-info-click: #4f4f4f;
-    --contact-info-disable: #333333;
+  --input-primary-color: #f2f2f2;
+  --input-secondary-color: #333333;
+  --input-minor-color: #828282;
+  --input-black-text: #222222;
+  --input-error: #eb5757;
+  --input-disable: #bdbdbd;
 
-    --font-regular: 'Inter', sans-serif;
-    --font-medium: 'Inter', sans-serif;
-    --font-semibold: 'Inter', sans-serif;
-    --font-bold: 'Inter', sans-serif;
-    --font-extrabold: 'Inter', sans-serif;
-    --font-black: 'Inter', sans-serif;
-    
-    --weight-regular: 400;
-    --weight-medium: 500;
-    --weight-semibold: 600;
-    --weight-bold: 700;
-    --weight-extrabold: 800;
-    --weight-black: 900;
+  --contact-info-click: #4f4f4f;
+  --contact-info-disable: #333333;
+
+  --font-regular: "Inter", sans-serif;
+  --font-medium: "Inter", sans-serif;
+  --font-semibold: "Inter", sans-serif;
+  --font-bold: "Inter", sans-serif;
+  --font-extrabold: "Inter", sans-serif;
+  --font-black: "Inter", sans-serif;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --weight-black: 900;
 }
