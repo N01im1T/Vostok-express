@@ -29,11 +29,15 @@ const modals = () => {
   const userEmailInput = document.createElement("div");
   const userPhoneInput = document.createElement("div");
   const userMessageInput = document.createElement("div");
+  const hiddenInput = document.createElement("input");
 
   userNameInput.classList.add("input-container");
   userEmailInput.classList.add("input-container");
   userPhoneInput.classList.add("input-container");
   userMessageInput.classList.add("input-container");
+  hiddenInput.setAttribute("type", "hidden");
+  hiddenInput.setAttribute("name", "city");
+  hiddenInput.setAttribute("value", "");
 
   userNameInput.innerHTML = `
         <input type="text"  id="name" class="styled-input"
@@ -94,7 +98,7 @@ const modals = () => {
         submitButton.classList.add("btn-call-me-back");
         submitButton.textContent = messages.callMeBack;
 
-        form.append(userNameInput, userPhoneInput, submitButton);
+        form.append(userNameInput, userPhoneInput, hiddenInput, submitButton);
         modalContainer.append(header, closeButton, form, dataProcessing);
 
         break;
@@ -107,7 +111,7 @@ const modals = () => {
         submitButton.classList.add("btn-call-me-back");
         submitButton.textContent = messages.callMeBack;
 
-        form.append(userNameInput, userPhoneInput, submitButton);
+        form.append(userNameInput, userPhoneInput, hiddenInput, submitButton);
         modalContainer.append(header, closeButton, form, dataProcessing);
 
         break;
@@ -125,6 +129,7 @@ const modals = () => {
           userEmailInput,
           userPhoneInput,
           userMessageInput,
+          hiddenInput,
           submitButton,
         );
         modalContainer.append(header, closeButton, form, dataProcessing);
