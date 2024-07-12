@@ -1,9 +1,12 @@
 import { default as applyInputs } from "./inputs.js";
 import { default as applyForms } from "./forms.js";
+
 import closeIcon from "/city-template/public/assets/images/modals/close-window-btn.svg";
+import dictionary from "./modals-dictionary.json";
 
 const modals = () => {
   const language = document.documentElement.lang;
+  const messages = dictionary[language] || dictionary.en;
 
   const modal = document.createElement("div");
   modal.classList.add("modal");
@@ -36,36 +39,18 @@ const modals = () => {
         <input type="text"  id="name" class="styled-input"
         pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
         <label for="name" class="floating-label"
-        data-original-text="${
-          language === "en"
-            ? "How can we address you?"
-            : "Как к вам обращаться?"
-        }"
-        data-error-message="${
-          language === "en"
-            ? "How can we address you? (incorrect input)"
-            : "Как к вам обращаться? (не верный ввод)"
-        }">
-            ${
-              language === "en"
-                ? "How can we address you?"
-                : "Как к вам обращаться?"
-            }
+        data-original-text="${messages.address}"
+        data-error-message="${messages.addressError}">
+          ${messages.address}
         </label>
     `;
   userEmailInput.innerHTML = `
         <input type="email"  id="email" class="styled-input"
         placeholder=" " required>
         <label for="email" class="floating-label"
-        data-original-text="${
-          language === "en" ? "Your e-mail" : "Ваша электронная почта"
-        }"
-        data-error-message="${
-          language === "en"
-            ? "Your e-mail (incorrect input)"
-            : "Ваша электронная почта (не верный ввод)"
-        }">
-            ${language === "en" ? "Your e-mail" : "Ваша электронная почта"}
+        data-original-text="${messages.email}"
+        data-error-message="${messages.emailError}">
+          ${messages.email}
         </label>
     `;
   userPhoneInput.innerHTML = `
@@ -73,22 +58,16 @@ const modals = () => {
         pattern="\\+?[0-9]{1,4}?[-.\\s]?(\\(?\\d{1,3}?\\)?[-.\\s]?)?[\\d-\\s]{5,10}"
         placeholder=" " required>
         <label for="telephone" class="floating-label"
-        data-original-text="${
-          language === "en" ? "Your phone number" : "Ваш номер телефона"
-        }"
-        data-error-message="${
-          language === "en"
-            ? "Your phone number (incorrect input)"
-            : "Ваш номер телефона (не верный ввод)"
-        }">
-            ${language === "en" ? "Your phone number" : "Ваш номер телефона"}
+        data-original-text="${messages.phone}"
+        data-error-message="${messages.phoneError}">
+          ${messages.phone}
         </label>
     `;
   userMessageInput.innerHTML = `
         <input type="text"  id="message" class="styled-input"
         placeholder=" ">
         <label for="message" class="floating-label">
-            ${language === "en" ? "Your message" : "Ваше сообщение"}
+          ${messages.message}
         </label>
     `;
 
@@ -98,13 +77,7 @@ const modals = () => {
 
   const dataProcessing = document.createElement("p");
   dataProcessing.classList.add("personal-data-processing");
-  dataProcessing.innerHTML =
-    language === "en"
-      ? `By clicking the button, you consent to the 
-            <a href="" target="_blank" rel="noopener noreferrer">
-            processing of personal data</a>`
-      : `Нажимая на кнопку, вы даете согласие на <a href="" target="_blank"
-            rel="noopener noreferrer">обработку персональных данных</a>`;
+  dataProcessing.innerHTML = messages.personalDataProcessing;
 
   function createAndShowModal(btn) {
     modal.classList.remove("fade-out");
@@ -114,14 +87,12 @@ const modals = () => {
 
     switch (btn) {
       case "btn-call-me-back":
-        header.textContent =
-          language === "en" ? "Call me back" : "Перезвоните мне";
+        header.textContent = messages.callMeBack;
 
         form.classList.add("reply-form");
 
         submitButton.classList.add("btn-call-me-back");
-        submitButton.textContent =
-          language === "en" ? "Call me back" : "Перезвоните мне";
+        submitButton.textContent = messages.callMeBack;
 
         form.append(userNameInput, userPhoneInput, submitButton);
         modalContainer.append(header, closeButton, form, dataProcessing);
@@ -129,14 +100,12 @@ const modals = () => {
         break;
 
       case "btn-become-our-partner":
-        header.textContent =
-          language === "en" ? "Become our partner" : "Стать нашим партнером";
+        header.textContent = messages.becomePartner;
 
         form.classList.add("reply-form");
 
         submitButton.classList.add("btn-call-me-back");
-        submitButton.textContent =
-          language === "en" ? "Call me back" : "Перезвоните мне";
+        submitButton.textContent = messages.callMeBack;
 
         form.append(userNameInput, userPhoneInput, submitButton);
         modalContainer.append(header, closeButton, form, dataProcessing);
@@ -144,16 +113,12 @@ const modals = () => {
         break;
 
       case "btn-get-transfer-cost":
-        header.textContent =
-          language === "en"
-            ? "Get the cost of the transfer"
-            : "Получите расчет стоимости трансфера";
+        header.textContent = messages.transferCost;
 
         form.classList.add("calculator-form");
 
         submitButton.classList.add("btn-calculate-price");
-        submitButton.textContent =
-          language === "en" ? "Calculate cost" : "Расчитать стоимость";
+        submitButton.textContent = messages.calculateCost;
 
         form.append(
           userNameInput,
