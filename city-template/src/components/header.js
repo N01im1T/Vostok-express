@@ -46,10 +46,10 @@ const header = () => {
   mobileBarOverlay.addEventListener("click", function () {
     topBar.classList.remove("active");
     topBar.classList.add("deactive");
-    setTimeout(() => {
-      topBar.classList.remove("mobile-bar");
-      mobileBarOverlay.remove();
-    }, 500);
+    callMeBackBtn.classList.remove("black");
+    burgerBtn.style.display = "block";
+    topBar.classList.remove("mobile-bar");
+    mobileBarOverlay.remove();
   });
 };
 
