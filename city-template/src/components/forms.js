@@ -52,7 +52,7 @@ const forms = (container = document) => {
       formData.append("action", "submit_form");
 
       // Add server
-      postData("", formData)
+      postData(backend['ajax_url'], formData)
         .then((res) => {
           console.log(res);
           statusMessage.textContent = message.success;
