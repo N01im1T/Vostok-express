@@ -40,7 +40,7 @@ const modals = () => {
   hiddenInput.setAttribute("value", "");
 
   userNameInput.innerHTML = `
-        <input type="text"  id="name" class="styled-input"
+        <input type="text"  id="name" name="name" class="styled-input"
         pattern="[a-zA-Zа-яА-Я]{2,11}" placeholder=" " required>
         <label for="name" class="floating-label"
         data-original-text="${messages.address}"
@@ -49,7 +49,7 @@ const modals = () => {
         </label>
     `;
   userEmailInput.innerHTML = `
-        <input type="email"  id="email" class="styled-input"
+        <input type="email"  id="email" name="email" class="styled-input"
         placeholder=" " required>
         <label for="email" class="floating-label"
         data-original-text="${messages.email}"
@@ -58,7 +58,7 @@ const modals = () => {
         </label>
     `;
   userPhoneInput.innerHTML = `
-        <input type="tel" id="telephone" class="styled-input"
+        <input type="tel" id="telephone" name="telephone" class="styled-input"
         pattern="\\+?[0-9]{1,4}?[-.\\s]?(\\(?\\d{1,3}?\\)?[-.\\s]?)?[\\d-\\s]{5,10}"
         placeholder=" " required>
         <label for="telephone" class="floating-label"
@@ -68,7 +68,7 @@ const modals = () => {
         </label>
     `;
   userMessageInput.innerHTML = `
-        <input type="text"  id="message" class="styled-input"
+        <input type="text"  id="message" name="message" class="styled-input"
         placeholder=" ">
         <label for="message" class="floating-label">
           ${messages.message}
