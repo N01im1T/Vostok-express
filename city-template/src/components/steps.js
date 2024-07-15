@@ -33,20 +33,22 @@ const steps = () => {
   function updateSVGContent() {
     for (let i = 1; i <= 4; i++) {
       let svgElement = document.getElementById(`step-svg-${i}`);
-      if (window.innerWidth <= 615) {
-        if (i === 4) {
-          svgElement.outerHTML = getMobileSVGContent(i);
+        if (svgElement) {
+          if (window.innerWidth <= 615) {
+          if (i === 4) {
+            svgElement.outerHTML = getMobileSVGContent(i);
+          } else {
+            svgElement.innerHTML = getMobileSVGContent(i);
+            svgElement.setAttribute("width", "80");
+            svgElement.setAttribute("height", "96");
+            svgElement.setAttribute("viewBox", "0 0 80 96");
+          }
         } else {
-          svgElement.innerHTML = getMobileSVGContent(i);
-          svgElement.setAttribute("width", "80");
-          svgElement.setAttribute("height", "96");
-          svgElement.setAttribute("viewBox", "0 0 80 96");
+          svgElement.innerHTML = getDesktopSVGContent(i);
+          svgElement.setAttribute("width", "96");
+          svgElement.setAttribute("height", "80");
+          svgElement.setAttribute("viewBox", "0 0 96 80");
         }
-      } else {
-        svgElement.innerHTML = getDesktopSVGContent(i);
-        svgElement.setAttribute("width", "96");
-        svgElement.setAttribute("height", "80");
-        svgElement.setAttribute("viewBox", "0 0 96 80");
       }
     }
   }
