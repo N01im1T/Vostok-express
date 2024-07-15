@@ -170,6 +170,8 @@
   transform: translateX(0);
 }
 
+/* City button */
+
 .btn-location {
   display: flex;
   align-items: center;
@@ -177,7 +179,12 @@
   background-color: transparent;
 
   border: none;
-} 
+}
+
+.btn-choose-city {
+  max-width: 257px;
+  width: 100%;
+}
 
 /* Mobile Buttons */
 

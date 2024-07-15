@@ -11,7 +11,6 @@ const modals = () => {
   const modal = document.createElement("div");
   modal.classList.add("modal");
   const modalContainer = document.createElement("div");
-  modalContainer.classList.add("modal-container");
   modal.appendChild(modalContainer);
 
   const header = document.createElement("h4");
@@ -20,6 +19,37 @@ const modals = () => {
   closeButton.innerHTML = `
         <img src="${closeIcon}" alt="close-icon">
     `;
+
+  const listOfCities = document.createElement("ul");
+  listOfCities.classList.add("cities-list");
+  const chooseIcon = document.createElement("span");
+  chooseIcon.innerHTML = `
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 6L9 17L4 12" stroke="black" stroke-width="2" 
+        stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    `;
+  async function getCities() {
+    try {
+      const response = await fetch('https://avto2a.ru/wp-admin/admin-ajax.php?action=get_cities');
+      if (!response.ok) {
+          throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+
+      data.forEach(city => {
+        const li = document.createElement('li');
+        li.classList.add("list-item");
+        li.innerText = city.name;
+        li.append(chooseIcon);
+        listOfCities.append(li);
+      });
+
+    } catch (error) {
+      console.error('Fetching cities failed:', error);
+    }
+  };
 
   const form = document.createElement("form");
   form.setAttribute("action", "/submit");
@@ -76,8 +106,6 @@ const modals = () => {
     `;
 
   const submitButton = document.createElement("button");
-  submitButton.classList.add("btn", "btn-primary");
-  submitButton.setAttribute("type", "submit");
 
   const dataProcessing = document.createElement("p");
   dataProcessing.classList.add("personal-data-processing");
@@ -85,11 +113,34 @@ const modals = () => {
 
   function createAndShowModal(btn) {
     modal.classList.remove("fade-out");
+
+    modalContainer.classList.value = "";
+    modalContainer.classList.add("modal-container");
     modalContainer.innerHTML = "";
+
+    listOfCities.innerHTML = "";
+
     form.innerHTML = "";
     form.classList.value = "";
 
+    submitButton.classList.value = "";
+    submitButton.classList.add("btn", "btn-primary");
+    submitButton.setAttribute("type", "submit");
+
     switch (btn) {
+      case "btn-location":
+        header.textContent = messages.chooseYourCity;
+
+        getCities();
+
+        submitButton.classList.add("btn-choose-city");
+        submitButton.textContent = messages.choose;
+
+        modalContainer.classList.add("modal-choose-city");
+        modalContainer.append(header, closeButton, listOfCities, submitButton);
+
+        break;
+
       case "btn-call-me-back":
         header.textContent = messages.callMeBack;
 
@@ -148,6 +199,13 @@ const modals = () => {
     applyInputs();
     applyForms();
   }
+
+  document
+    .getElementById("btn-location")
+    .addEventListener("click", function () {
+      createAndShowModal("btn-location");
+      modal.style.display = "block";
+    })
 
   document
     .getElementById("btn-call-me-back")

@@ -196,6 +196,12 @@ p {
   text-align: left;
 }
 
+.modal-container.modal-choose-city h4 {
+  font-family: var(--font-medium);
+  font-weight: var(--weight-medium);
+  font-size: 1.5rem;
+}
+
 .modal-container p a {
   color: var(--text-color-dark);
   text-decoration: underline;
@@ -204,6 +210,14 @@ p {
 
 .modal-container p a:hover {
   text-decoration: none;
+}
+
+.cities-list li {
+  font-family: var(--font-medium);
+  font-weight: var(--weight-medium);
+  font-size: 1rem;
+  color: var(--text-color-dark);
+  line-height: 115%;
 }
 
 /* Header */
