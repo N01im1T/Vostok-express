@@ -170,6 +170,15 @@
   transform: translateX(0);
 }
 
+.btn-location {
+  display: flex;
+  align-items: center;
+
+  background-color: transparent;
+
+  border: none;
+} 
+
 /* Mobile Buttons */
 
 .mobile-burger-btn {

@@ -104,6 +104,48 @@ p {
   color: var(--toggle-btn-disable);
 }
 
+.btn-location {
+  color: var(--prymary-color);
+}
+
+.btn-location:active .path-fill {
+  fill: var(--contact-info-click);
+  stroke: var(--contact-info-click);
+}
+
+.btn-location.disabled .path-fill {
+  fill: var(--contact-info-disable);
+  stroke: var(--contact-info-disable);
+
+  cursor: not-allowed;
+}
+
+.btn-location.disabled .path-stroke {
+  stroke: var(--contact-info-click);
+}
+
+.btn-location {
+  font-family: var(--font-semibold);
+  font-weight: var(--weight-semibold);
+  font-size: 1.25rem;
+  text-decoration: underline dotted;
+  text-underline-offset: 3.5px;
+}
+
+.btn-location:not(.disabled):hover {
+  text-decoration: none;
+}
+
+.btn-location:active {
+  color: var(--contact-info-click);
+}
+
+.btn-location.disabled {
+  color: var(--contact-info-disable);
+
+  cursor: not-allowed;
+}
+
 /* Inputs */
 
 .input-container {
@@ -169,44 +211,6 @@ p {
 .logo-container span {
   text-align: start;
   color: var(--text-color);
-}
-
-.location a:active .path-fill {
-  fill: var(--contact-info-click);
-  stroke: var(--contact-info-click);
-}
-
-.location a.disabled .path-fill {
-  fill: var(--contact-info-disable);
-  stroke: var(--contact-info-disable);
-
-  cursor: not-allowed;
-}
-
-.location a.disabled .path-stroke {
-  stroke: var(--contact-info-click);
-}
-
-.location a {
-  font-family: var(--font-semibold);
-  font-weight: var(--weight-semibold);
-  font-size: 1.25rem;
-  text-decoration: underline dotted;
-  text-underline-offset: 3.5px;
-}
-
-.location a:not(.disabled):hover {
-  text-decoration: none;
-}
-
-.location a:active {
-  color: var(--contact-info-click);
-}
-
-.location a.disabled {
-  color: var(--contact-info-disable);
-
-  cursor: not-allowed;
 }
 
 .email a:first-of-type {
@@ -541,16 +545,16 @@ p {
     color: var(--text-color-dark);
   }
 
-  .mobile-bar > .contact-info > .location .path-fill {
+  .mobile-bar > .contact-info > .location > .btn-location .path-fill {
     fill: var(--text-color-dark);
     stroke: var(--text-color-dark);
   }
 
-  .mobile-bar > .contact-info > .location .path-stroke {
+  .mobile-bar > .contact-info > .location > .btn-location .path-stroke {
     stroke: #ffffff;
   }
 
-  .mobile-bar > .contact-info > .location a {
+  .mobile-bar > .contact-info > .location > .btn-location {
     color: var(--text-color-dark);
   }
 
