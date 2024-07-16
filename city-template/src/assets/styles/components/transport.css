@@ -40,6 +40,8 @@
 }
 
 .transport-img {
+  flex-grow: 1;
+
   max-width: 332px;
 }
 
@@ -48,8 +50,10 @@
 }
 
 .transport-description {
-  margin-bottom: 0.5rem;
+  flex-grow: 1;
+
   max-width: 332px;
+  margin-bottom: 0.5rem;
 }
 
 .transport-price {
