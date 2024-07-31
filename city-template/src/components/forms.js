@@ -6,16 +6,10 @@ const forms = (container = document) => {
 
   const messages = {
     ru: {
-      loading: "Загрузка...",
-      success: "Спасибо! Скоро мы с вами свяжемся",
-      failure: "Что-то пошло не так...",
       fillField: "Заполните поле",
       invalidFormat: "Введите данные в указанном формате",
     },
     en: {
-      loading: "Loading...",
-      success: "Thank you! We will contact you soon",
-      failure: "Something went wrong...",
       fillField: "Please fill in this field",
       invalidFormat: "Please enter the data in the specified format",
     },
@@ -43,21 +37,17 @@ const forms = (container = document) => {
     item.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      let statusMessage = document.createElement("div");
-      statusMessage.classList.add("status");
-      item.appendChild(statusMessage);
-
       const formData = new FormData(item);
 
       formData.append("action", "submit_form");
 
-      // Add server
       postData(backend['ajax_url'], formData)
         .then((res) => {
           console.log(res);
-          statusMessage.textContent = message.success;
         })
-        .catch(() => (statusMessage.textContent = message.failure))
+        .catch((error) => {
+          console.log(error);
+        })
         .finally(() => {
           clearInputs();
           setTimeout(() => {
