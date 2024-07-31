@@ -97,6 +97,12 @@
   align-items: center;
 }
 
+.company-link {
+  display: inline-block;
+
+  width: 160px;
+}
+
 .footer-bottom footer:first-of-type {
   margin-right: 1.5rem;
 }
