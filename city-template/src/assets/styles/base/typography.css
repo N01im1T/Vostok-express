@@ -460,6 +460,11 @@ p {
 }
 
 .number,
+.content {
+  text-wrap: nowrap;
+}
+
+.number,
 .feedback-link {
   font-family: var(--font-semibold);
   font-weight: var(--weight-semibold);
