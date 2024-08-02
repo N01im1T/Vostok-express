@@ -561,7 +561,7 @@ p {
     stroke: #ffffff;
   }
 
-  .mobile-bar > .contact-info > .location a {
+  .mobile-bar > .contact-info > .location button {
     color: var(--text-color-dark);
   }
 
