@@ -2,8 +2,6 @@ const forms = (container = document) => {
   const form = container.querySelectorAll("form"),
     inputs = container.querySelectorAll("input");
 
-  const lang = document.documentElement.lang || "en";
-
   const messages = {
     ru: {
       fillField: "Заполните поле",
@@ -15,7 +13,11 @@ const forms = (container = document) => {
     },
   };
 
-  const message = messages[lang] || messages.en;
+  const rawLang = document.documentElement.lang;
+  const lang = rawLang ? rawLang.toLowerCase().split('-')[0] : '';
+
+  const selectedLang = messages[lang] ? lang : 'en';
+  const message = messages[selectedLang];
 
   const postData = async (url, data) => {
     document.querySelector(".status").textContent = message.loading;

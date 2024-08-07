@@ -7,9 +7,13 @@ import briefcaseIcon from "/city-template/public/assets/images/transport/briefca
 import dictionary from "./modals-dictionary.json";
 
 const modals = () => {
-  const language = document.documentElement.lang;
-  const messages = dictionary[language] || dictionary.en;
+  // Get the value of the lang attribute
+  const rawLanguage = document.documentElement.lang;
+  const language = rawLanguage ? rawLanguage.toLowerCase().split('-')[0] : '';
 
+  const selectedLanguage = dictionary[language] ? language : 'en';
+  const messages = dictionary[selectedLanguage];
+  
 
   const modal = document.createElement("div");
   modal.classList.add("modal");
