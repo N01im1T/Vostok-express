@@ -11,9 +11,17 @@
   gap: 1rem;
 }
 
-.transport-card-goods-passanger img,
-.transport-card-goods-luggage img {
-  vertical-align: text-top;
+.transport-card-goods-passanger,
+.transport-card-goods-luggage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  max-height: 1.5rem;
+}
+
+.transport-card-goods-luggage {
+  column-gap: 0.25rem;
 }
 
 .transport-card-container {
@@ -36,7 +44,6 @@
   flex-direction: column;
 
   margin: 1.5rem;
-  cursor: pointer;
 }
 
 .transport-img {

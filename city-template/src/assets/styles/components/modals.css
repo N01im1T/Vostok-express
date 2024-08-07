@@ -151,8 +151,50 @@
   transition: stroke 0.3s ease-out;
 }
 
+/* Order modal */
+
+.modal-order-wrapper {
+  display: flex;
+}
+
+.modal-order .calculator-form {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.order-form-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+} 
+
+.order-inputs {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  row-gap: 0.5rem;
+}
+
+.order-form-wrapper .transport-card {
+  cursor: default;
+}
+
+.order-form-wrapper .transport-card .transport-card-goods > * {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  max-height: 1.5rem;
+}
+
 @media (max-height: 667px) {
   .modal-container.choose-city-modal {
+    top: 63%;
+    right: 50%;
+  }
+
+  .modal-container.modal-order {
     top: 63%;
     right: 50%;
   }
@@ -171,6 +213,10 @@
 
   .modal-container:has(.calculator-form) {
     max-width: 580px;
+  }
+
+  .order-form-wrapper .transport-card {
+    display: none;
   }
 }
 

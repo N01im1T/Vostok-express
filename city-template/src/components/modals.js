@@ -2,6 +2,8 @@ import { default as applyInputs } from "./inputs.js";
 import { default as applyForms } from "./forms.js";
 
 import closeIcon from "/city-template/public/assets/images/modals/close-window-btn.svg";
+import userIcon from "/city-template/public/assets/images/transport/user-icon.svg";
+import briefcaseIcon from "/city-template/public/assets/images/transport/briefcase-icon.svg";
 import dictionary from "./modals-dictionary.json";
 
 const modals = () => {
@@ -22,7 +24,7 @@ const modals = () => {
       <img src="${closeIcon}" alt="close-icon">
   `;
 
-
+  // Choose city modal
   const cityList = document.createElement("ul");
   cityList.classList.add("city-list");
   const checkMarkIcon = `
@@ -84,6 +86,37 @@ const modals = () => {
   }
 
   var selectedCity = null;
+
+
+  // Order modal
+  const orderFormWrapper = document.createElement("div");
+  orderFormWrapper.classList.add("order-form-wrapper");
+
+  const orderInputs = document.createElement("div");
+  orderInputs.classList.add("order-inputs");
+
+  const transportCard = document.createElement("div");
+  transportCard.classList.add("transport-card");
+
+  transportCard.innerHTML = `
+      <div class="transport-card-goods">
+          <div class="transport-card-goods-passenger">
+              <img src="${userIcon}" alt="passenger-icon" />
+              <span class="passenger-amount"></span>
+          </div>
+          <div class="transport-card-goods-luggage">
+              <img src="${briefcaseIcon}" alt="luggage-icon" />
+              <span class="luggage-amount"></span>
+          </div>
+      </div>
+      <img class="transport-img" src="../assets/images/transport/toyota corolla.png" alt="transport-img" />
+      <span class="transport-quality">Стандарт</span>
+      <p class="transport-price">
+          <span>от</span>
+          <span class="price">13000</span>
+          <span class="currency">₽</span>
+      </p>
+  `;
 
 
   const form = document.createElement("form");
@@ -241,6 +274,33 @@ const modals = () => {
 
         break;
 
+      case "btn-order":
+        modalContainer.classList.add("modal-order");
+
+        header.textContent = messages.transferCost;
+
+        form.classList.add("calculator-form");
+
+        submitButton.classList.add("btn-calculate-price");
+        submitButton.setAttribute("type", "submit");
+        submitButton.textContent = messages.calculateCost;
+
+        orderInputs.append(
+          userNameInput,
+          userEmailInput,
+          userPhoneInput,
+          userMessageInput,
+          hiddenInput
+        );
+
+        orderFormWrapper.append(orderInputs, transportCard, submitButton);
+
+        form.append(orderFormWrapper)
+
+        modalContainer.append(header, closeButton, form, dataProcessing);
+
+        break;
+
       default:
         console.log("There isn't such button");
 
@@ -281,6 +341,26 @@ const modals = () => {
       createAndShowModal("btn-choose-city");
       modal.style.display = "block";
     });
+  document.querySelectorAll(".btn-order").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      createAndShowModal("btn-order");
+      modal.style.display = "block";
+
+      const transportCard = this.closest('.transport-card');
+
+      const passengerAmount = transportCard.querySelector('.passenger-amount').textContent;
+      const luggageAmount = transportCard.querySelector('.luggage-amount').textContent;
+      const transportImgSrc = transportCard.querySelector('.transport-img').src;
+      const transportQuality = transportCard.querySelector('.transport-quality').textContent;
+      const transportPrice = transportCard.querySelector('.price').textContent;
+
+      modalContainer.querySelector('.passenger-amount').textContent = passengerAmount;
+      modalContainer.querySelector('.luggage-amount').textContent = luggageAmount;
+      modalContainer.querySelector('.transport-img').src = transportImgSrc;
+      modalContainer.querySelector('.transport-quality').textContent = transportQuality;
+      modalContainer.querySelector('.price').textContent = transportPrice;
+    });
+  });
 
 
   closeButton.addEventListener("click", () => {

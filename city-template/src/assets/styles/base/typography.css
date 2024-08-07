@@ -207,6 +207,10 @@ p {
   text-decoration: none;
 }
 
+.order-form-wrapper .transport-card {
+  color: var(--text-color-dark);
+}
+
 /* Header */
 
 .logo-container span {
